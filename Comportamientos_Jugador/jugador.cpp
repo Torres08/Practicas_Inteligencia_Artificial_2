@@ -5,6 +5,8 @@
 #include <cmath>
 #include <set>
 #include <stack>
+#include <queue>
+
 
 // Este es el método principal que se piden en la practica.
 // Tiene como entrada la información de los sensores y devuelve la acción a realizar.
@@ -49,11 +51,11 @@ Action ComportamientoJugador::think(Sensores sensores)
 // Level representa el comportamiento en el que fue iniciado el agente.
 bool ComportamientoJugador::pathFinding(int level, const estado &origen, const list<estado> &destino, list<Action> &plan)
 {
+	estado un_objetivo;
 	switch (level)
 	{
 	case 0:
 		cout << "Demo\n";
-		estado un_objetivo;
 		un_objetivo = objetivos.front();
 		cout << "fila: " << un_objetivo.fila << " col:" << un_objetivo.columna << endl;
 		return pathFinding_Profundidad(origen, un_objetivo, plan);
@@ -61,8 +63,11 @@ bool ComportamientoJugador::pathFinding(int level, const estado &origen, const l
 
 	case 1:
 		cout << "Optimo numero de acciones\n";
-		// Incluir aqui la llamada al busqueda en anchura
-		cout << "No implementado aun\n";
+		un_objetivo = objetivos.front();
+		cout << "fila: " << un_objetivo.fila << " col:" << un_objetivo.columna << endl;
+		return pathFinding_Anchura(origen, un_objetivo, plan);
+		
+		
 		break;
 	case 2:
 		cout << "Optimo en coste\n";
@@ -173,102 +178,6 @@ struct ComparaEstados
 	}
 };
 
-// Implementación de la busqueda en profundidad.
-// Entran los puntos origen y destino y devuelve la
-// secuencia de acciones en plan, una lista de acciones.
-bool ComportamientoJugador::pathFinding_Profundidad(const estado &origen, const estado &destino, list<Action> &plan)
-{
-	// Borro la lista
-	cout << "Calculando plan\n";
-	plan.clear();
-	set<estado, ComparaEstados> Cerrados; // Lista de Cerrados
-	stack<nodo> Abiertos;				  // Lista de Abiertos
-
-	nodo current;
-	current.st = origen;
-	current.secuencia.empty();
-
-	Abiertos.push(current);
-
-	while (!Abiertos.empty() and (current.st.fila != destino.fila or current.st.columna != destino.columna))
-	{
-
-		Abiertos.pop();
-		Cerrados.insert(current.st);
-
-		// Generar descendiente de girar a la derecha 90 grados
-		nodo hijoTurnR = current;
-		hijoTurnR.st.orientacion = (hijoTurnR.st.orientacion + 2) % 8;
-		if (Cerrados.find(hijoTurnR.st) == Cerrados.end())
-		{
-			hijoTurnR.secuencia.push_back(actTURN_R);
-			Abiertos.push(hijoTurnR);
-		}
-
-		// Generar descendiente de girar a la derecha 45 grados
-		nodo hijoSEMITurnR = current;
-		hijoSEMITurnR.st.orientacion = (hijoSEMITurnR.st.orientacion + 1) % 8;
-		if (Cerrados.find(hijoSEMITurnR.st) == Cerrados.end())
-		{
-			hijoSEMITurnR.secuencia.push_back(actSEMITURN_R);
-			Abiertos.push(hijoSEMITurnR);
-		}
-
-		// Generar descendiente de girar a la izquierda 90 grados
-		nodo hijoTurnL = current;
-		hijoTurnL.st.orientacion = (hijoTurnL.st.orientacion + 6) % 8;
-		if (Cerrados.find(hijoTurnL.st) == Cerrados.end())
-		{
-			hijoTurnL.secuencia.push_back(actTURN_L);
-			Abiertos.push(hijoTurnL);
-		}
-
-		// Generar descendiente de girar a la izquierda 45 grados
-		nodo hijoSEMITurnL = current;
-		hijoSEMITurnL.st.orientacion = (hijoSEMITurnL.st.orientacion + 7) % 8;
-		if (Cerrados.find(hijoSEMITurnL.st) == Cerrados.end())
-		{
-			hijoSEMITurnL.secuencia.push_back(actSEMITURN_L);
-			Abiertos.push(hijoSEMITurnL);
-		}
-
-		// Generar descendiente de avanzar
-		nodo hijoForward = current;
-		if (!HayObstaculoDelante(hijoForward.st))
-		{
-			if (Cerrados.find(hijoForward.st) == Cerrados.end())
-			{
-				hijoForward.secuencia.push_back(actFORWARD);
-				Abiertos.push(hijoForward);
-			}
-		}
-
-		// Tomo el siguiente valor de la Abiertos
-		if (!Abiertos.empty())
-		{
-			current = Abiertos.top();
-		}
-	}
-
-	cout << "Terminada la busqueda\n";
-
-	if (current.st.fila == destino.fila and current.st.columna == destino.columna)
-	{
-		cout << "Cargando el plan\n";
-		plan = current.secuencia;
-		cout << "Longitud del plan: " << plan.size() << endl;
-		PintaPlan(plan);
-		// ver el plan en el mapa
-		VisualizaPlan(origen, plan);
-		return true;
-	}
-	else
-	{
-		cout << "No encontrado plan\n";
-	}
-
-	return false;
-}
 
 // Sacar por la consola la secuencia del plan obtenido
 void ComportamientoJugador::PintaPlan(list<Action> plan)
@@ -384,4 +293,222 @@ void ComportamientoJugador::VisualizaPlan(const estado &st, const list<Action> &
 int ComportamientoJugador::interact(Action accion, int valor)
 {
 	return false;
+}
+//------------------------------------------------------------------------
+//						NIVEL 0: BUSQUEDA EN PROFUNDIDAD
+//------------------------------------------------------------------------
+
+// Implementación de la busqueda en profundidad.
+// Entran los puntos origen y destino y devuelve la
+// secuencia de acciones en plan, una lista de acciones.
+bool ComportamientoJugador::pathFinding_Profundidad(const estado &origen, const estado &destino, list<Action> &plan)
+{
+	// Borro la lista
+	cout << "Calculando plan\n";
+	plan.clear();
+	set<estado, ComparaEstados> Cerrados; // Lista de Cerrados
+	stack<nodo> Abiertos;				  // Lista de Abiertos
+
+	nodo current;
+	current.st = origen;
+	current.secuencia.empty();
+
+	Abiertos.push(current);
+
+	while (!Abiertos.empty() and (current.st.fila != destino.fila or current.st.columna != destino.columna))
+	{
+
+		Abiertos.pop();
+		Cerrados.insert(current.st);
+
+		// Generar descendiente de girar a la derecha 90 grados
+		nodo hijoTurnR = current;
+		hijoTurnR.st.orientacion = (hijoTurnR.st.orientacion + 2) % 8;
+		if (Cerrados.find(hijoTurnR.st) == Cerrados.end())
+		{
+			hijoTurnR.secuencia.push_back(actTURN_R);
+			Abiertos.push(hijoTurnR);
+		}
+
+		// Generar descendiente de girar a la derecha 45 grados
+		nodo hijoSEMITurnR = current;
+		hijoSEMITurnR.st.orientacion = (hijoSEMITurnR.st.orientacion + 1) % 8;
+		if (Cerrados.find(hijoSEMITurnR.st) == Cerrados.end())
+		{
+			hijoSEMITurnR.secuencia.push_back(actSEMITURN_R);
+			Abiertos.push(hijoSEMITurnR);
+		}
+
+		// Generar descendiente de girar a la izquierda 90 grados
+		nodo hijoTurnL = current;
+		hijoTurnL.st.orientacion = (hijoTurnL.st.orientacion + 6) % 8;
+		if (Cerrados.find(hijoTurnL.st) == Cerrados.end())
+		{
+			hijoTurnL.secuencia.push_back(actTURN_L);
+			Abiertos.push(hijoTurnL);
+		}
+
+		// Generar descendiente de girar a la izquierda 45 grados
+		nodo hijoSEMITurnL = current;
+		hijoSEMITurnL.st.orientacion = (hijoSEMITurnL.st.orientacion + 7) % 8;
+		if (Cerrados.find(hijoSEMITurnL.st) == Cerrados.end())
+		{
+			hijoSEMITurnL.secuencia.push_back(actSEMITURN_L);
+			Abiertos.push(hijoSEMITurnL);
+		}
+
+		// Generar descendiente de avanzar
+		nodo hijoForward = current;
+		if (!HayObstaculoDelante(hijoForward.st))
+		{
+			if (Cerrados.find(hijoForward.st) == Cerrados.end())
+			{
+				hijoForward.secuencia.push_back(actFORWARD);
+				Abiertos.push(hijoForward);
+			}
+		}
+
+		// Tomo el siguiente valor de la Abiertos
+		if (!Abiertos.empty())
+		{
+			current = Abiertos.top();
+		}
+	}
+
+	cout << "Terminada la busqueda\n";
+
+	if (current.st.fila == destino.fila and current.st.columna == destino.columna)
+	{
+		cout << "Cargando el plan\n";
+		plan = current.secuencia;
+		cout << "Longitud del plan: " << plan.size() << endl;
+		PintaPlan(plan);
+		// ver el plan en el mapa
+		VisualizaPlan(origen, plan);
+		return true;
+	}
+	else
+	{
+		cout << "No encontrado plan\n";
+	}
+
+	return false;
+}
+
+//------------------------------------------------------------------------
+//						NIVEL 1: BUSQUEDA EN ANCHURA
+//------------------------------------------------------------------------
+
+/*
+	Para conseguir el minimo numero de acciones basta con implementar la busqueda en anchura
+	Entran los puntos origen y destino y devuelve la secuancia de ciiones en plan, una lista de acciones
+
+	nodo - estado 
+		 - secuencia (lista acciones)
+*/
+
+bool ComportamientoJugador::pathFinding_Anchura(const estado &origen, const estado &destino, list<Action> &plan){
+	
+	// busqueda en grafo
+	// lista abiertos - para almacenar nodos sucesores que se han generado en etapas anteriores
+	// lista cerrado - almaceno los nodos que hayan sido abiertos
+	
+	// Primero meto el nodo inicial en la lista de abiertos, luego meto sus hijos
+	// si uno es solucion se acaba, en otro caso el nodo revisado se elimina de la cola
+	// de abiertos y pasa a Cerrados
+
+	// Borro la lista , borro mi plan
+	cout << "Calculando plan\n";
+	plan.clear();
+	set<estado, ComparaEstados> Cerrados; // Lista de Cerrados
+	queue<nodo> Abiertos;				  // Lista de Abiertos FIFO , stack es lifo
+
+	nodo current;
+	current.st = origen;
+	current.secuencia.empty();
+
+	Abiertos.push(current);
+
+	while (!Abiertos.empty() and (current.st.fila != destino.fila or current.st.columna != destino.columna)) // mientras abiertos no sea fin y no se haya llegado al destino creamos el arbol
+	{
+		Abiertos.pop();
+		Cerrados.insert(current.st);
+
+		//para cada accion generamos un hijo
+
+
+		// genera hijo giro a la derecha 90
+		nodo hijoTurnR = current;
+		hijoTurnR.st.orientacion = (hijoTurnR.st.orientacion + 2) % 8;  // giro der 90
+		if (Cerrados.find(hijoTurnR.st) == Cerrados.end())
+		{
+			hijoTurnR.secuencia.push_back(actTURN_R);
+			Abiertos.push(hijoTurnR);
+		}
+
+		// genera hijo giro a la izquierda 90
+		nodo hijoTurnL = current;
+		hijoTurnL.st.orientacion = (hijoTurnL.st.orientacion + 6) % 8;
+		if (Cerrados.find(hijoTurnL.st) == Cerrados.end())
+		{
+			hijoTurnL.secuencia.push_back(actTURN_L);
+			Abiertos.push(hijoTurnL);
+		}
+
+		// genera gijo giro a la derecha 45
+		nodo hijoSEMITurnR = current;
+		hijoSEMITurnR.st.orientacion = (hijoSEMITurnR.st.orientacion + 1) % 8;
+		if (Cerrados.find(hijoSEMITurnR.st) == Cerrados.end())
+		{
+			hijoSEMITurnR.secuencia.push_back(actSEMITURN_R);
+			Abiertos.push(hijoSEMITurnR);
+		}
+
+		// genera hijo giro a la izquierda 45
+		nodo hijoSEMITurnL = current;
+		hijoSEMITurnL.st.orientacion = (hijoSEMITurnL.st.orientacion + 7) % 8;
+		if (Cerrados.find(hijoSEMITurnL.st) == Cerrados.end())
+		{
+			hijoSEMITurnL.secuencia.push_back(actSEMITURN_L);
+			Abiertos.push(hijoSEMITurnL);
+		}
+
+		// genero hijo para avanzar
+		nodo hijoForward = current;
+		if (!HayObstaculoDelante(hijoForward.st))
+		{
+			if (Cerrados.find(hijoForward.st) == Cerrados.end())
+			{
+				hijoForward.secuencia.push_back(actFORWARD);
+				Abiertos.push(hijoForward);
+			}
+		}
+
+		// tomo el siguiente valor de Abiertos
+		if(!Abiertos.empty())
+			current = Abiertos.front();
+	}
+
+	// cargamos el plan
+
+	cout << "Terminada la busqueda\n";
+
+	if (current.st.fila == destino.fila and current.st.columna == destino.columna)
+	{
+		cout << "Cargando el plan\n";
+		plan = current.secuencia;
+		cout << "Longitud del plan: " << plan.size() << endl;
+		PintaPlan(plan);
+		// ver el plan en el mapa
+		VisualizaPlan(origen, plan);
+		return true;
+	}
+	else
+	{
+		cout << "No encontrado plan\n";
+	}
+
+	return false;
+
+
 }

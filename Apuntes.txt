@@ -46,3 +46,262 @@ Think()
         hayplan (boolean) true si se a construido un plan, se inicializa a falso
 
 --------------------------------------------------------------------------
+DATOS
+    
+    mapa 100x100, superior izquierda el 0 0 , mapaResultado[i][j]
+    NORTE - Decrementa fila
+    SUR - Incrementa fila
+    ESTE - Incrementa Columnas
+    OESTE - Decrementa columna
+
+    casillas - Arboles: B 
+             - Agua: A
+             -Precipicion: P 
+             -Suelo Pedregoso: S 
+             -Suelo Arenoso: T 
+             -Muro: M 
+             -Bikini: K 
+             -Zapatillas: D 
+             -Recarga: X 
+             -Desconocida: ?
+    
+    El jugador  solo puede llevar a las zapatillas o el bikini, no los dos 
+    a la vez, si pasa por bikini pierde zapas
+
+    Elementos - Aldeano: a , cuadrado naranja, molestan el movimiento
+              - Lobos: I , empujan al agente (desplaza una casilla en 
+                      la direccion que avanzaria el lobo)
+
+    Propiedades Jugador:
+        tiene campo vision: 2 vectores caracteres tamaño 16 
+                    - terreno: observa los elementos inmoviles del terreno
+                    - superficie: muestra los elementos(aldeanos y lobos)
+        
+        EL campo de vision puede ver en triangulo(norte sur este oeste) y 
+        de forma diagonal
+
+        9 10 11 12 13 14 15  |   9 10 11 12   * 0 es Belkan
+           4  5  6  7  8     |   4  5  6 13
+              1  2  3        |   1  2  7 14
+                 0           |   0  3  8 15
+    
+    Sensores:
+        colision: true si la ultima accion se ha chocado
+        reset: true si la ultima accion es morir
+        posD,posF :devuelve posicion fila y columna que ocupa el jugador 
+        sentido: es la orientacion del jugador
+        num_destinos: indica el numero de casilla destino activas y esta 
+                      vinculada al siguiente Sensores
+        destino: sensor de la ubicacion de los destinos activos, vector de
+                 enteros que representa las coordenadas de los destinos activos
+                 45 12 78 23 11 19
+                 - 3 destinos activos fila 45 columna 12, fila 78 columna 23, 
+                   fila 11 columna 19
+        bateria: sensor bateria, inicialmente a 3000
+        nivel:  0 Demo(Busqueda en profundidad)
+                1: Plan optimo en número de acciones
+                2: Plan optimo coste bateria
+                3: reto 1 (Maximizar descubrimiento mapa)
+                4: reto 2 (Maximizar numero misiones)
+        tiempo: sensor tiempo acumulado
+
+    acciones:
+        actFORWARD
+        actTURN_L
+        actTURN_R
+        actSEMITURN_L
+        actSEMITURN_R
+        actWHEREIS: pone los sensores posF y posC y sentido la fila
+                    y columna y orientacion actual del agente solo en 
+                    el siguiente instante de simulacion
+                    Para el nivel 4, cuando los sensores relativos al 
+                    posicionamiento no funcionan
+        actIDLE
+
+        gastan bateria, depende si es foward, turn o semiturn 
+
+
+
+    ejecucion
+        (practica2SG sin interfaz)
+        ./practica2 <mapa> <semilla> <nivel> <fila> <col> <ori> <filO> <colO>
+
+        semilla - nº entero con el que se inicia el generador numero aleatorios
+        <filO>  fila de la casilla del objetivo
+        <colO> columna de la casilla del objetivo 
+
+        ./practica2 mapas/mapa30.map 1 0 4 5 1 3 20 5 12
+
+        desde la fila 4 columna 5 en el nivel 0 tiene que ir 
+            - 3 20 y a la 5 12
+            - cuando hay mas destinos de los necesarios coge el primero
+    
+    FUNCIONES 
+        ComportamientoJugador(unsigned int size) : Comportamiento(size)
+            Constructor usado nivel 3 y 4
+        
+        ComportamientoJugador(std::vector< std::vector< unsigned char> > mapaR)
+            Constructor usado nivel 0 1 y 2
+        
+        think()
+            comportamiento agente
+        
+        void VisualizaPlan(const estado &st, const list<Action> &plan)
+            pinta sobre la parte grafica el plan
+
+--------------------------------------------------------------------------
+OBJETIVOS
+
+    5 niveles a realizar
+
+    0: Demo(Busqueda en profundidad)
+        Hcer el tutorial 
+        Busqueda en profundidad, seguir el tutorial
+
+    1: Plan optimo en numero de acciones minimo n1 acciones (2 p)
+        MIsion agente: llegar a un punto del mapa
+        no hay aldeanos ni lobos
+        esquivar muros y precipicios
+        Aparece forma aleatoria conociendo su posicion y orientacion
+        menor numeor de acciones
+        Se conoce el mapa
+
+        Busqueda en anchura
+
+    2: Plan optimo en coste bateria (3 p)
+        Igual que el anterior
+        menor consumo de bateria en vez de acciones
+        
+        Algoritmos para resolver el problema son costo uniforme o una 
+        implementacion algoritmo A* usando heuristica admisible
+
+    3: Reto 1 (Descubrir mayor porcentaje mapa) (2 p)
+        mapa desconocido
+        definir comportamiento para descubrir mayor porcentaje mapa
+        tiene posF posC y sentido
+        no hay aldeanos ni lonos
+        3000 instantes 3000 puntos bateria 300 segundos tiempo
+        la forma de calculo sera semejanre a como se hizo en la pracica 1 
+        pero en este caso, cada casilla erronea(las casilla con valor distinot de ?)
+        restan una casilla acertada (Puntaje final)
+    
+    4: Reto 2 (Maximizar numero onjetivos) (3 p)
+        se ira porponiendo al agente casillas objetivos de 3 en 3 que debera ir alcanzando
+        sensores posicion y orientacion no funcionan
+            - hay que usar actWHEREIS 
+        hay aldeanos y lobos
+        La unica informacion es que cuando se completen 3 objetivos se 
+        propondran 3 nuevos
+
+--------------------------------------------------------------------------
+TEORIA
+
+agente deliberativo - puede mirar mas alla que un reactivo  y prever las 
+                      consecuencia de sus acciones
+
+para diseñarlos
+    1. mapa entorno y objetos del mismo
+    2. modelo de efectos de sus acciones, como se va a mover
+    3. EL agente puede razonar que accion hacer para escoger la beneficiosa
+
+    acciones - en forma de arbol
+                tengo varias opciones inmediatas en un arbol escoge el 
+                mas adecuado
+
+Componentes
+
+    Espacio Estados - sera donde el agente realice la busqueda, inicio y objetivo
+                        (secuencia de acciones)
+   
+    Comporbacion camino - funcion comprueba si un estado es objetivo
+
+    Coste camino - funcion que asigna un coste numerico a cada camino, aumentar rendimiento
+
+    COn estos componentes podemos definir u problema y podemos representarlo
+    en una unica estructura que proporcionamos a un algoritmo de 
+    resolucion de problemas
+    SOLUCION - secuencia de acciones inicio -> objetivo
+    problemas en los que una accion tenga un coste se puede hablar de 
+    una solucion optima
+
+Sistema busqueda y estrategias
+    una vez formulado el problema a resolver 
+    nodos - estados del espacio de estado de problema
+    arcos - acciones
+
+    procedimiento general
+
+    1.Grafo explicito -> Inicializar con estado inicial 
+    2.untl Grafo explicito [COntiene un nodo que cumple la condicion terminiacion, test objetivo]
+
+        do 
+            3. begin
+            4. select [selecciono alguna accion A en el conjunto de acciones que
+                        pueda se aplicada a Grafo explicito]
+            5. Grafo explicito <- resultado de aplicar A al grafo 
+        6. end
+
+estrategias
+    irrevocables
+        se selecciona accion A 
+        se aplica sobre el estado del sistema E -> nuevo estado E'
+        se borra E y sustituyo E'
+        me detengo cuando E cumple condicion estado objetivo
+
+        problema - si llego a un nodo que no es solucion no puedo volver a 
+                    los anterirores 
+
+    Tentativas
+        -retoractivas Backtraking
+            En memoria solo guardamos un hijo de cada estado , se mantiene el camino desde el estado inicial hasta actual
+            el grafo explicito -> es una lista
+
+            paramos - encontramos solucion, pero deseamos encontrar otra sol alternativoa
+                    - se llega a un limite nivel profundidad
+                    - se ha generado un estado que ya existia en el camino
+                    - cuando no existen reglas aplicalbes al ultimo nodo de la lista
+            
+        -busqueda de grafos
+                grafo explicito - en memo guardamos todos los estados(nodos) generados, de forma
+                                  que la busqueda puede proseguir por cualquiera de ellos
+
+                                  busqueda de arboles - uso lista Frontera (Abiertos) almacenamos nodos
+                                                        sucesores que se han generado etapas anteriores (busqueda profundidad)
+                                
+                                  busqueda en grafos - uso lista adicional Explorados (Cerrados) almaceno los nodos que fueron forntera
+
+Busqueda si informacion
+    Busqueda en anchura
+        2 listas del mismo grafo
+            - FRONTERA y la lista de nodos explorados
+
+Funcion Busqueda anchura(datos) returns solution
+
+    nodo <- tiene un estado 
+        si el nodo inicial es el final -> solucion (nodo)
+    abiertos <- cola FIFO con nodo como unico elemnto con su estado inicial
+    cerrados <- empty set 
+
+    do 
+       si Abiertos es empty fallamos
+       node <- pop(Abierto) 
+       add node.STATE to cerrados
+
+       Para cada accion en tipos de acciones que pueda hacer o Abiertos then
+                hijo <- nodo hijo (problema, nodo , accion)
+                si estado del hijo no es explorado o Abierto entonces
+                    compruebo si es solucion
+                    Abiertos <- inserto hijo y abierto
+    end
+
+    Priemro meto el nodo inicial en la lista Abiertos, luego metos
+    sus hijos, si uno de estos es solucion se acaba, en otro caso el 
+    nodo revisado se elimina de la cola Abierto y pasa a cerrados
+
+--------------------------------------------------------------------------
+PASOS QUE HE HECHO
+
+NIVEL 1
+    Busqueda en anchura
+        - copiar las cabeceras como en el de profundidad 
+        - al ser parecidos el sitch es igual con 1 objetivo
