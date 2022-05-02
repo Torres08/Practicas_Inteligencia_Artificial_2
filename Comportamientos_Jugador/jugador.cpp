@@ -16,13 +16,19 @@ Action ComportamientoJugador::think(Sensores sensores)
 	//Actualizo la variable accion y actual
 	Action accion = actIDLE;
 
+
 	actual.fila = sensores.posF;
 	actual.columna = sensores.posC;
 	actual.orientacion = sensores.sentido;
 
+	// actualizo tmb bikini y zapas solo puedo tener uno
+	actual = SensorCasilla(sensores, actual);
+
 	cout << "Fila: " << actual.fila << endl;
 	cout << "Col : " << actual.columna << endl;
 	cout << "Ori : " << actual.orientacion << endl;
+	cout << "Tiene Zapatillas: " << actual.TieneZapatillas << endl;
+	cout << "Tiene Bikini: " << actual.TieneBikini << endl;
 
 	// Capturo los destinos
 	cout << "sensores.num_destinos : " << sensores.num_destinos << endl;
@@ -44,6 +50,9 @@ Action ComportamientoJugador::think(Sensores sensores)
 	}else{
 		cout << "no se pudo encontrar un plan\n" << endl;
 	}
+
+	
+
 	return accion;
 }
 
@@ -71,8 +80,10 @@ bool ComportamientoJugador::pathFinding(int level, const estado &origen, const l
 		break;
 	case 2:
 		cout << "Optimo en coste\n";
-		// Incluir aqui la llamada al busqueda de costo uniforme/A*
-		cout << "No implementado aun\n";
+		un_objetivo = objetivos.front();
+		cout << "fila: " << un_objetivo.fila << " col:" << un_objetivo.columna << endl;
+		return pathFinding_CostoUniforme(origen, un_objetivo, plan);
+		
 		break;
 	case 3:
 		cout << "Reto 1: Descubrir el mapa\n";
@@ -512,3 +523,103 @@ bool ComportamientoJugador::pathFinding_Anchura(const estado &origen, const esta
 
 
 }
+
+
+//------------------------------------------------------------------------
+//						NIVEL 2: COSTO UNIFORME O A*
+//------------------------------------------------------------------------
+
+// menor consumo de bateria en acciones
+// estructura de nodos especializada
+// para la priority queue necesito crear sus operandos
+
+ estado ComportamientoJugador::SensorCasilla(Sensores sensores, estado aux){
+  
+  if (sensores.terreno[2] == 'K') {
+    aux.TieneBikini = true;
+	aux.TieneZapatillas = false;
+  }
+
+  if (sensores.terreno[2] == 'D') {
+    aux.TieneZapatillas = true;
+	aux.TieneBikini = false;
+  }
+
+  if (sensores.terreno[2] == 'X') {
+    aux.recarga = true;
+  }
+
+  return aux;
+}
+
+
+struct nodoCoste
+{
+	estado st;
+	list<Action> secuencia;
+	unsigned int coste;
+	
+};
+
+struct ComparaEstadosCostes{
+	bool operator()(const nodoCoste &a, const nodoCoste &n) const{
+		if ((a.st.fila > n.st.fila) or
+            (a.st.fila == n.st.fila and a.st.columna > n.st.columna) or
+            (a.st.fila == n.st.fila and a.st.columna == n.st.columna and a.st.orientacion > n.st.orientacion) or
+            (a.st.fila == n.st.fila and a.st.columna == n.st.columna and a.st.orientacion == n.st.orientacion and a.st.TieneZapatillas > n.st.TieneZapatillas) or
+            (a.st.fila == n.st.fila and a.st.columna == n.st.columna and a.st.orientacion == n.st.orientacion and a.st.TieneZapatillas == n.st.TieneZapatillas and a.st.TieneBikini > n.st.TieneBikini))
+			return true;
+		else
+			return false;
+	}
+};
+
+// calculo el coste de una accion en un nodo
+unsigned int ComportamientoJugador::CalculoCoste(int fil, int col, Action accion){
+	unsigned int coste = 0;
+	//char casilla = sensores.terreno[0]; // necesito saber que casilla estoy, ahora la comparo y veo su coste
+	char casilla = mapaResultado[fil][col];
+
+	if (accion != actIDLE ){ // si no es IDLE
+		coste = 1;
+		
+		// mirar la tabla de costes de bateria
+		if(casilla == 'A'){
+
+			if (accion =actFORWARD){
+
+			} else {
+
+			}
+		}  else if (casilla == 'B'){
+
+		} else if (casilla == 'T'){
+
+		}
+	
+	}
+	return coste;
+}
+
+
+
+bool ComportamientoJugador::pathFinding_CostoUniforme(const estado &origen, const estado &destino, list<Action> &plan){
+	
+	
+	// Borro la lista , borro mi plan
+	cout << "Calculando plan\n";
+	plan.clear();
+	set<estado, ComparaEstados> Cerrados; // Lista de Cerrados
+	//priority_queue<nodo> Abiertos;				  // Lista de Abiertos
+
+	nodo current;
+	current.st = origen;
+	current.secuencia.empty();
+
+	//Abiertos.push(current);
+	// hijoSEMITurnR.coste += coste(hijoSEMITurnR.fil,hijoSEMITurnR.col,tiene bikini, tiene zapas, actuo semiturn R )
+	
+	return false;
+}
+
+

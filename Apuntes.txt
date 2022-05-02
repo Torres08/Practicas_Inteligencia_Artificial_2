@@ -20,7 +20,7 @@ funcion pathFinding
     -plan: devuelve lista de acciones a realizar para ir de origen -> destino
 
 nivel 0 - Implementar Algoritmo de busqueda en profundidad
-nivel 1 - ImplementarAlgoritmo busqueda en anchura
+nivel 1 - Implementar Algoritmo busqueda en anchura
 nivel 2 - Algoritmo A*, o costo uniforme
 nevel 3 y 4 - Usal alguno de los anteriores o alguno nuevo
 
@@ -192,7 +192,7 @@ OBJETIVOS
         hay aldeanos y lobos
         La unica informacion es que cuando se completen 3 objetivos se 
         propondran 3 nuevos
-
+        A*
 --------------------------------------------------------------------------
 TEORIA
 
@@ -298,6 +298,29 @@ Funcion Busqueda anchura(datos) returns solution
     sus hijos, si uno de estos es solucion se acaba, en otro caso el 
     nodo revisado se elimina de la cola Abierto y pasa a cerrados
 
+Busqueda en costo uniforme
+    derivada de la busqueda en anchura, donde cada nodo guarda info sobre el
+    costo del camino desde el estado inicial hasta ese nodo
+
+    la diff es que aqui se usa una priority queue usando el coste del camino como 
+    solucion
+
+    limpiamos plan
+    priority queue Abiertos
+    set cerrados
+    poner el nodo raiz 
+
+    si abiertos empty o se hay llegado al final
+    do
+        current en cerrados
+        para cada accion
+            hijo
+        tomo el siguiente valor
+
+    
+    end 
+
+
 --------------------------------------------------------------------------
 PASOS QUE HE HECHO
 
@@ -305,3 +328,8 @@ NIVEL 1
     Busqueda en anchura
         - copiar las cabeceras como en el de profundidad 
         - al ser parecidos el sitch es igual con 1 objetivo
+        - lista de abiertos tendra que ser una pila - estructura FIFO
+        YA EL RESTO IGUAL QUE PROFUNDIDAD
+    
+
+NIVEL 2

@@ -9,6 +9,9 @@ struct estado {
   int fila;
   int columna;
   int orientacion;
+  bool TieneBikini;
+  bool TieneZapatillas;
+  bool recarga;
 };
 
 class ComportamientoJugador : public Comportamiento {
@@ -31,7 +34,7 @@ class ComportamientoJugador : public Comportamiento {
 
   private:
     // Declarar Variables de Estado
-    estado actual; // fil col brujula
+    estado actual; // fil col brujula TieneBikini TieneZapatillas
     list<estado> objetivos;
     list<Action> plan;
     bool hayPlan;
@@ -40,12 +43,16 @@ class ComportamientoJugador : public Comportamiento {
     bool pathFinding(int level, const estado &origen, const list<estado> &destino, list<Action> &plan);
     bool pathFinding_Profundidad(const estado &origen, const estado &destino, list<Action> &plan);
     bool pathFinding_Anchura(const estado &origen, const estado &destino, list<Action> &plan);
+    bool pathFinding_CostoUniforme(const estado &origen, const estado &destino, list<Action> &plan);
 
+    estado SensorCasilla(Sensores sensores, estado actual);
+    unsigned int CalculoCoste(int fil, int col, Action accion);
     void PintaPlan(list<Action> plan);
     bool HayObstaculoDelante(estado &st);
 
     void Inicializar(){
       hayPlan = false;
+      actual.TieneBikini = actual.TieneZapatillas = actual.recarga = false;
     }
 };
 
