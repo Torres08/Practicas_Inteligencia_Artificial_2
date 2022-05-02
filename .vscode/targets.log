@@ -1,0 +1,3999 @@
+make all --print-data-base --no-builtin-variables --no-builtin-rules --question
+# GNU Make 4.3
+# Built for x86_64-pc-linux-gnu
+# Copyright (C) 1988-2020 Free Software Foundation, Inc.
+# License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+# This is free software: you are free to change and redistribute it.
+# There is NO WARRANTY, to the extent permitted by law.
+
+# Make data base, printed on Mon May  2 16:25:27 2022
+
+# Variables
+
+# environment
+GDK_BACKEND = x11
+# environment
+LC_ALL = C
+# environment
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-420ef926-8df3-4528-9a32-dab8660e3338.sock
+# environment
+VSCODE_CWD = /home/icaro
+# environment
+LESS_TERMCAP_me = [0m
+# environment
+GDM_LANG = es_ES.utf8
+# default
+MAKE_COMMAND := make
+# environment
+QT_ACCESSIBILITY = 1
+# automatic
+@D = $(patsubst %/,%,$(dir $@))
+# environment
+VSCODE_HANDLES_UNCAUGHT_ERRORS = true
+# default
+.VARIABLES := 
+# environment
+PWD = /home/icaro/Escritorio/2º Cuatri/IA/practica2
+# automatic
+%D = $(patsubst %/,%,$(dir $%))
+# environment
+XDG_DATA_DIRS = /usr/share/xfce4:/home/icaro/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share:/usr/share:/usr/share
+# environment
+OLDPWD = /home/icaro
+# automatic
+^D = $(patsubst %/,%,$(dir $^))
+# environment
+VSCODE_LOG_STACK = true
+# automatic
+%F = $(notdir $%)
+# environment
+XDG_SESSION_PATH = /org/freedesktop/DisplayManager/Session0
+# environment
+LANG = C
+# environment
+POWERSHELL_UPDATECHECK = Off
+# environment
+XAUTHORITY = /home/icaro/.Xauthority
+# default
+.LOADED := 
+# environment
+LESS_TERMCAP_md = [1;36m
+# default
+.INCLUDE_DIRS = /usr/local/include /usr/include /usr/include
+# makefile (from 'Makefile', line 51)
+CMAKE_COMMAND = /usr/bin/cmake
+# makefile
+MAKEFLAGS = pqrR
+# environment
+LESS_TERMCAP_so = [01;33m
+# makefile
+CURDIR := /home/icaro/Escritorio/2º Cuatri/IA/practica2
+# environment
+VSCODE_PIPE_LOGGING = true
+# environment
+APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = true
+# automatic
+*D = $(patsubst %/,%,$(dir $*))
+# environment
+LESS_TERMCAP_ue = [0m
+# environment
+MFLAGS = -pqrR
+# environment
+SSH_AUTH_SOCK = /tmp/ssh-XXXXXXwCMPxS/agent.1145
+# default
+.SHELLFLAGS := -c
+# environment
+XDG_CONFIG_DIRS = /etc/xdg
+# automatic
++D = $(patsubst %/,%,$(dir $+))
+# environment
+VSCODE_CRASH_REPORTER_START_OPTIONS = {"companyName":"Microsoft","productName":"Code - OSS","submitURL":"","uploadToServer":false}
+# environment
+XDG_SESSION_DESKTOP = lightdm-xsession
+# makefile (from 'Makefile', line 1)
+MAKEFILE_LIST := Makefile
+# makefile (from 'Makefile', line 63)
+CMAKE_BINARY_DIR = "/home/icaro/Escritorio/2º Cuatri/IA/practica2"
+# automatic
+@F = $(notdir $@)
+# environment
+VSCODE_VERBOSE_LOGGING = true
+# environment
+VSCODE_PID = 24298
+# environment
+XDG_SESSION_TYPE = x11
+# automatic
+?D = $(patsubst %/,%,$(dir $?))
+# makefile (from 'Makefile', line 60)
+ 
+CMAKE_SOURCE_DIR = "/home/icaro/Escritorio/2º Cuatri/IA/practica2"
+# environment
+SESSION_MANAGER = local/kali:@/tmp/.ICE-unix/1145,unix/kali:/tmp/.ICE-unix/1145
+# automatic
+*F = $(notdir $*)
+# environment
+QT_QPA_PLATFORMTHEME = qt5ct
+# environment
+CHROME_DESKTOP = code-oss-url-handler.desktop
+# environment
+DBUS_SESSION_BUS_ADDRESS = unix:path=/run/user/1000/bus
+# automatic
+<D = $(patsubst %/,%,$(dir $<))
+# environment
+VSCODE_NLS_CONFIG = {"locale":"es","availableLanguages":{},"_languagePackSupport":true}
+# environment
+BREAKPAD_DUMP_LOCATION = /home/icaro/.config/Code - OSS/exthost Crash Reports
+# default
+MAKE_HOST := x86_64-pc-linux-gnu
+# makefile (from 'Makefile', line 48)
+SHELL = /bin/sh
+# environment
+LESS_TERMCAP_us = [1;32m
+# default
+MAKECMDGOALS := all
+# environment
+SHLVL = 0
+# environment
+MAKELEVEL := 0
+# default
+MAKE = $(MAKE_COMMAND)
+# environment
+PATH = /usr/local/sbin:/usr/sbin:/sbin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/home/icaro/.dotnet/tools
+# environment
+LESS_TERMCAP_se = [0m
+# default
+MAKEFILES := 
+# automatic
+^F = $(notdir $^)
+# environment
+COMMAND_NOT_FOUND_INSTALL_PROMPT = 1
+# environment
+LESS_TERMCAP_mb = [1;31m
+# environment
+VSCODE_LOG_NATIVE = false
+# automatic
+?F = $(notdir $?)
+# environment
+XDG_SEAT = seat0
+# environment
+XDG_CURRENT_DESKTOP = XFCE
+# environment
+LS_COLORS = 
+# automatic
++F = $(notdir $+)
+# environment
+XDG_SEAT_PATH = /org/freedesktop/DisplayManager/Seat0
+# environment
+DESKTOP_SESSION = lightdm-xsession
+# environment
+ORIGINAL_XDG_CURRENT_DESKTOP = XFCE
+# 'override' directive
+GNUMAKEFLAGS := 
+# makefile (from 'Makefile', line 57)
+EQUALS = =
+# environment
+LOGNAME = icaro
+# environment
+GIO_LAUNCHED_DESKTOP_FILE = /usr/share/applications/code-oss.desktop
+# environment
+XDG_VTNR = 7
+# makefile
+.DEFAULT_GOAL := default_target
+# makefile (from 'Makefile', line 54)
+RM = /usr/bin/cmake -E rm -f
+# environment
+DISPLAY = :0.0
+# environment
+USER = icaro
+# environment
+GTK_MODULES = gail:atk-bridge
+# default
+MAKE_VERSION := 4.3
+# environment
+GIO_LAUNCHED_DESKTOP_FILE_PID = 24298
+# environment
+SSH_AGENT_PID = 1196
+# environment
+VSCODE_NODE_CACHED_DATA_DIR = 
+# environment
+_ = /usr/lib/code-oss/code-oss
+# makefile (from 'Makefile', line 35)
+MAKESILENT = -s
+# environment
+XDG_RUNTIME_DIR = /run/user/1000
+# environment
+POWERSHELL_TELEMETRY_OPTOUT = 1
+# environment
+XDG_SESSION_CLASS = user
+# environment
+VSCODE_AMD_ENTRYPOINT = vs/workbench/services/extensions/node/extensionHostProcess
+# environment
+HOME = /home/icaro
+# environment
+_JAVA_OPTIONS = -Dawt.useSystemAAFontSettings=on -Dswing.aatext=true
+# environment
+ELECTRON_RUN_AS_NODE = 1
+# environment
+VSCODE_IPC_HOOK = /run/user/1000/vscode-f9f071d1-1.56.1-main.sock
+# environment
+GSETTINGS_SCHEMA_DIR = /home/icaro/data
+# environment
+XDG_SESSION_ID = 5
+# environment
+DOTNET_CLI_TELEMETRY_OPTOUT = 1
+# default
+.RECIPEPREFIX := 
+# automatic
+<F = $(notdir $<)
+# default
+SUFFIXES := 
+# environment
+QT_AUTO_SCREEN_SCALE_FACTOR = 0
+# environment
+XDG_GREETER_DATA_DIR = /var/lib/lightdm/data/icaro
+# default
+.FEATURES := target-specific order-only second-expansion else-if shortest-stem undefine oneshell nocomment grouped-target extra-prereqs archives jobserver output-sync check-symlink load
+# environment
+XDG_MENU_PREFIX = xfce-
+# environment
+GDMSESSION = lightdm-xsession
+# variable set hash-table stats:
+# Load=113/1024=11%, Rehash=0, Collisions=14/152=9%
+
+# Pattern-specific Variable Values
+
+# No pattern-specific variable values.
+
+# Directories
+
+# RCS: could not be stat'd.
+# SCCS: could not be stat'd.
+# . (device 66309, inode 14024991): 25 files, no impossibilities.
+
+# 25 files, no impossibilities in 3 directories.
+
+# Implicit Rules
+
+%: %,v
+
+%: RCS/%
+
+%: RCS/%,v
+
+%: SCCS/s.%
+
+%: s.%
+
+%.hpux_make_needs_suffix_list:
+
+# 6 implicit rules, 0 (0.0%) terminal.
+# Files
+
+src/obj3dlib/esfera3d.s: src/obj3dlib/esfera3d.cc.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_textbox.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 999):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_textbox.cpp.s
+
+src/modelos/perro/lomo.s: src/modelos/perro/lomo.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/item/item.s: src/modelos/item/item.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/arcball.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 391):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/arcball.cpp.i
+
+src/glui/glui_translation.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1023):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_translation.cpp.s
+
+motorLib/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 181):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorLib.dir/build.make CMakeFiles/motorLib.dir/build
+
+src/modelos/aldeano/cintura.i: src/modelos/aldeano/cintura.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+practica2/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 194):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/practica2.dir/build.make CMakeFiles/practica2.dir/build
+
+src/modelos/aldeano/cintura.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1239):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/cintura.cpp.s
+
+src/glui/glui_string.i: src/glui/glui_string.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_edittext.o: src/glui/glui_edittext.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_window.o: src/glui/glui_window.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_separator.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 887):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_separator.cpp.o
+
+Comportamientos_Jugador/aldeano.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 223):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/comportamientosLib.dir/build.make CMakeFiles/comportamientosLib.dir/Comportamientos_Jugador/aldeano.cpp.i
+
+src/glui/algebra3.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 367):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/algebra3.cpp.i
+
+src/glui/viewmodel.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+ 
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1143):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/viewmodel.cpp.s
+
+src/modelos/arbol/arbol.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1295):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/arbol/arbol.cpp.o
+
+Comportamientos_Jugador/perro.i: Comportamientos_Jugador/perro.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_control.s: src/glui/glui_control.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_button.s: src/glui/glui_button.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/aldeano/cabeza.s: src/modelos/aldeano/cabeza.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/jpeg_reader/jpg_memsrc.o: src/obj3dlib/jpeg_reader/jpg_memsrc.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/quaternion.i: src/glui/quaternion.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/toro3d.cc.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 2007):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/toro3d.cc.s
+
+src/glui/glui_list.s: src/glui/glui_list.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_treepanel.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1055):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_treepanel.cpp.o
+
+src/glui/glui_button.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 503):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_button.cpp.o
+
+depend:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 116):
+	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+
+src/motorlib/motor_juego.s: src/motorlib/motor_juego.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/cono3dwire.s: src/obj3dlib/cono3dwire.cc.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/icosaedro3d.cc.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1775):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/icosaedro3d.cc.o
+
+src/glui/quaternion.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1103):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/quaternion.cpp.o
+
+src/obj3dlib/jpeg_reader/jpg_readwrite.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1863):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/jpeg_reader/jpg_readwrite.cpp.s
+
+bin_src/juego.i: bin_src/juego.cc.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/file_ply_stl.i: src/obj3dlib/file_ply_stl.cc.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_filebrowser.s: src/glui/glui_filebrowser.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/perro/lomo.i: src/modelos/perro/lomo.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+bin_src/juegoSG.s: bin_src/juegoSG.cc.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/aldeano/torso.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1279):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/torso.cpp.i
+
+src/glui/glui_separator.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 895):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_separator.cpp.i
+
+src/glui/viewmodel.s: src/glui/viewmodel.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/motorlib/mapa.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1527):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorLib.dir/build.make CMakeFiles/motorLib.dir/src/motorlib/mapa.cpp.s
+
+src/obj3dlib/octaedro3d.s: src/obj3dlib/octaedro3d.cc.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_textbox.o: src/glui/glui_textbox.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_checkbox.s: src/glui/glui_checkbox.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_rollout.i: src/glui/glui_rollout.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+default_target: all
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_textbox.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 983):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_textbox.cpp.o
+
+src/modelos/arbol/arbol.i: src/modelos/arbol/arbol.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/viewmodel.o: src/glui/viewmodel.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+Comportamientos_Jugador/jugador.o: Comportamientos_Jugador/jugador.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_treepanel.i: src/glui/glui_treepanel.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_scrollbar.s: src/glui/glui_scrollbar.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/motorlib/motor_grafico.o: src/motorlib/motor_grafico.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/tetraedro3d.i: src/obj3dlib/tetraedro3d.cc.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/tetraedro3d.cc.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1967):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/tetraedro3d.cc.o
+
+src/glui/glui_textbox.i: src/glui/glui_textbox.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+practica2SG/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 207):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/practica2SG.dir/build.make CMakeFiles/practica2SG.dir/build
+
+src/glui/glui_bitmaps.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 479):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_bitmaps.cpp.o
+
+ 
+Comportamientos_Jugador/perro.s: Comportamientos_Jugador/perro.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_column.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 567):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_column.cpp.s
+
+src/glui/glui_filebrowser.i: src/glui/glui_filebrowser.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_listbox.s: src/glui/glui_listbox.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/viewmodel.i: src/glui/viewmodel.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+bin_src/juego.cc.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 303):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/practica2.dir/build.make CMakeFiles/practica2.dir/bin_src/juego.cc.s
+
+src/glui/glui_mouse_iaction.o: src/glui/glui_mouse_iaction.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/aldeano/brazo.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1183):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/brazo.cpp.i
+
+edit_cache/fast: edit_cache
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_radio.s: src/glui/glui_radio.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_translation.s: src/glui/glui_translation.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_list.i: src/glui/glui_list.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/cubo3d.i: src/obj3dlib/cubo3d.cc.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+Comportamientos_Jugador/perro.o: Comportamientos_Jugador/perro.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_column.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 559):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_column.cpp.i
+
+src/glui/glui_treepanel.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1071):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_treepanel.cpp.s
+
+src/motorlib/mapa.o: src/motorlib/mapa.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_tree.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1039):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_tree.cpp.i
+
+src/modelos/aldeano/cabeza.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1215):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/cabeza.cpp.s
+
+Comportamientos_Jugador/aldeano.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 215):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/comportamientosLib.dir/build.make CMakeFiles/comportamientosLib.dir/Comportamientos_Jugador/aldeano.cpp.o
+
+src/modelos/perro/cabeza.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1407):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/perro/cabeza.cpp.s
+
+src/glui/glui_column.s: src/glui/glui_column.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_string.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 975):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_string.cpp.s
+
+src/modelos/item/item.i: src/modelos/item/item.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/objeto3d.s: src/obj3dlib/objeto3d.cc.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_checkbox.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 535):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_checkbox.cpp.i
+
+src/glui/glui_rollout.o: src/glui/glui_rollout.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/jugador/quesito.i: src/modelos/jugador/quesito.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui.s: src/glui/glui.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_bitmap_img_data.o: src/glui/glui_bitmap_img_data.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/objeto3d.o: src/obj3dlib/objeto3d.cc.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/aldeano/cintura.s: src/modelos/aldeano/cintura.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/motorlib/util.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1607):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorLib.dir/build.make CMakeFiles/motorLib.dir/src/motorlib/util.cpp.o
+
+src/glui/glui_string.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 967):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_string.cpp.i
+
+bin_src/juegoSG.o: bin_src/juegoSG.cc.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/icosaedro3d.o: src/obj3dlib/icosaedro3d.cc.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/aldeano/pierna.i: src/modelos/aldeano/pierna.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/file_ply_stl.cc.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1759):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/file_ply_stl.cc.i
+
+src/glui/glui_rollout.s: src/glui/glui_rollout.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_mouse_iaction.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 735):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_mouse_iaction.cpp.s
+
+src/motorlib/mapa.s: src/motorlib/mapa.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/toro3d.o: src/obj3dlib/toro3d.cc.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/objrevolucion3d.o: src/obj3dlib/objrevolucion3d.cc.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+Makefile:
+#  Implicit rule search has been done.
+ 
+#  Last modified 2022-05-02 16:23:21.503490863
+#  File has been updated.
+#  Successfully updated.
+
+src/modelos/aldeano/pierna.s: src/modelos/aldeano/pierna.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+rebuild_cache:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 80):
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake --regenerate-during-build -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+
+src/modelos/jugador/jugador3d.o: src/modelos/jugador/jugador3d.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/aldeano/aldeano.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1159):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/aldeano.cpp.i
+
+src/obj3dlib/cono3d.cc.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1631):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/cono3d.cc.o
+
+src/obj3dlib/dodecaedro3d.o: src/obj3dlib/dodecaedro3d.cc.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_panel.i: src/glui/glui_panel.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_statictext.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 943):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_statictext.cpp.i
+
+src/glui/glui_column.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 551):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_column.cpp.o
+
+src/glui/glui_scrollbar.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 863):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_scrollbar.cpp.o
+
+src/glui/glui_bitmap_img_data.i: src/glui/glui_bitmap_img_data.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/motorlib/motor_juego.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1599):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorLib.dir/build.make CMakeFiles/motorLib.dir/src/motorlib/motor_juego.cpp.s
+
+src/glui/quaternion.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1111):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/quaternion.cpp.i
+
+src/obj3dlib/cono3d.i: src/obj3dlib/cono3d.cc.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+Comportamientos_Jugador/jugador.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 247):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/comportamientosLib.dir/build.make CMakeFiles/comportamientosLib.dir/Comportamientos_Jugador/jugador.cpp.i
+
+src/glui/glui_string.o: src/glui/glui_string.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/cubo3d.s: src/obj3dlib/cubo3d.cc.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/comportamientos/comportamiento.s: src/comportamientos/comportamiento.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+practica2SG: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 202):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 practica2SG
+
+src/comportamientos/comportamiento.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 351):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/comportamientosLib.dir/build.make CMakeFiles/comportamientosLib.dir/src/comportamientos/comportamiento.cpp.s
+
+src/obj3dlib/luz.o: src/obj3dlib/luz.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_listbox.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 703):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_listbox.cpp.i
+
+src/obj3dlib/octaedro3d.cc.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1959):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/octaedro3d.cc.s
+
+src/motorlib/motor_juego.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1591):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorLib.dir/build.make CMakeFiles/motorLib.dir/src/motorlib/motor_juego.cpp.i
+
+src/glui/glui.i: src/glui/glui.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/jpeg_reader/jpg_memsrc.s: src/obj3dlib/jpeg_reader/jpg_memsrc.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_column.i: src/glui/glui_column.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/comportamientos/comportamiento.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 335):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/comportamientosLib.dir/build.make CMakeFiles/comportamientosLib.dir/src/comportamientos/comportamiento.cpp.o
+
+src/glui/glui_statictext.i: src/glui/glui_statictext.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_node.s: src/glui/glui_node.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/retrato.o: src/modelos/retrato.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_button.o: src/glui/glui_button.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+Comportamientos_Jugador/jugador.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 239):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/comportamientosLib.dir/build.make CMakeFiles/comportamientosLib.dir/Comportamientos_Jugador/jugador.cpp.o
+
+src/glui/glui_textbox.s: src/glui/glui_textbox.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/tetraedro3d.s: src/obj3dlib/tetraedro3d.cc.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/motorlib/motor_grafico.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1575):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorLib.dir/build.make CMakeFiles/motorLib.dir/src/motorlib/motor_grafico.cpp.s
+
+src/glui/glui_separator.o: src/glui/glui_separator.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/cono3dwire.cc.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1663):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/cono3dwire.cc.i
+
+src/obj3dlib/objeto3d.i: src/obj3dlib/objeto3d.cc.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/quaternion.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1119):
+ 
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/quaternion.cpp.s
+
+.SILENT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+src/glui/glui_filebrowser.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 647):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_filebrowser.cpp.o
+
+src/glui/glui_panel.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 767):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_panel.cpp.o
+
+src/modelos/retrato.i: src/modelos/retrato.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_listbox.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 695):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_listbox.cpp.o
+
+src/glui/glui_treepanel.s: src/glui/glui_treepanel.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_commandline.i: src/glui/glui_commandline.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/objeto3d.cc.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1911):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/objeto3d.cc.s
+
+src/motorlib/monitor.i: src/motorlib/monitor.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_edittext.s: src/glui/glui_edittext.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/motorlib/entidad.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1495):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorLib.dir/build.make CMakeFiles/motorLib.dir/src/motorlib/entidad.cpp.i
+
+src/glui/glui_mouse_iaction.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 719):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_mouse_iaction.cpp.o
+
+src/motorlib/entidad.o: src/motorlib/entidad.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+clean:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 97):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+
+cmake_force:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_checkbox.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 527):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_checkbox.cpp.o
+
+src/glui/algebra3.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 375):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/algebra3.cpp.s
+
+src/glui/glui_checkbox.i: src/glui/glui_checkbox.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/jpeg_reader/jpg_imagen.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1815):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/jpeg_reader/jpg_imagen.cpp.s
+
+src/glui/glui_mouse_iaction.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 727):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_mouse_iaction.cpp.i
+
+src/glui/glui_statictext.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 951):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_statictext.cpp.s
+
+src/glui/glui_bitmaps.i: src/glui/glui_bitmaps.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/aldeano/aldeano.s: src/modelos/aldeano/aldeano.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/dodecaedro3d.i: src/obj3dlib/dodecaedro3d.cc.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/octaedro3d.cc.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1951):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/octaedro3d.cc.i
+
+src/obj3dlib/objrevolucion3d.cc.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1919):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/objrevolucion3d.cc.o
+
+preinstall/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 111):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+
+src/obj3dlib/jpeg_reader/jpg_imagen.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1807):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/jpeg_reader/jpg_imagen.cpp.i
+
+src/motorlib/monitor.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1543):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorLib.dir/build.make CMakeFiles/motorLib.dir/src/motorlib/monitor.cpp.i
+
+src/glui/quaternion.o: src/glui/quaternion.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_bitmaps.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 487):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_bitmaps.cpp.i
+
+src/glui/glui_control.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+ 
+#  recipe to execute (from 'Makefile', line 599):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_control.cpp.o
+
+src/motorlib/entidad.i: src/motorlib/entidad.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_commandline.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 575):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_commandline.cpp.o
+
+modelosBelkanLib/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 155):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/build
+
+GLUILib/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 142):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/build
+
+src/obj3dlib/dodecaedro3d.s: src/obj3dlib/dodecaedro3d.cc.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+edit_cache:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 70):
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+
+src/glui/glui_button.i: src/glui/glui_button.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_window.s: src/glui/glui_window.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_translation.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1007):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_translation.cpp.o
+
+src/glui/glui_filebrowser.o: src/glui/glui_filebrowser.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/cono3d.s: src/obj3dlib/cono3d.cc.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/tetraedro3d.cc.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1975):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/tetraedro3d.cc.i
+ 
+
+Comportamientos_Jugador/aldeano.o: Comportamientos_Jugador/aldeano.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_node.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 759):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_node.cpp.s
+
+src/modelos/jugador/jugador3d.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1343):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/jugador/jugador3d.cpp.o
+
+src/modelos/aldeano/pierna.o: src/modelos/aldeano/pierna.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+bin_src/juegoSG.cc.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 319):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/practica2SG.dir/build.make CMakeFiles/practica2SG.dir/bin_src/juegoSG.cc.i
+
+src/glui/glui_checkbox.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 543):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_checkbox.cpp.s
+
+src/glui/glui_tree.i: src/glui/glui_tree.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/aldeano/cabeza.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1207):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/cabeza.cpp.i
+
+src/modelos/perro/lomo.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1423):
+ 
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/perro/lomo.cpp.i
+
+src/glui/glui_add_controls.i: src/glui/glui_add_controls.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_spinner.s: src/glui/glui_spinner.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/retrato.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1463):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/retrato.cpp.o
+
+src/motorlib/mapa.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1511):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorLib.dir/build.make CMakeFiles/motorLib.dir/src/motorlib/mapa.cpp.o
+
+src/glui/glui_radio.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 799):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_radio.cpp.i
+
+src/glui/glui_scrollbar.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 879):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_scrollbar.cpp.s
+
+src/glui/glui_mouse_iaction.i: src/glui/glui_mouse_iaction.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_radio.i: src/glui/glui_radio.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/cono3d.o: src/obj3dlib/cono3d.cc.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/file_ply_stl.o: src/obj3dlib/file_ply_stl.cc.o
+#  Phony target (prerequisite of .PHONY).
+ 
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_control.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 615):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_control.cpp.s
+
+src/motorlib/motor_juego.i: src/motorlib/motor_juego.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_commandline.s: src/glui/glui_commandline.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/toro3d.cc.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1999):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/toro3d.cc.i
+
+src/glui/glui_edittext.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 639):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_edittext.cpp.s
+
+rebuild_cache/fast: rebuild_cache
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+.hpux_make_needs_suffix_list:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+src/glui/glui_filebrowser.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+ 
+#  recipe to execute (from 'Makefile', line 655):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_filebrowser.cpp.i
+
+src/motorlib/mapa.i: src/motorlib/mapa.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/jpeg_reader/jpg_memsrc.i: src/obj3dlib/jpeg_reader/jpg_memsrc.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+Comportamientos_Jugador/perro.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 279):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/comportamientosLib.dir/build.make CMakeFiles/comportamientosLib.dir/Comportamientos_Jugador/perro.cpp.s
+
+src/glui/glui_scrollbar.i: src/glui/glui_scrollbar.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_add_controls.o: src/glui/glui_add_controls.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/viewmodel.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1135):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/viewmodel.cpp.i
+
+src/modelos/aldeano/aldeano.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1167):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/aldeano.cpp.s
+
+src/modelos/aldeano/aldeano.i: src/modelos/aldeano/aldeano.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+ 
+
+src/glui/glui_window.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1087):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_window.cpp.i
+
+src/glui/glui_scrollbar.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 871):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_scrollbar.cpp.i
+
+src/obj3dlib/icosaedro3d.cc.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1791):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/icosaedro3d.cc.s
+
+src/modelos/perro/lomo.o: src/modelos/perro/lomo.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/motorlib/entidad.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1487):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorLib.dir/build.make CMakeFiles/motorLib.dir/src/motorlib/entidad.cpp.o
+
+motorLib: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 176):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 motorLib
+
+src/obj3dlib/dodecaedro3d.cc.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1703):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/dodecaedro3d.cc.o
+
+src/glui/glui_checkbox.o: src/glui/glui_checkbox.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/dodecaedro3d.cc.i:
+ 
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1711):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/dodecaedro3d.cc.i
+
+src/glui/glui_bitmaps.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 495):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_bitmaps.cpp.s
+
+src/glui/glui_control.o: src/glui/glui_control.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_textbox.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 991):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_textbox.cpp.i
+
+src/obj3dlib/octaedro3d.o: src/obj3dlib/octaedro3d.cc.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_translation.i: src/glui/glui_translation.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/arcball.o: src/glui/arcball.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+preinstall: all
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 106):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+
+src/glui/glui_tree.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1047):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_tree.cpp.s
+
+src/glui/glui_separator.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 903):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_separator.cpp.s
+
+src/obj3dlib/file_ply_stl.cc.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1751):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/file_ply_stl.cc.o
+
+src/glui/glui_rotation.s: src/glui/glui_rotation.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/objrevolucion3d.cc.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1935):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/objrevolucion3d.cc.s
+
+src/glui/glui_commandline.o: src/glui/glui_commandline.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/motorlib/monitor.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1551):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorLib.dir/build.make CMakeFiles/motorLib.dir/src/motorlib/monitor.cpp.s
+
+src/glui/glui_radio.o: src/glui/glui_radio.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_spinner.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 927):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_spinner.cpp.s
+
+Comportamientos_Jugador/aldeano.s: Comportamientos_Jugador/aldeano.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/tetraedro3d.o: src/obj3dlib/tetraedro3d.cc.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/toro3d.cc.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1991):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/toro3d.cc.o
+
+src/modelos/aldeano/brazo.o: src/modelos/aldeano/brazo.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/motorlib/entidad.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1503):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorLib.dir/build.make CMakeFiles/motorLib.dir/src/motorlib/entidad.cpp.s
+
+src/obj3dlib/file_ply_stl.s: src/obj3dlib/file_ply_stl.cc.s
+ 
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/perro/cabeza.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1391):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/perro/cabeza.cpp.o
+
+src/modelos/jugador/quesito.s: src/modelos/jugador/quesito.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_bitmap_img_data.s: src/glui/glui_bitmap_img_data.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/motorlib/motor_juego.o: src/motorlib/motor_juego.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+bin_src/juegoSG.i: bin_src/juegoSG.cc.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_listbox.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 711):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_listbox.cpp.s
+
+bin_src/juego.cc.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 287):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/practica2.dir/build.make CMakeFiles/practica2.dir/bin_src/juego.cc.o
+
+src/glui/glui_mouse_iaction.s: src/glui/glui_mouse_iaction.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_scrollbar.o: src/glui/glui_scrollbar.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/retrato.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1471):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/retrato.cpp.i
+
+src/motorlib/util.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1623):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorLib.dir/build.make CMakeFiles/motorLib.dir/src/motorlib/util.cpp.s
+
+src/glui/glui_control.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 607):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_control.cpp.i
+
+ 
+src/glui/glui_button.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 519):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_button.cpp.s
+
+src/obj3dlib/objeto3d.cc.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1895):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/objeto3d.cc.o
+
+src/modelos/aldeano/brazo.i: src/modelos/aldeano/brazo.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# Not a target:
+.DEFAULT:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+src/obj3dlib/objeto3d.cc.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1903):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/objeto3d.cc.i
+
+src/glui/glui_treepanel.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1063):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_treepanel.cpp.i
+
+src/obj3dlib/jpeg_reader/jpg_readwrite.i: src/obj3dlib/jpeg_reader/jpg_readwrite.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/algebra3.i: src/glui/algebra3.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_rotation.i: src/glui/glui_rotation.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/objrevolucion3d.i: src/obj3dlib/objrevolucion3d.cc.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+ 
+src/glui/glui_statictext.o: src/glui/glui_statictext.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/aldeano/aldeano.o: src/modelos/aldeano/aldeano.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/perro/cabeza.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1399):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/perro/cabeza.cpp.i
+
+all: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Command line target.
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/6=0%
+#  recipe to execute (from 'Makefile', line 90):
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/icaro/Escritorio/2º Cuatri/IA/practica2/CMakeFiles" "/home/icaro/Escritorio/2º Cuatri/IA/practica2//CMakeFiles/progress.marks"
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/icaro/Escritorio/2º Cuatri/IA/practica2/CMakeFiles" 0
+
+src/motorlib/monitor.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1535):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorLib.dir/build.make CMakeFiles/motorLib.dir/src/motorlib/monitor.cpp.o
+
+src/modelos/perro/perro.i: src/modelos/perro/perro.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/aldeano/torso.s: src/modelos/aldeano/torso.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/cono3dwire.cc.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1671):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/cono3dwire.cc.s
+
+src/modelos/perro/lomo.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1415):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/perro/lomo.cpp.o
+
+src/obj3dlib/luz.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1879):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/luz.cpp.i
+
+src/modelos/aldeano/torso.o: src/modelos/aldeano/torso.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_node.o: src/glui/glui_node.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/comportamientos/comportamiento.o: src/comportamientos/comportamiento.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_node.i: src/glui/glui_node.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_tree.s: src/glui/glui_tree.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/item/item.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1319):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/item/item.cpp.o
+
+help:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 2012):
+	@echo "The following are some of the valid targets for this Makefile:"
+	@echo "... all (the default if no target is provided)"
+	@echo "... clean"
+	@echo "... depend"
+	@echo "... edit_cache"
+	@echo "... rebuild_cache"
+	@echo "... GLUILib"
+	@echo "... comportamientosLib"
+	@echo "... modelosBelkanLib"
+	@echo "... motorLib"
+	@echo "... obj3DLib"
+	@echo "... practica2"
+	@echo "... practica2SG"
+	@echo "... Comportamientos_Jugador/aldeano.o"
+	@echo "... Comportamientos_Jugador/aldeano.i"
+	@echo "... Comportamientos_Jugador/aldeano.s"
+	@echo "... Comportamientos_Jugador/jugador.o"
+	@echo "... Comportamientos_Jugador/jugador.i"
+	@echo "... Comportamientos_Jugador/jugador.s"
+	@echo "... Comportamientos_Jugador/perro.o"
+	@echo "... Comportamientos_Jugador/perro.i"
+	@echo "... Comportamientos_Jugador/perro.s"
+	@echo "... bin_src/juego.o"
+	@echo "... bin_src/juego.i"
+	@echo "... bin_src/juego.s"
+	@echo "... bin_src/juegoSG.o"
+	@echo "... bin_src/juegoSG.i"
+	@echo "... bin_src/juegoSG.s"
+	@echo "... src/comportamientos/comportamiento.o"
+	@echo "... src/comportamientos/comportamiento.i"
+	@echo "... src/comportamientos/comportamiento.s"
+	@echo "... src/glui/algebra3.o"
+	@echo "... src/glui/algebra3.i"
+	@echo "... src/glui/algebra3.s"
+	@echo "... src/glui/arcball.o"
+	@echo "... src/glui/arcball.i"
+	@echo "... src/glui/arcball.s"
+	@echo "... src/glui/glui.o"
+	@echo "... src/glui/glui.i"
+	@echo "... src/glui/glui.s"
+	@echo "... src/glui/glui_add_controls.o"
+	@echo "... src/glui/glui_add_controls.i"
+	@echo "... src/glui/glui_add_controls.s"
+	@echo "... src/glui/glui_bitmap_img_data.o"
+	@echo "... src/glui/glui_bitmap_img_data.i"
+	@echo "... src/glui/glui_bitmap_img_data.s"
+	@echo "... src/glui/glui_bitmaps.o"
+	@echo "... src/glui/glui_bitmaps.i"
+	@echo "... src/glui/glui_bitmaps.s"
+	@echo "... src/glui/glui_button.o"
+	@echo "... src/glui/glui_button.i"
+	@echo "... src/glui/glui_button.s"
+	@echo "... src/glui/glui_checkbox.o"
+	@echo "... src/glui/glui_checkbox.i"
+	@echo "... src/glui/glui_checkbox.s"
+	@echo "... src/glui/glui_column.o"
+	@echo "... src/glui/glui_column.i"
+	@echo "... src/glui/glui_column.s"
+	@echo "... src/glui/glui_commandline.o"
+	@echo "... src/glui/glui_commandline.i"
+	@echo "... src/glui/glui_commandline.s"
+	@echo "... src/glui/glui_control.o"
+	@echo "... src/glui/glui_control.i"
+ 
+	@echo "... src/glui/glui_control.s"
+	@echo "... src/glui/glui_edittext.o"
+	@echo "... src/glui/glui_edittext.i"
+	@echo "... src/glui/glui_edittext.s"
+	@echo "... src/glui/glui_filebrowser.o"
+	@echo "... src/glui/glui_filebrowser.i"
+	@echo "... src/glui/glui_filebrowser.s"
+	@echo "... src/glui/glui_list.o"
+	@echo "... src/glui/glui_list.i"
+	@echo "... src/glui/glui_list.s"
+	@echo "... src/glui/glui_listbox.o"
+	@echo "... src/glui/glui_listbox.i"
+	@echo "... src/glui/glui_listbox.s"
+	@echo "... src/glui/glui_mouse_iaction.o"
+	@echo "... src/glui/glui_mouse_iaction.i"
+	@echo "... src/glui/glui_mouse_iaction.s"
+	@echo "... src/glui/glui_node.o"
+	@echo "... src/glui/glui_node.i"
+	@echo "... src/glui/glui_node.s"
+	@echo "... src/glui/glui_panel.o"
+	@echo "... src/glui/glui_panel.i"
+	@echo "... src/glui/glui_panel.s"
+	@echo "... src/glui/glui_radio.o"
+	@echo "... src/glui/glui_radio.i"
+	@echo "... src/glui/glui_radio.s"
+	@echo "... src/glui/glui_rollout.o"
+	@echo "... src/glui/glui_rollout.i"
+	@echo "... src/glui/glui_rollout.s"
+	@echo "... src/glui/glui_rotation.o"
+	@echo "... src/glui/glui_rotation.i"
+	@echo "... src/glui/glui_rotation.s"
+	@echo "... src/glui/glui_scrollbar.o"
+	@echo "... src/glui/glui_scrollbar.i"
+	@echo "... src/glui/glui_scrollbar.s"
+	@echo "... src/glui/glui_separator.o"
+	@echo "... src/glui/glui_separator.i"
+	@echo "... src/glui/glui_separator.s"
+	@echo "... src/glui/glui_spinner.o"
+	@echo "... src/glui/glui_spinner.i"
+	@echo "... src/glui/glui_spinner.s"
+	@echo "... src/glui/glui_statictext.o"
+	@echo "... src/glui/glui_statictext.i"
+	@echo "... src/glui/glui_statictext.s"
+	@echo "... src/glui/glui_string.o"
+	@echo "... src/glui/glui_string.i"
+	@echo "... src/glui/glui_string.s"
+	@echo "... src/glui/glui_textbox.o"
+	@echo "... src/glui/glui_textbox.i"
+	@echo "... src/glui/glui_textbox.s"
+	@echo "... src/glui/glui_translation.o"
+	@echo "... src/glui/glui_translation.i"
+	@echo "... src/glui/glui_translation.s"
+	@echo "... src/glui/glui_tree.o"
+	@echo "... src/glui/glui_tree.i"
+	@echo "... src/glui/glui_tree.s"
+	@echo "... src/glui/glui_treepanel.o"
+	@echo "... src/glui/glui_treepanel.i"
+	@echo "... src/glui/glui_treepanel.s"
+	@echo "... src/glui/glui_window.o"
+	@echo "... src/glui/glui_window.i"
+	@echo "... src/glui/glui_window.s"
+	@echo "... src/glui/quaternion.o"
+	@echo "... src/glui/quaternion.i"
+	@echo "... src/glui/quaternion.s"
+	@echo "... src/glui/viewmodel.o"
+	@echo "... src/glui/viewmodel.i"
+	@echo "... src/glui/viewmodel.s"
+	@echo "... src/modelos/aldeano/aldeano.o"
+	@echo "... src/modelos/aldeano/aldeano.i"
+	@echo "... src/modelos/aldeano/aldeano.s"
+	@echo "... src/modelos/aldeano/brazo.o"
+	@echo "... src/modelos/aldeano/brazo.i"
+	@echo "... src/modelos/aldeano/brazo.s"
+	@echo "... src/modelos/aldeano/cabeza.o"
+	@echo "... src/modelos/aldeano/cabeza.i"
+	@echo "... src/modelos/aldeano/cabeza.s"
+	@echo "... src/modelos/aldeano/cintura.o"
+	@echo "... src/modelos/aldeano/cintura.i"
+	@echo "... src/modelos/aldeano/cintura.s"
+	@echo "... src/modelos/aldeano/pierna.o"
+	@echo "... src/modelos/aldeano/pierna.i"
+	@echo "... src/modelos/aldeano/pierna.s"
+	@echo "... src/modelos/aldeano/torso.o"
+	@echo "... src/modelos/aldeano/torso.i"
+	@echo "... src/modelos/aldeano/torso.s"
+	@echo "... src/modelos/arbol/arbol.o"
+	@echo "... src/modelos/arbol/arbol.i"
+	@echo "... src/modelos/arbol/arbol.s"
+	@echo "... src/modelos/item/item.o"
+	@echo "... src/modelos/item/item.i"
+	@echo "... src/modelos/item/item.s"
+	@echo "... src/modelos/jugador/jugador3d.o"
+	@echo "... src/modelos/jugador/jugador3d.i"
+ 
+	@echo "... src/modelos/jugador/jugador3d.s"
+	@echo "... src/modelos/jugador/quesito.o"
+	@echo "... src/modelos/jugador/quesito.i"
+	@echo "... src/modelos/jugador/quesito.s"
+	@echo "... src/modelos/perro/cabeza.o"
+	@echo "... src/modelos/perro/cabeza.i"
+	@echo "... src/modelos/perro/cabeza.s"
+	@echo "... src/modelos/perro/lomo.o"
+	@echo "... src/modelos/perro/lomo.i"
+	@echo "... src/modelos/perro/lomo.s"
+	@echo "... src/modelos/perro/perro.o"
+	@echo "... src/modelos/perro/perro.i"
+	@echo "... src/modelos/perro/perro.s"
+	@echo "... src/modelos/retrato.o"
+	@echo "... src/modelos/retrato.i"
+	@echo "... src/modelos/retrato.s"
+	@echo "... src/motorlib/entidad.o"
+	@echo "... src/motorlib/entidad.i"
+	@echo "... src/motorlib/entidad.s"
+	@echo "... src/motorlib/mapa.o"
+	@echo "... src/motorlib/mapa.i"
+	@echo "... src/motorlib/mapa.s"
+	@echo "... src/motorlib/monitor.o"
+	@echo "... src/motorlib/monitor.i"
+	@echo "... src/motorlib/monitor.s"
+	@echo "... src/motorlib/motor_grafico.o"
+	@echo "... src/motorlib/motor_grafico.i"
+	@echo "... src/motorlib/motor_grafico.s"
+	@echo "... src/motorlib/motor_juego.o"
+	@echo "... src/motorlib/motor_juego.i"
+	@echo "... src/motorlib/motor_juego.s"
+	@echo "... src/motorlib/util.o"
+	@echo "... src/motorlib/util.i"
+	@echo "... src/motorlib/util.s"
+	@echo "... src/obj3dlib/cono3d.o"
+	@echo "... src/obj3dlib/cono3d.i"
+	@echo "... src/obj3dlib/cono3d.s"
+	@echo "... src/obj3dlib/cono3dwire.o"
+	@echo "... src/obj3dlib/cono3dwire.i"
+	@echo "... src/obj3dlib/cono3dwire.s"
+	@echo "... src/obj3dlib/cubo3d.o"
+	@echo "... src/obj3dlib/cubo3d.i"
+	@echo "... src/obj3dlib/cubo3d.s"
+	@echo "... src/obj3dlib/dodecaedro3d.o"
+	@echo "... src/obj3dlib/dodecaedro3d.i"
+	@echo "... src/obj3dlib/dodecaedro3d.s"
+	@echo "... src/obj3dlib/esfera3d.o"
+	@echo "... src/obj3dlib/esfera3d.i"
+	@echo "... src/obj3dlib/esfera3d.s"
+	@echo "... src/obj3dlib/file_ply_stl.o"
+	@echo "... src/obj3dlib/file_ply_stl.i"
+	@echo "... src/obj3dlib/file_ply_stl.s"
+	@echo "... src/obj3dlib/icosaedro3d.o"
+	@echo "... src/obj3dlib/icosaedro3d.i"
+	@echo "... src/obj3dlib/icosaedro3d.s"
+	@echo "... src/obj3dlib/jpeg_reader/jpg_imagen.o"
+	@echo "... src/obj3dlib/jpeg_reader/jpg_imagen.i"
+	@echo "... src/obj3dlib/jpeg_reader/jpg_imagen.s"
+ 
+	@echo "... src/obj3dlib/jpeg_reader/jpg_memsrc.o"
+	@echo "... src/obj3dlib/jpeg_reader/jpg_memsrc.i"
+	@echo "... src/obj3dlib/jpeg_reader/jpg_memsrc.s"
+	@echo "... src/obj3dlib/jpeg_reader/jpg_readwrite.o"
+	@echo "... src/obj3dlib/jpeg_reader/jpg_readwrite.i"
+	@echo "... src/obj3dlib/jpeg_reader/jpg_readwrite.s"
+	@echo "... src/obj3dlib/luz.o"
+	@echo "... src/obj3dlib/luz.i"
+	@echo "... src/obj3dlib/luz.s"
+	@echo "... src/obj3dlib/objeto3d.o"
+	@echo "... src/obj3dlib/objeto3d.i"
+	@echo "... src/obj3dlib/objeto3d.s"
+	@echo "... src/obj3dlib/objrevolucion3d.o"
+	@echo "... src/obj3dlib/objrevolucion3d.i"
+	@echo "... src/obj3dlib/objrevolucion3d.s"
+	@echo "... src/obj3dlib/octaedro3d.o"
+	@echo "... src/obj3dlib/octaedro3d.i"
+	@echo "... src/obj3dlib/octaedro3d.s"
+	@echo "... src/obj3dlib/tetraedro3d.o"
+	@echo "... src/obj3dlib/tetraedro3d.i"
+	@echo "... src/obj3dlib/tetraedro3d.s"
+	@echo "... src/obj3dlib/toro3d.o"
+	@echo "... src/obj3dlib/toro3d.i"
+	@echo "... src/obj3dlib/toro3d.s"
+
+src/glui/glui_spinner.i: src/glui/glui_spinner.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/perro/lomo.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1431):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/perro/lomo.cpp.s
+
+src/motorlib/util.o: src/motorlib/util.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/jpeg_reader/jpg_readwrite.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1855):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/jpeg_reader/jpg_readwrite.cpp.i
+
+bin_src/juego.o: bin_src/juego.cc.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/perro/perro.s: src/modelos/perro/perro.cpp.s
+#  Phony target (prerequisite of .PHONY).
+ 
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_add_controls.s: src/glui/glui_add_controls.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/algebra3.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 359):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/algebra3.cpp.o
+
+src/obj3dlib/jpeg_reader/jpg_memsrc.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1839):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/jpeg_reader/jpg_memsrc.cpp.s
+
+src/obj3dlib/jpeg_reader/jpg_imagen.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1799):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/jpeg_reader/jpg_imagen.cpp.o
+
+src/glui/glui_node.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 743):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_node.cpp.o
+
+src/obj3dlib/cono3dwire.cc.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1655):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/cono3dwire.cc.o
+
+clean/fast: clean
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+ 
+src/glui/arcball.i: src/glui/arcball.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/aldeano/cabeza.o: src/modelos/aldeano/cabeza.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/esfera3d.i: src/obj3dlib/esfera3d.cc.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/aldeano/torso.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1287):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/torso.cpp.s
+
+src/glui/glui_tree.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1031):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_tree.cpp.o
+
+src/obj3dlib/jpeg_reader/jpg_imagen.o: src/obj3dlib/jpeg_reader/jpg_imagen.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/jpeg_reader/jpg_readwrite.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1847):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/jpeg_reader/jpg_readwrite.cpp.o
+
+src/obj3dlib/toro3d.s: src/obj3dlib/toro3d.cc.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_spinner.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+ 
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 911):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_spinner.cpp.o
+
+src/obj3dlib/cono3d.cc.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1639):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/cono3d.cc.i
+
+src/obj3dlib/jpeg_reader/jpg_imagen.s: src/obj3dlib/jpeg_reader/jpg_imagen.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_edittext.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 631):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_edittext.cpp.i
+
+src/modelos/jugador/jugador3d.s: src/modelos/jugador/jugador3d.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/aldeano/pierna.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1247):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/pierna.cpp.o
+
+src/motorlib/motor_grafico.s: src/motorlib/motor_grafico.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/aldeano/brazo.s: src/modelos/aldeano/brazo.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/aldeano/cintura.o: src/modelos/aldeano/cintura.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_tree.o: src/glui/glui_tree.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/aldeano/torso.i: src/modelos/aldeano/torso.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+ 
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/cono3d.cc.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1647):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/cono3d.cc.s
+
+src/obj3dlib/jpeg_reader/jpg_imagen.i: src/obj3dlib/jpeg_reader/jpg_imagen.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_translation.o: src/glui/glui_translation.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_radio.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 791):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_radio.cpp.o
+
+src/glui/arcball.s: src/glui/arcball.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/motorlib/mapa.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1519):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorLib.dir/build.make CMakeFiles/motorLib.dir/src/motorlib/mapa.cpp.i
+
+src/modelos/arbol/arbol.o: src/modelos/arbol/arbol.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_bitmap_img_data.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 471):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_bitmap_img_data.cpp.s
+
+src/modelos/aldeano/cabeza.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+ 
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1199):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/cabeza.cpp.o
+
+src/obj3dlib/cubo3d.cc.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1679):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/cubo3d.cc.o
+
+src/modelos/aldeano/brazo.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1175):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/brazo.cpp.o
+
+src/modelos/perro/cabeza.s: src/modelos/perro/cabeza.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_list.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 671):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_list.cpp.o
+
+src/glui/glui_spinner.o: src/glui/glui_spinner.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/jugador/jugador3d.i: src/modelos/jugador/jugador3d.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/toro3d.i: src/obj3dlib/toro3d.cc.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/algebra3.o: src/glui/algebra3.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/motorlib/monitor.s: src/motorlib/monitor.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+ 
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/jpeg_reader/jpg_readwrite.o: src/obj3dlib/jpeg_reader/jpg_readwrite.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/aldeano/cabeza.i: src/modelos/aldeano/cabeza.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/item/item.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1335):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/item/item.cpp.s
+
+src/modelos/perro/perro.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1455):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/perro/perro.cpp.s
+
+src/glui/glui_window.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1079):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_window.cpp.o
+
+src/glui/glui.o: src/glui/glui.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/aldeano/cintura.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1231):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/cintura.cpp.i
+
+src/obj3dlib/cubo3d.cc.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1687):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/cubo3d.cc.i
+
+Comportamientos_Jugador/aldeano.i: Comportamientos_Jugador/aldeano.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+ 
+src/modelos/aldeano/cintura.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1223):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/cintura.cpp.o
+
+src/motorlib/util.i: src/motorlib/util.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+Comportamientos_Jugador/jugador.i: Comportamientos_Jugador/jugador.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/motorlib/util.s: src/motorlib/util.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_rotation.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 847):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_rotation.cpp.i
+
+src/glui/glui_spinner.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 919):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_spinner.cpp.i
+
+.NOTPARALLEL:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+GLUILib: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 137):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 GLUILib
+
+src/obj3dlib/objrevolucion3d.cc.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+ 
+#  recipe to execute (from 'Makefile', line 1927):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/objrevolucion3d.cc.i
+
+src/modelos/arbol/arbol.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1303):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/arbol/arbol.cpp.i
+
+src/motorlib/motor_grafico.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1559):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorLib.dir/build.make CMakeFiles/motorLib.dir/src/motorlib/motor_grafico.cpp.o
+
+src/motorlib/motor_grafico.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1567):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorLib.dir/build.make CMakeFiles/motorLib.dir/src/motorlib/motor_grafico.cpp.i
+
+src/glui/glui_button.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 511):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_button.cpp.i
+
+src/glui/glui_statictext.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 935):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_statictext.cpp.o
+
+src/glui/glui_list.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 679):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_list.cpp.i
+
+src/motorlib/motor_juego.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+ 
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1583):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorLib.dir/build.make CMakeFiles/motorLib.dir/src/motorlib/motor_juego.cpp.o
+
+src/glui/glui_panel.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 783):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_panel.cpp.s
+
+src/obj3dlib/esfera3d.o: src/obj3dlib/esfera3d.cc.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/jpeg_reader/jpg_memsrc.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1831):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/jpeg_reader/jpg_memsrc.cpp.i
+
+src/glui/glui_window.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1095):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_window.cpp.s
+
+src/glui/glui_separator.i: src/glui/glui_separator.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+Comportamientos_Jugador/jugador.s: Comportamientos_Jugador/jugador.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/tetraedro3d.cc.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1983):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/tetraedro3d.cc.s
+
+bin_src/juego.s: bin_src/juego.cc.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_rollout.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+ 
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 815):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_rollout.cpp.o
+
+src/modelos/item/item.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1327):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/item/item.cpp.i
+
+src/glui/glui_node.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 751):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_node.cpp.i
+
+src/glui/algebra3.s: src/glui/algebra3.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_bitmaps.s: src/glui/glui_bitmaps.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/arbol/arbol.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1311):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/arbol/arbol.cpp.s
+
+src/glui/glui_edittext.i: src/glui/glui_edittext.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/arcball.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 399):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/arcball.cpp.s
+
+ 
+cmake_check_build_system:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  Implicit/static pattern stem: ''
+#  File does not exist.
+#  File has been updated.
+#  Needs to be updated (-q is set).
+# automatic
+# @ := cmake_check_build_system
+# automatic
+# * := 
+# automatic
+# < := 
+# automatic
+# + := 
+# automatic
+# % := 
+# automatic
+# ^ := 
+# automatic
+# ? := 
+# automatic
+# | := 
+# variable set hash-table stats:
+# Load=8/32=25%, Rehash=0, Collisions=1/14=7%
+#  recipe to execute (from 'Makefile', line 2261):
+	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+
+src/modelos/aldeano/pierna.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1255):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/pierna.cpp.i
+
+src/obj3dlib/octaedro3d.cc.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1943):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/octaedro3d.cc.o
+
+comportamientosLib/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 168):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/comportamientosLib.dir/build.make CMakeFiles/comportamientosLib.dir/build
+
+ 
+src/glui/glui_list.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 687):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_list.cpp.s
+
+Comportamientos_Jugador/aldeano.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 231):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/comportamientosLib.dir/build.make CMakeFiles/comportamientosLib.dir/Comportamientos_Jugador/aldeano.cpp.s
+
+src/glui/glui_panel.o: src/glui/glui_panel.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+Comportamientos_Jugador/perro.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 263):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/comportamientosLib.dir/build.make CMakeFiles/comportamientosLib.dir/Comportamientos_Jugador/perro.cpp.o
+
+src/glui/glui_edittext.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 623):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_edittext.cpp.o
+
+src/obj3dlib/jpeg_reader/jpg_readwrite.s: src/obj3dlib/jpeg_reader/jpg_readwrite.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_bitmap_img_data.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 455):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_bitmap_img_data.cpp.o
+
+src/glui/glui_treepanel.o: src/glui/glui_treepanel.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/perro/cabeza.i: src/modelos/perro/cabeza.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+ 
+#  File does not exist.
+#  File has not been updated.
+
+bin_src/juegoSG.cc.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 327):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/practica2SG.dir/build.make CMakeFiles/practica2SG.dir/bin_src/juegoSG.cc.s
+
+src/obj3dlib/cubo3d.cc.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1695):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/cubo3d.cc.s
+
+bin_src/juego.cc.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 295):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/practica2.dir/build.make CMakeFiles/practica2.dir/bin_src/juego.cc.i
+
+src/obj3dlib/file_ply_stl.cc.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1767):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/file_ply_stl.cc.s
+
+src/obj3dlib/octaedro3d.i: src/obj3dlib/octaedro3d.cc.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+bin_src/juegoSG.cc.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 311):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/practica2SG.dir/build.make CMakeFiles/practica2SG.dir/bin_src/juegoSG.cc.o
+
+src/modelos/aldeano/pierna.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1263):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/pierna.cpp.s
+
+ 
+src/glui/glui_rotation.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 839):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_rotation.cpp.o
+
+src/glui/glui_list.o: src/glui/glui_list.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/cubo3d.o: src/obj3dlib/cubo3d.cc.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/jugador/quesito.o: src/modelos/jugador/quesito.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_rotation.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 855):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_rotation.cpp.s
+
+src/glui/glui_statictext.s: src/glui/glui_statictext.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/viewmodel.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1127):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/viewmodel.cpp.o
+
+src/glui/glui.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 423):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui.cpp.s
+
+src/motorlib/motor_grafico.i: src/motorlib/motor_grafico.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+ 
+#  File has not been updated.
+
+src/glui/glui_separator.s: src/glui/glui_separator.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/icosaedro3d.cc.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1783):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/icosaedro3d.cc.i
+
+src/glui/glui_add_controls.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 431):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_add_controls.cpp.o
+
+Comportamientos_Jugador/perro.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 271):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/comportamientosLib.dir/build.make CMakeFiles/comportamientosLib.dir/Comportamientos_Jugador/perro.cpp.i
+
+src/glui/glui_column.o: src/glui/glui_column.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/aldeano/aldeano.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1151):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/aldeano.cpp.o
+
+src/modelos/jugador/quesito.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1375):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/jugador/quesito.cpp.i
+
+src/glui/glui_listbox.o: src/glui/glui_listbox.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+ 
+
+src/modelos/jugador/jugador3d.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1359):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/jugador/jugador3d.cpp.s
+
+src/glui/glui_add_controls.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 447):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_add_controls.cpp.s
+
+src/glui/glui_window.i: src/glui/glui_window.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+comportamientosLib: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 163):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 comportamientosLib
+
+src/modelos/jugador/quesito.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1367):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/jugador/quesito.cpp.o
+
+src/glui/glui_commandline.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 583):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_commandline.cpp.i
+
+src/glui/quaternion.s: src/glui/quaternion.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/esfera3d.cc.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+ 
+#  recipe to execute (from 'Makefile', line 1735):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/esfera3d.cc.i
+
+src/glui/glui_control.i: src/glui/glui_control.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+.SUFFIXES: .hpux_make_needs_suffix_list
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+src/glui/glui_bitmap_img_data.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 463):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_bitmap_img_data.cpp.i
+
+practica2: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 189):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 practica2
+
+src/glui/glui.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 407):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui.cpp.o
+
+src/modelos/aldeano/torso.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1271):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/torso.cpp.o
+
+src/modelos/retrato.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1479):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/retrato.cpp.s
+
+ 
+.PHONY: default_target cmake_force edit_cache edit_cache/fast rebuild_cache rebuild_cache/fast all clean clean/fast preinstall preinstall/fast depend obj3DLib obj3DLib/fast GLUILib GLUILib/fast modelosBelkanLib modelosBelkanLib/fast comportamientosLib comportamientosLib/fast motorLib motorLib/fast practica2 practica2/fast practica2SG practica2SG/fast Comportamientos_Jugador/aldeano.o Comportamientos_Jugador/aldeano.cpp.o Comportamientos_Jugador/aldeano.i Comportamientos_Jugador/aldeano.cpp.i Comportamientos_Jugador/aldeano.s Comportamientos_Jugador/aldeano.cpp.s Comportamientos_Jugador/jugador.o Comportamientos_Jugador/jugador.cpp.o Comportamientos_Jugador/jugador.i Comportamientos_Jugador/jugador.cpp.i Comportamientos_Jugador/jugador.s Comportamientos_Jugador/jugador.cpp.s Comportamientos_Jugador/perro.o Comportamientos_Jugador/perro.cpp.o Comportamientos_Jugador/perro.i Comportamientos_Jugador/perro.cpp.i Comportamientos_Jugador/perro.s Comportamientos_Jugador/perro.cpp.s bin_src/juego.o bin_src/juego.cc.o bin_src/juego.i bin_src/juego.cc.i bin_src/juego.s bin_src/juego.cc.s bin_src/juegoSG.o bin_src/juegoSG.cc.o bin_src/juegoSG.i bin_src/juegoSG.cc.i bin_src/juegoSG.s bin_src/juegoSG.cc.s src/comportamientos/comportamiento.o src/comportamientos/comportamiento.cpp.o src/comportamientos/comportamiento.i src/comportamientos/comportamiento.cpp.i src/comportamientos/comportamiento.s src/comportamientos/comportamiento.cpp.s src/glui/algebra3.o src/glui/algebra3.cpp.o src/glui/algebra3.i src/glui/algebra3.cpp.i src/glui/algebra3.s src/glui/algebra3.cpp.s src/glui/arcball.o src/glui/arcball.cpp.o src/glui/arcball.i src/glui/arcball.cpp.i src/glui/arcball.s src/glui/arcball.cpp.s src/glui/glui.o src/glui/glui.cpp.o src/glui/glui.i src/glui/glui.cpp.i src/glui/glui.s src/glui/glui.cpp.s src/glui/glui_add_controls.o src/glui/glui_add_controls.cpp.o src/glui/glui_add_controls.i src/glui/glui_add_controls.cpp.i src/glui/glui_add_controls.s src/glui/glui_add_controls.cpp.s src/glui/glui_bitmap_img_data.o src/glui/glui_bitmap_img_data.cpp.o src/glui/glui_bitmap_img_data.i src/glui/glui_bitmap_img_data.cpp.i src/glui/glui_bitmap_img_data.s src/glui/glui_bitmap_img_data.cpp.s src/glui/glui_bitmaps.o src/glui/glui_bitmaps.cpp.o src/glui/glui_bitmaps.i src/glui/glui_bitmaps.cpp.i src/glui/glui_bitmaps.s src/glui/glui_bitmaps.cpp.s src/glui/glui_button.o src/glui/glui_button.cpp.o src/glui/glui_button.i src/glui/glui_button.cpp.i src/glui/glui_button.s src/glui/glui_button.cpp.s src/glui/glui_checkbox.o src/glui/glui_checkbox.cpp.o src/glui/glui_checkbox.i src/glui/glui_checkbox.cpp.i src/glui/glui_checkbox.s src/glui/glui_checkbox.cpp.s src/glui/glui_column.o src/glui/glui_column.cpp.o src/glui/glui_column.i src/glui/glui_column.cpp.i src/glui/glui_column.s src/glui/glui_column.cpp.s src/glui/glui_commandline.o src/glui/glui_commandline.cpp.o src/glui/glui_commandline.i src/glui/glui_commandline.cpp.i src/glui/glui_commandline.s src/glui/glui_commandline.cpp.s src/glui/glui_control.o src/glui/glui_control.cpp.o src/glui/glui_control.i src/glui/glui_control.cpp.i src/glui/glui_control.s src/glui/glui_control.cpp.s src/glui/glui_edittext.o src/glui/glui_edittext.cpp.o src/glui/glui_edittext.i src/glui/glui_edittext.cpp.i src/glui/glui_edittext.s src/glui/glui_edittext.cpp.s src/glui/glui_filebrowser.o src/glui/glui_filebrowser.cpp.o src/glui/glui_filebrowser.i src/glui/glui_filebrowser.cpp.i src/glui/glui_filebrowser.s src/glui/glui_filebrowser.cpp.s src/glui/glui_list.o src/glui/glui_list.cpp.o src/glui/glui_list.i src/glui/glui_list.cpp.i src/glui/glui_list.s src/glui/glui_list.cpp.s src/glui/glui_listbox.o src/glui/glui_listbox.cpp.o src/glui/glui_listbox.i src/glui/glui_listbox.cpp.i src/glui/glui_listbox.s src/glui/glui_listbox.cpp.s src/glui/glui_mouse_iaction.o src/glui/glui_mouse_iaction.cpp.o src/glui/glui_mouse_iaction.i src/glui/glui_mouse_iaction.cpp.i src/glui/glui_mouse_iaction.s src/glui/glui_mouse_iaction.cpp.s src/glui/glui_node.o src/glui/glui_node.cpp.o src/glui/glui_node.i src/glui/glui_node.cpp.i src/glui/glui_node.s src/glui/glui_node.cpp.s src/glui/glui_panel.o src/glui/glui_panel.cpp.o src/glui/glui_panel.i src/glui/glui_panel.cpp.i src/glui/glui_panel.s src/glui/glui_panel.cpp.s src/glui/glui_radio.o src/glui/glui_radio.cpp.o src/glui/glui_radio.i src/glui/glui_radio.cpp.i src/glui/glui_radio.s src/glui/glui_radio.cpp.s src/glui/glui_rollout.o src/glui/glui_rollout.cpp.o src/glui/glui_rollout.i src/glui/glui_rollout.cpp.i src/glui/glui_rollout.s src/glui/glui_rollout.cpp.s src/glui/glui_rotation.o src/glui/glui_rotation.cpp.o src/glui/glui_rotation.i src/glui/glui_rotation.cpp.i src/glui/glui_rotation.s src/glui/glui_rotation.cpp.s src/glui/glui_scrollbar.o src/glui/glui_scrollbar.cpp.o src/glui/glui_scrollbar.i src/glui/glui_scrollbar.cpp.i src/glui/glui_scrollbar.s src/glui/glui_scrollbar.cpp.s src/glui/glui_separator.o src/glui/glui_separator.cpp.o src/glui/glui_separator.i src/glui/glui_separator.cpp.i src/glui/glui_separator.s src/glui/glui_separator.cpp.s src/glui/glui_spinner.o src/glui/glui_spinner.cpp.o src/glui/glui_spinner.i src/glui/glui_spinner.cpp.i src/glui/glui_spinner.s src/glui/glui_spinner.cpp.s src/glui/glui_statictext.o src/glui/glui_statictext.cpp.o src/glui/glui_statictext.i src/glui/glui_statictext.cpp.i src/glui/glui_statictext.s src/glui/glui_statictext.cpp.s src/glui/glui_string.o src/glui/glui_string.cpp.o src/glui/glui_string.i src/glui/glui_string.cpp.i src/glui/glui_string.s src/glui/glui_string.cpp.s src/glui/glui_textbox.o src/glui/glui_textbox.cpp.o src/glui/glui_textbox.i src/glui/glui_textbox.cpp.i src/glui/glui_textbox.s src/glui/glui_textbox.cpp.s src/glui/glui_translation.o src/glui/glui_translation.cpp.o src/glui/glui_translation.i src/glui/glui_translation.cpp.i src/glui/glui_translation.s src/glui/glui_translation.cpp.s src/glui/glui_tree.o src/glui/glui_tree.cpp.o src/glui/glui_tree.i src/glui/glui_tree.cpp.i src/glui/glui_tree.s src/glui/glui_tree.cpp.s src/glui/glui_treepanel.o src/glui/glui_treepanel.cpp.o src/glui/glui_treepanel.i src/glui/glui_treepanel.cpp.i src/glui/glui_treepanel.s src/glui/glui_treepanel.cpp.s src/glui/glui_window.o src/glui/glui_window.cpp.o src/glui/glui_window.i src/glui/glui_window.cpp.i src/glui/glui_window.s src/glui/glui_window.cpp.s src/glui/quaternion.o src/glui/quaternion.cpp.o src/glui/quaternion.i src/glui/quaternion.cpp.i src/glui/quaternion.s src/glui/quaternion.cpp.s src/glui/viewmodel.o src/glui/viewmodel.cpp.o src/glui/viewmodel.i src/glui/viewmodel.cpp.i src/glui/viewmodel.s src/glui/viewmodel.cpp.s src/modelos/aldeano/aldeano.o src/modelos/aldeano/aldeano.cpp.o src/modelos/aldeano/aldeano.i src/modelos/aldeano/aldeano.cpp.i src/modelos/aldeano/aldeano.s src/modelos/aldeano/aldeano.cpp.s src/modelos/aldeano/brazo.o src/modelos/aldeano/brazo.cpp.o src/modelos/aldeano/brazo.i src/modelos/aldeano/brazo.cpp.i src/modelos/aldeano/brazo.s src/modelos/aldeano/brazo.cpp.s src/modelos/aldeano/cabeza.o src/modelos/aldeano/cabeza.cpp.o src/modelos/aldeano/cabeza.i src/modelos/aldeano/cabeza.cpp.i src/modelos/aldeano/cabeza.s src/modelos/aldeano/cabeza.cpp.s src/modelos/aldeano/cintura.o src/modelos/aldeano/cintura.cpp.o src/modelos/aldeano/cintura.i src/modelos/aldeano/cintura.cpp.i src/modelos/aldeano/cintura.s src/modelos/aldeano/cintura.cpp.s src/modelos/aldeano/pierna.o src/modelos/aldeano/pierna.cpp.o src/modelos/aldeano/pierna.i src/modelos/aldeano/pierna.cpp.i src/modelos/aldeano/pierna.s src/modelos/aldeano/pierna.cpp.s src/modelos/aldeano/torso.o src/modelos/aldeano/torso.cpp.o src/modelos/aldeano/torso.i src/modelos/aldeano/torso.cpp.i src/modelos/aldeano/torso.s src/modelos/aldeano/torso.cpp.s src/modelos/arbol/arbol.o src/modelos/arbol/arbol.cpp.o src/modelos/arbol/arbol.i src/modelos/arbol/arbol.cpp.i src/modelos/arbol/arbol.s src/modelos/arbol/arbol.cpp.s src/modelos/item/item.o src/modelos/item/item.cpp.o src/modelos/item/item.i src/modelos/item/item.cpp.i src/modelos/item/item.s src/modelos/item/item.cpp.s src/modelos/jugador/jugador3d.o src/modelos/jugador/jugador3d.cpp.o src/modelos/jugador/jugador3d.i src/modelos/jugador/jugador3d.cpp.i 
+ src/modelos/jugador/jugador3d.s src/modelos/jugador/jugador3d.cpp.s src/modelos/jugador/quesito.o src/modelos/jugador/quesito.cpp.o src/modelos/jugador/quesito.i src/modelos/jugador/quesito.cpp.i src/modelos/jugador/quesito.s src/modelos/jugador/quesito.cpp.s src/modelos/perro/cabeza.o src/modelos/perro/cabeza.cpp.o src/modelos/perro/cabeza.i src/modelos/perro/cabeza.cpp.i src/modelos/perro/cabeza.s src/modelos/perro/cabeza.cpp.s src/modelos/perro/lomo.o src/modelos/perro/lomo.cpp.o src/modelos/perro/lomo.i src/modelos/perro/lomo.cpp.i src/modelos/perro/lomo.s src/modelos/perro/lomo.cpp.s src/modelos/perro/perro.o src/modelos/perro/perro.cpp.o src/modelos/perro/perro.i src/modelos/perro/perro.cpp.i src/modelos/perro/perro.s src/modelos/perro/perro.cpp.s src/modelos/retrato.o src/modelos/retrato.cpp.o src/modelos/retrato.i src/modelos/retrato.cpp.i src/modelos/retrato.s src/modelos/retrato.cpp.s src/motorlib/entidad.o src/motorlib/entidad.cpp.o src/motorlib/entidad.i src/motorlib/entidad.cpp.i src/motorlib/entidad.s src/motorlib/entidad.cpp.s src/motorlib/mapa.o src/motorlib/mapa.cpp.o src/motorlib/mapa.i src/motorlib/mapa.cpp.i src/motorlib/mapa.s src/motorlib/mapa.cpp.s src/motorlib/monitor.o src/motorlib/monitor.cpp.o src/motorlib/monitor.i src/motorlib/monitor.cpp.i src/motorlib/monitor.s src/motorlib/monitor.cpp.s src/motorlib/motor_grafico.o src/motorlib/motor_grafico.cpp.o src/motorlib/motor_grafico.i src/motorlib/motor_grafico.cpp.i src/motorlib/motor_grafico.s src/motorlib/motor_grafico.cpp.s src/motorlib/motor_juego.o src/motorlib/motor_juego.cpp.o src/motorlib/motor_juego.i src/motorlib/motor_juego.cpp.i src/motorlib/motor_juego.s src/motorlib/motor_juego.cpp.s src/motorlib/util.o src/motorlib/util.cpp.o src/motorlib/util.i src/motorlib/util.cpp.i src/motorlib/util.s src/motorlib/util.cpp.s src/obj3dlib/cono3d.o src/obj3dlib/cono3d.cc.o src/obj3dlib/cono3d.i src/obj3dlib/cono3d.cc.i src/obj3dlib/cono3d.s src/obj3dlib/cono3d.cc.s src/obj3dlib/cono3dwire.o src/obj3dlib/cono3dwire.cc.o src/obj3dlib/cono3dwire.i src/obj3dlib/cono3dwire.cc.i src/obj3dlib/cono3dwire.s src/obj3dlib/cono3dwire.cc.s src/obj3dlib/cubo3d.o src/obj3dlib/cubo3d.cc.o src/obj3dlib/cubo3d.i src/obj3dlib/cubo3d.cc.i src/obj3dlib/cubo3d.s src/obj3dlib/cubo3d.cc.s src/obj3dlib/dodecaedro3d.o src/obj3dlib/dodecaedro3d.cc.o src/obj3dlib/dodecaedro3d.i src/obj3dlib/dodecaedro3d.cc.i src/obj3dlib/dodecaedro3d.s src/obj3dlib/dodecaedro3d.cc.s src/obj3dlib/esfera3d.o src/obj3dlib/esfera3d.cc.o src/obj3dlib/esfera3d.i src/obj3dlib/esfera3d.cc.i src/obj3dlib/esfera3d.s src/obj3dlib/esfera3d.cc.s src/obj3dlib/file_ply_stl.o src/obj3dlib/file_ply_stl.cc.o src/obj3dlib/file_ply_stl.i src/obj3dlib/file_ply_stl.cc.i src/obj3dlib/file_ply_stl.s src/obj3dlib/file_ply_stl.cc.s src/obj3dlib/icosaedro3d.o src/obj3dlib/icosaedro3d.cc.o src/obj3dlib/icosaedro3d.i src/obj3dlib/icosaedro3d.cc.i src/obj3dlib/icosaedro3d.s src/obj3dlib/icosaedro3d.cc.s src/obj3dlib/jpeg_reader/jpg_imagen.o src/obj3dlib/jpeg_reader/jpg_imagen.cpp.o src/obj3dlib/jpeg_reader/jpg_imagen.i src/obj3dlib/jpeg_reader/jpg_imagen.cpp.i src/obj3dlib/jpeg_reader/jpg_imagen.s src/obj3dlib/jpeg_reader/jpg_imagen.cpp.s src/obj3dlib/jpeg_reader/jpg_memsrc.o src/obj3dlib/jpeg_reader/jpg_memsrc.cpp.o src/obj3dlib/jpeg_reader/jpg_memsrc.i src/obj3dlib/jpeg_reader/jpg_memsrc.cpp.i src/obj3dlib/jpeg_reader/jpg_memsrc.s src/obj3dlib/jpeg_reader/jpg_memsrc.cpp.s src/obj3dlib/jpeg_reader/jpg_readwrite.o src/obj3dlib/jpeg_reader/jpg_readwrite.cpp.o src/obj3dlib/jpeg_reader/jpg_readwrite.i src/obj3dlib/jpeg_reader/jpg_readwrite.cpp.i src/obj3dlib/jpeg_reader/jpg_readwrite.s src/obj3dlib/jpeg_reader/jpg_readwrite.cpp.s src/obj3dlib/luz.o src/obj3dlib/luz.cpp.o src/obj3dlib/luz.i src/obj3dlib/luz.cpp.i src/obj3dlib/luz.s src/obj3dlib/luz.cpp.s src/obj3dlib/objeto3d.o src/obj3dlib/objeto3d.cc.o src/obj3dlib/objeto3d.i src/obj3dlib/objeto3d.cc.i src/obj3dlib/objeto3d.s src/obj3dlib/objeto3d.cc.s src/obj3dlib/objrevolucion3d.o src/obj3dlib/objrevolucion3d.cc.o src/obj3dlib/objrevolucion3d.i src/obj3dlib/objrevolucion3d.cc.i src/obj3dlib/objrevolucion3d.s src/obj3dlib/objrevolucion3d.cc.s src/obj3dlib/octaedro3d.o src/obj3dlib/octaedro3d.cc.o src/obj3dlib/octaedro3d.i src/obj3dlib/octaedro3d.cc.i src/obj3dlib/octaedro3d.s src/obj3dlib/octaedro3d.cc.s src/obj3dlib/tetraedro3d.o src/obj3dlib/tetraedro3d.cc.o src/obj3dlib/tetraedro3d.i src/obj3dlib/tetraedro3d.cc.i src/obj3dlib/tetraedro3d.s src/obj3dlib/tetraedro3d.cc.s src/obj3dlib/toro3d.o src/obj3dlib/toro3d.cc.o src/obj3dlib/toro3d.i src/obj3dlib/toro3d.cc.i src/obj3dlib/toro3d.s src/obj3dlib/toro3d.cc.s help cmake_check_build_system
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+
+src/glui/glui_panel.s: src/glui/glui_panel.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/jugador/quesito.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1383):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/jugador/quesito.cpp.s
+
+src/glui/glui_string.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 959):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_string.cpp.o
+
+src/motorlib/util.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1615):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/motorLib.dir/build.make CMakeFiles/motorLib.dir/src/motorlib/util.cpp.i
+
+src/obj3dlib/cono3dwire.i: src/obj3dlib/cono3dwire.cc.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_rotation.o: src/glui/glui_rotation.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+obj3DLib/fast:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 129):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/build
+
+src/obj3dlib/icosaedro3d.i: src/obj3dlib/icosaedro3d.cc.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/luz.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1871):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/luz.cpp.o
+
+src/modelos/aldeano/brazo.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+ 
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1191):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/brazo.cpp.s
+
+src/comportamientos/comportamiento.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 343):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/comportamientosLib.dir/build.make CMakeFiles/comportamientosLib.dir/src/comportamientos/comportamiento.cpp.i
+
+src/modelos/perro/perro.o: src/modelos/perro/perro.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/cono3dwire.o: src/obj3dlib/cono3dwire.cc.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/obj3dlib/icosaedro3d.s: src/obj3dlib/icosaedro3d.cc.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+Comportamientos_Jugador/jugador.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 255):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/comportamientosLib.dir/build.make CMakeFiles/comportamientosLib.dir/Comportamientos_Jugador/jugador.cpp.s
+
+src/obj3dlib/objrevolucion3d.s: src/obj3dlib/objrevolucion3d.cc.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/arcball.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 383):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/arcball.cpp.o
+
+src/obj3dlib/luz.i: src/obj3dlib/luz.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_add_controls.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 439):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_add_controls.cpp.i
+
+src/glui/glui_rollout.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 831):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_rollout.cpp.s
+
+src/glui/glui_bitmaps.o: src/glui/glui_bitmaps.cpp.o
+ 
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+obj3DLib: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 124):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 obj3DLib
+
+src/modelos/item/item.o: src/modelos/item/item.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/comportamientos/comportamiento.i: src/comportamientos/comportamiento.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/jugador/jugador3d.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1351):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/jugador/jugador3d.cpp.i
+
+src/obj3dlib/esfera3d.cc.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1727):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/esfera3d.cc.o
+
+src/glui/glui_radio.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 807):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_radio.cpp.s
+
+src/modelos/arbol/arbol.s: src/modelos/arbol/arbol.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_panel.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+ 
+#  recipe to execute (from 'Makefile', line 775):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_panel.cpp.i
+
+src/modelos/retrato.s: src/modelos/retrato.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_filebrowser.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 663):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_filebrowser.cpp.s
+
+modelosBelkanLib: cmake_check_build_system
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 150):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 modelosBelkanLib
+
+src/obj3dlib/esfera3d.cc.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1743):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/esfera3d.cc.s
+
+src/glui/glui_commandline.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 591):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_commandline.cpp.s
+
+src/glui/glui.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 415):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui.cpp.i
+
+src/modelos/perro/cabeza.o: src/modelos/perro/cabeza.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/motorlib/monitor.o: src/motorlib/monitor.cpp.o
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_string.s: src/glui/glui_string.cpp.s
+ 
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_listbox.i: src/glui/glui_listbox.cpp.i
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/glui/glui_rollout.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 823):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_rollout.cpp.i
+
+src/glui/glui_translation.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1015):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_translation.cpp.i
+
+src/modelos/perro/perro.cpp.i:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1447):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/perro/perro.cpp.i
+
+src/obj3dlib/jpeg_reader/jpg_memsrc.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1823):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/jpeg_reader/jpg_memsrc.cpp.o
+
+src/motorlib/entidad.s: src/motorlib/entidad.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+src/modelos/perro/perro.cpp.o:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1439):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/perro/perro.cpp.o
+
+src/obj3dlib/luz.cpp.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+ 
+#  recipe to execute (from 'Makefile', line 1887):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/luz.cpp.s
+
+src/obj3dlib/dodecaedro3d.cc.s:
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+#  recipe to execute (from 'Makefile', line 1719):
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/dodecaedro3d.cc.s
+
+src/obj3dlib/luz.s: src/obj3dlib/luz.cpp.s
+#  Phony target (prerequisite of .PHONY).
+#  Implicit rule search has not been done.
+#  File does not exist.
+#  File has not been updated.
+
+# files hash-table stats:
+# Load=485/1024=47%, Rehash=0, Collisions=586/1919=31%
+# VPATH Search Paths
+
+# No 'vpath' search paths.
+
+# No general ('VPATH' variable) search path.
+
+# strcache buffers: 2 (0) / strings = 518 / storage = 13261 B / avg = 25 B
+# current buf: size = 8162 B / used = 5124 B / count = 183 / avg = 28 B
+# other used: total = 8137 B / count = 335 / avg = 24 B
+# other free: total = 25 B / max = 25 B / min = 25 B / avg = 25 B
+
+# strcache performance: lookups = 2685 / hit rate = 80%
+# hash-table stats:
+# Load=518/8192=6%, Rehash=0, Collisions=62/2685=2%
+# Finished Make data base on Mon May  2 16:25:27 2022
+
+ 
