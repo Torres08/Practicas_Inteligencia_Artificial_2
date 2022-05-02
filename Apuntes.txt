@@ -1,0 +1,48 @@
+--------------------------------------------------------------------------
+Torres Ramos, Juan Luis
+--------------------------------------------------------------------------
+TUTORIAL
+
+- 1º Enlazar y preparar el repositorio de github, como en el tema anterior
+- Realizacion del nivel 0 "Controlando la ejecucion de un plan"
+    tmb sera valido para los niveles 1 y 2, en esos niveles lo que faltara 
+    sera implementar los algoritmos de busqueda
+    NIvel 3 y 4 involucraremos comportamientos reactivos
+
+CONTROLANDO LA EJECUCION DE UN PLAN 
+
+-Tenemos implementado una funcion del algoritmo de busqueda de profundidad
+
+funcion pathFinding 
+    -level: Algoritmo de busqueda a usar (0-4, cases del switch)
+    -origen:establece la casilla donde empieza el comportamientos
+    -destino:especifica la casilla destino(por eso es una lista de estados)
+    -plan: devuelve lista de acciones a realizar para ir de origen -> destino
+
+nivel 0 - Implementar Algoritmo de busqueda en profundidad
+nivel 1 - ImplementarAlgoritmo busqueda en anchura
+nivel 2 - Algoritmo A*, o costo uniforme
+nevel 3 y 4 - Usal alguno de los anteriores o alguno nuevo
+
+En level 0
+    como en este nivel solo se espera una casilla objetivo (tipo estado) 
+    y el parametro de entrada destino es una lista de estados, antes de 
+    invocar a la busqueda en profundidad se extrae la primera casilla de
+    estados un_objetivo = destino.front()
+    
+    En el nivel 1 y 2 es igual pero en el 3 se especifica 3 objetivos y en
+    el nivel 4 será el estudiante el que decida si pasa solo uno de los 
+    objetivos o pasa los tres al algoritmo de busqueda
+
+Think()
+    Se encarga invocar pathFinding para construir un camino y controlar la 
+    ejecuion del plan
+
+    .hpp variables estado
+        actual (tipo estado) almacena posicion y orientacion actial mapa
+        destino (lista estados) almacena coordenada casilla destino
+        plan (lista acciones) almacena secuencia acciones permite al agente 
+                              trasladarse al objetivo
+        hayplan (boolean) true si se a construido un plan, se inicializa a falso
+
+--------------------------------------------------------------------------
