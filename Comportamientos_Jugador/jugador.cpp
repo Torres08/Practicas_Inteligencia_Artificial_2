@@ -18,11 +18,15 @@ Action ComportamientoJugador::think(Sensores sensores) {
   actual.columna = sensores.posC; // columna 
   actual.orientacion = sensores.sentido; // brujula
 
+  
+
   cout << "Fila: " << actual.fila << endl;
   cout << "Col : " << actual.columna << endl;
   cout << "Ori : " << actual.orientacion << endl;
   cout << "Tiene Zapatillas: " << actual.TieneZapatillas << endl;
   cout << "Tiene Bikini: " << actual.TieneBikini << endl;
+  cout << "Tiempo Recarga: " << tiempo_recarga << endl;
+  cout << "Recarga: " << actual.recarga << endl;
 
   // Capturo los destinos
   cout << "sensores.num_destinos : " << sensores.num_destinos << endl;
@@ -41,13 +45,18 @@ Action ComportamientoJugador::think(Sensores sensores) {
   */
   if (sensores.nivel == 3) {
     
-    ActualizarMapa(sensores);
+    //ActualizarMapa(sensores);
 
 	if (comienzo){
 
-		//ActualizarMapa(sensores);
+		ActualizarMapa(sensores);
 
-		if (SensoresAvanzar(sensores, actual))
+		if (actual.recarga){
+			accion = actIDLE;
+    		actual = Recargar(sensores,actual);
+		}
+
+		else if (SensoresAvanzar(sensores, actual))
 			accion = actFORWARD; 
 			// accion = moverAleatorio;
 	}
@@ -528,7 +537,7 @@ estado ComportamientoJugador::SensorCasilla(Sensores sensores, estado aux) {
     aux.TieneBikini = false;
   }
 
-  if (sensores.terreno[2] == 'X') {
+  if (sensores.terreno[2] == 'X' ) {
     aux.recarga = true;
   }
 
@@ -944,3 +953,12 @@ void ComportamientoJugador::ActualizarMapa(Sensores sensores) {
   }
 }
 
+
+estado ComportamientoJugador::Recargar(Sensores sensores,estado st) {
+  tiempo_recarga--;
+  if (tiempo_recarga == 0) {
+    st.recarga = false;
+    tiempo_recarga = 100;
+  }
+  return st;
+}
