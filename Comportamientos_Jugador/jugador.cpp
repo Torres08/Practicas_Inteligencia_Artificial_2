@@ -46,7 +46,13 @@ Action ComportamientoJugador::think(Sensores sensores) {
   if (sensores.nivel == 3) {
     
     //ActualizarMapa(sensores);
+	/*
+	int ejemplo=0;
 
+	ejemplo = (rand() % 4 );
+	cout << " " << ejemplo << endl;
+	*/
+	
 	if (comienzo){
 
 		ActualizarMapa(sensores);
@@ -56,12 +62,15 @@ Action ComportamientoJugador::think(Sensores sensores) {
     		actual = Recargar(sensores,actual);
 		}
 
-		else if (SensoresAvanzar(sensores, actual))
+		else if (SensoresAvanzar(sensores, actual)){
 			accion = actFORWARD; 
 			// accion = moverAleatorio;
+		} else {
+			accion = Girar(sensores);
+		}
 	}
 
-
+	
 
 
 
@@ -961,4 +970,44 @@ estado ComportamientoJugador::Recargar(Sensores sensores,estado st) {
     tiempo_recarga = 100;
   }
   return st;
+}
+
+Action ComportamientoJugador::Girar(Sensores sensores) {
+  Action accion;
+  // generar valores aleatorios del 1 al 4
+
+	switch (girar) {
+		case 0:
+			accion = actTURN_L;
+			girar = (rand() % 4);
+		break;
+
+		case 1: 
+			accion = actTURN_R;
+			girar = (rand() % 4);
+		break;
+
+		case 2:
+			accion = actSEMITURN_L;
+			girar = (rand() % 4);
+		break;
+
+		case 3: 
+			accion = actSEMITURN_L;
+			girar = (rand() % 4);
+		break;
+	}
+
+/* 
+  if (!girar_derecha) {
+    accion = actTURN_L;
+    girar_derecha = (rand() % 2 == 0);
+
+  } else {
+    accion = actTURN_R;
+    girar_derecha = (rand() % 2 == 0);
+  }
+*/
+
+  return accion;
 }
