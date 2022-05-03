@@ -14,9 +14,9 @@ Action ComportamientoJugador::think(Sensores sensores) {
   // Actualizo la variable accion y actual
   Action accion = actIDLE;
 
-  actual.fila = sensores.posF;
-  actual.columna = sensores.posC;
-  actual.orientacion = sensores.sentido;
+  actual.fila = sensores.posF; // fila
+  actual.columna = sensores.posC; // columna 
+  actual.orientacion = sensores.sentido; // brujula
 
   cout << "Fila: " << actual.fila << endl;
   cout << "Col : " << actual.columna << endl;
@@ -34,19 +34,49 @@ Action ComportamientoJugador::think(Sensores sensores) {
     objetivos.push_back(aux);
   }
 
-  if (!hayPlan)
-    hayPlan = pathFinding(sensores.nivel, actual, objetivos, plan);
+  // nivel 3 donde hago hibrido reactivo y deliberativo
 
-  if (hayPlan and plan.size() > 0) { // hay un plan no vacio
-    accion = plan.front();           // tomo la siguiente accion del Plan
-    plan.erase(plan.begin());        // eliminamos la accion del plan
+  /*
+	
+  */
+  if (sensores.nivel == 3) {
+    
+    ActualizarMapa(sensores);
+
+	if (comienzo){
+
+		//ActualizarMapa(sensores);
+
+		if (SensoresAvanzar(sensores, actual))
+			accion = actFORWARD; 
+			// accion = moverAleatorio;
+	}
+
+
+
+
+
+
+
+
+
+
   } else {
-    cout << "no se pudo encontrar un plan\n" << endl;
+    if (!hayPlan)
+      hayPlan = pathFinding(sensores.nivel, actual, objetivos, plan);
+
+    if (hayPlan and plan.size() > 0) { // hay un plan no vacio
+      accion = plan.front();           // tomo la siguiente accion del Plan
+      plan.erase(plan.begin());        // eliminamos la accion del plan
+    } else {
+      cout << "no se pudo encontrar un plan\n" << endl;
+    }
   }
+  //
 
   // actualizo tmb bikini y zapas solo puedo tener uno
   actual = SensorCasilla(sensores, actual);
-
+  comienzo = true;
   return accion;
 }
 
@@ -83,8 +113,7 @@ bool ComportamientoJugador::pathFinding(int level, const estado &origen,
     break;
   case 3:
     cout << "Reto 1: Descubrir el mapa\n";
-    // Incluir aqui la llamada al algoritmo de busqueda para el Reto 1
-    cout << "No implementado aun\n";
+
     break;
   case 4:
     cout << "Reto 2: Maximizar objetivos\n";
@@ -263,7 +292,6 @@ void ComportamientoJugador::VisualizaPlan(const estado &st,
   }
 }
 
-int ComportamientoJugador::interact(Action accion, int valor) { return false; }
 //------------------------------------------------------------------------
 //						NIVEL 0: BUSQUEDA EN PROFUNDIDAD
 //------------------------------------------------------------------------
@@ -481,6 +509,13 @@ bool ComportamientoJugador::pathFinding_Anchura(const estado &origen,
 // estructura de nodos especializada
 // para la priority queue necesito crear sus operandos
 
+/*
+        - Definir sensor casilla
+        - nodoCoste
+        - CalculoCoste
+        - CostoUniforme
+*/
+
 estado ComportamientoJugador::SensorCasilla(Sensores sensores, estado aux) {
 
   if (sensores.terreno[2] == 'K') {
@@ -624,7 +659,6 @@ bool ComportamientoJugador::pathFinding_CostoUniforme(const estado &origen,
       current.st.TieneZapatillas = false;
     }
 
-
     if (mapaResultado[current.st.fila][current.st.columna] == 'D') {
       current.st.TieneZapatillas = true;
       current.st.TieneBikini = false;
@@ -719,3 +753,194 @@ bool ComportamientoJugador::pathFinding_CostoUniforme(const estado &origen,
 
   return false;
 }
+
+//------------------------------------------------------------------------
+//			NIVEL 3: RETO 1 (DESCUBRIR MAYOR PORCENTAJE MAPA)
+//------------------------------------------------------------------------
+
+int ComportamientoJugador::interact(Action accion, int valor) { return false; }
+
+bool ComportamientoJugador::SensoresAvanzar(Sensores sensores, estado st) {
+
+  bool b1 = (sensores.terreno[2] == 'T' or sensores.terreno[2] == 'S' or
+             sensores.terreno[2] == 'G' or sensores.terreno[2] == 'D' or
+             sensores.terreno[2] == 'K' or sensores.terreno[2] == 'X');
+  bool b2 = (sensores.superficie[2] == '_');
+  bool condicion_zapatillas = (sensores.terreno[2] == 'B');
+  bool condicion_bikini = (sensores.terreno[2] == 'A');
+
+  
+  if (st.TieneZapatillas) // ahora uso estado porque las variables de zapas y bikini estan ahi
+    b1 = b1 || condicion_zapatillas;
+
+  if (st.TieneBikini)
+    b1 = b1 || condicion_bikini;
+  
+
+  return b1 && b2;
+}
+
+void ComportamientoJugador::ActualizarMapa(Sensores sensores) {
+
+  int fil=sensores.posF;
+  int col=sensores.posC;
+  int brujula=sensores.sentido;
+
+  mapaResultado[fil][col] = sensores.terreno[0];
+
+  switch (brujula) {
+  case 0:
+    mapaResultado[fil - 1][col - 1] = sensores.terreno[1];
+    mapaResultado[fil - 1][col] = sensores.terreno[2];
+    mapaResultado[fil - 1][col + 1] = sensores.terreno[3];
+    mapaResultado[fil - 2][col - 2] = sensores.terreno[4];
+    mapaResultado[fil - 2][col - 1] = sensores.terreno[5];
+    mapaResultado[fil - 2][col] = sensores.terreno[6];
+    mapaResultado[fil - 2][col + 1] = sensores.terreno[7];
+    mapaResultado[fil - 2][col + 2] = sensores.terreno[8];
+
+    mapaResultado[fil - 3][col - 3] = sensores.terreno[9];
+    mapaResultado[fil - 3][col - 2] = sensores.terreno[10];
+    mapaResultado[fil - 3][col - 1] = sensores.terreno[11];
+    mapaResultado[fil - 3][col] = sensores.terreno[12];
+    mapaResultado[fil - 3][col + 1] = sensores.terreno[13];
+    mapaResultado[fil - 3][col + 2] = sensores.terreno[14];
+    mapaResultado[fil - 3][col + 3] = sensores.terreno[15];
+    break;
+
+  case 1:
+  	mapaResultado[fil - 1][col] = sensores.terreno[1];
+	mapaResultado[fil - 1][col+1] = sensores.terreno[2];
+	mapaResultado[fil][col + 1] = sensores.terreno[3];
+	mapaResultado[fil - 2][col] = sensores.terreno[4];
+	mapaResultado[fil - 2][col + 1] = sensores.terreno[5];
+	mapaResultado[fil - 2][col + 2] = sensores.terreno[6];
+	mapaResultado[fil - 1][col + 2] = sensores.terreno[7];
+    mapaResultado[fil][col + 2] = sensores.terreno[8];
+	mapaResultado[fil - 3][col] = sensores.terreno[9];
+	mapaResultado[fil - 3][col + 1] = sensores.terreno[10];
+	mapaResultado[fil - 3][col + 2] = sensores.terreno[11];
+	mapaResultado[fil - 3][col + 3] = sensores.terreno[12];
+	mapaResultado[fil -2 ][col +3 ] = sensores.terreno[13];
+	mapaResultado[fil -1][col+3 ] = sensores.terreno[14];
+	mapaResultado[fil][col + 3] = sensores.terreno[15];
+  break;
+
+  case 2:
+    mapaResultado[fil - 1][col + 1] = sensores.terreno[1];
+    mapaResultado[fil][col + 1] = sensores.terreno[2];
+    mapaResultado[fil + 1][col + 1] = sensores.terreno[3];
+
+    mapaResultado[fil - 2][col + 2] = sensores.terreno[4];
+    mapaResultado[fil - 1][col + 2] = sensores.terreno[5];
+    mapaResultado[fil][col + 2] = sensores.terreno[6];
+    mapaResultado[fil + 1][col + 2] = sensores.terreno[7];
+    mapaResultado[fil + 2][col + 2] = sensores.terreno[8];
+
+    mapaResultado[fil - 3][col + 3] = sensores.terreno[9];
+    mapaResultado[fil - 2][col + 3] = sensores.terreno[10];
+    mapaResultado[fil - 1][col + 3] = sensores.terreno[11];
+    mapaResultado[fil][col + 3] = sensores.terreno[12];
+    mapaResultado[fil + 1][col + 3] = sensores.terreno[13];
+    mapaResultado[fil + 2][col + 3] = sensores.terreno[14];
+    mapaResultado[fil + 3][col + 3] = sensores.terreno[15];
+    break;
+
+	case 3:
+		mapaResultado[fil ][col+1] = sensores.terreno[1];
+		mapaResultado[fil + 1][col+1] = sensores.terreno[2];
+		mapaResultado[fil+1][col] = sensores.terreno[3];
+		mapaResultado[fil][col+2] = sensores.terreno[4];
+		mapaResultado[fil + 1][col+2] = sensores.terreno[5];
+		mapaResultado[fil + 2][col+2] = sensores.terreno[6];
+		mapaResultado[fil + 2][col+1] = sensores.terreno[7];
+		mapaResultado[fil+2][col] = sensores.terreno[8];
+		mapaResultado[fil][col+3] = sensores.terreno[9];
+		mapaResultado[fil + 1][col+3] = sensores.terreno[10];
+		mapaResultado[fil + 2][col+3] = sensores.terreno[11];
+		mapaResultado[fil + 3][col+3] = sensores.terreno[12];
+		mapaResultado[fil + 3][col+2] = sensores.terreno[13];
+		mapaResultado[fil + 3][col+1] = sensores.terreno[14];
+		mapaResultado[fil+3][col] = sensores.terreno[15];
+	break;
+
+  case 4:
+    mapaResultado[fil + 1][col + 1] = sensores.terreno[1];
+    mapaResultado[fil + 1][col] = sensores.terreno[2];
+    mapaResultado[fil + 1][col - 1] = sensores.terreno[3];
+
+    mapaResultado[fil + 2][col + 2] = sensores.terreno[4];
+    mapaResultado[fil + 2][col + 1] = sensores.terreno[5];
+    mapaResultado[fil + 2][col] = sensores.terreno[6];
+    mapaResultado[fil + 2][col - 1] = sensores.terreno[7];
+    mapaResultado[fil + 2][col - 2] = sensores.terreno[8];
+
+    mapaResultado[fil + 3][col + 3] = sensores.terreno[9];
+    mapaResultado[fil + 3][col + 2] = sensores.terreno[10];
+    mapaResultado[fil + 3][col + 1] = sensores.terreno[11];
+    mapaResultado[fil + 3][col] = sensores.terreno[12];
+    mapaResultado[fil + 3][col - 1] = sensores.terreno[13];
+    mapaResultado[fil + 3][col - 2] = sensores.terreno[14];
+    mapaResultado[fil + 3][col - 3] = sensores.terreno[15];
+    break;
+
+	case 5:
+		mapaResultado[fil + 1][col] = sensores.terreno[1];
+		mapaResultado[fil + 1][col-1] = sensores.terreno[2];
+		mapaResultado[fil][col - 1] = sensores.terreno[3];
+		mapaResultado[fil + 2][col] = sensores.terreno[4];
+		mapaResultado[fil + 2][col - 1] = sensores.terreno[5];
+		mapaResultado[fil + 2][col - 2] = sensores.terreno[6];
+		mapaResultado[fil + 1][col - 2] = sensores.terreno[7];
+		mapaResultado[fil][col - 2] = sensores.terreno[8];
+		mapaResultado[fil + 3][col] = sensores.terreno[9];
+		mapaResultado[fil + 3][col - 1] = sensores.terreno[10];
+		mapaResultado[fil + 3][col - 2] = sensores.terreno[11];
+		mapaResultado[fil + 3][col - 3] = sensores.terreno[12];
+		mapaResultado[fil +2 ][col - 3 ] = sensores.terreno[13];
+		mapaResultado[fil +1][col-3 ] = sensores.terreno[14];
+		mapaResultado[fil][col - 3] = sensores.terreno[15];
+	break;
+
+  case 6:
+    mapaResultado[fil + 1][col - 1] = sensores.terreno[1];
+    mapaResultado[fil][col - 1] = sensores.terreno[2];
+    mapaResultado[fil - 1][col - 1] = sensores.terreno[3];
+
+    mapaResultado[fil + 2][col - 2] = sensores.terreno[4];
+    mapaResultado[fil + 1][col - 2] = sensores.terreno[5];
+    mapaResultado[fil][col - 2] = sensores.terreno[6];
+    mapaResultado[fil - 1][col - 2] = sensores.terreno[7];
+    mapaResultado[fil - 2][col - 2] = sensores.terreno[8];
+
+    mapaResultado[fil + 3][col - 3] = sensores.terreno[9];
+    mapaResultado[fil + 2][col - 3] = sensores.terreno[10];
+    mapaResultado[fil + 1][col - 3] = sensores.terreno[11];
+    mapaResultado[fil][col - 3] = sensores.terreno[12];
+    mapaResultado[fil - 1][col - 3] = sensores.terreno[13];
+    mapaResultado[fil - 2][col - 3] = sensores.terreno[14];
+    mapaResultado[fil - 3][col - 3] = sensores.terreno[15];
+    break;
+
+
+	case 7:
+		mapaResultado[fil ][col-1] = sensores.terreno[1];
+		mapaResultado[fil - 1][col-1] = sensores.terreno[2];
+		mapaResultado[fil-1][col] = sensores.terreno[3];
+		mapaResultado[fil][col-2] = sensores.terreno[4];
+		mapaResultado[fil - 1][col-2] = sensores.terreno[5];
+		mapaResultado[fil - 2][col-2] = sensores.terreno[6];
+		mapaResultado[fil - 2][col-1] = sensores.terreno[7];
+		mapaResultado[fil-2][col] = sensores.terreno[8];
+		mapaResultado[fil][col-3] = sensores.terreno[9];
+		mapaResultado[fil - 1][col-3] = sensores.terreno[10];
+		mapaResultado[fil - 2][col-3] = sensores.terreno[11];
+		mapaResultado[fil - 3][col-3] = sensores.terreno[12];
+		mapaResultado[fil - 3][col-2] = sensores.terreno[13];
+		mapaResultado[fil - 3][col-1] = sensores.terreno[14];
+		mapaResultado[fil-3][col] = sensores.terreno[15];
+
+	break;
+  }
+}
+

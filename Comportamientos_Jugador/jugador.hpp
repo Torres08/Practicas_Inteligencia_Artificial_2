@@ -19,6 +19,7 @@ class ComportamientoJugador : public Comportamiento {
     ComportamientoJugador(unsigned int size) : Comportamiento(size) {
       // Inicializar Variables de Estado PARA NIVEL 3 Y 4
       Inicializar();
+      comienzo = false;
     }
     ComportamientoJugador(std::vector< std::vector< unsigned char> > mapaR) : Comportamiento(mapaR) {
       // Inicializar Variables de Estado PARA NIVEL 0 1 Y 2
@@ -37,7 +38,7 @@ class ComportamientoJugador : public Comportamiento {
     estado actual; // fil col brujula TieneBikini TieneZapatillas
     list<estado> objetivos;
     list<Action> plan;
-    bool hayPlan;
+    bool hayPlan, comienzo;
 
     // Métodos privados de la clase
     bool pathFinding(int level, const estado &origen, const list<estado> &destino, list<Action> &plan);
@@ -49,6 +50,11 @@ class ComportamientoJugador : public Comportamiento {
     unsigned int CalculoCoste(int fil, int col, Action accion, bool TieneBikini, bool TieneZapatillas);
     void PintaPlan(list<Action> plan);
     bool HayObstaculoDelante(estado &st);
+    
+    //
+    bool SensoresAvanzar(Sensores sensores, estado st);
+    void ActualizarMapa(Sensores sensores);
+    
 
     void Inicializar(){
       hayPlan = false;

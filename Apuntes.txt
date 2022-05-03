@@ -344,3 +344,14 @@ NIVEL 1
     
 
 NIVEL 2
+    - Definir sensor casilla
+	- nodoCoste
+	- CalculoCoste
+	- CostoUniforme - tener en cuenta zapas y bikini del proximo
+
+NIVEL 3
+    
+
+
+NIVEL 4
+    - A*
