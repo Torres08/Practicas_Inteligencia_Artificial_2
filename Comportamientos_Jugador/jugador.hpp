@@ -46,7 +46,7 @@ class ComportamientoJugador : public Comportamiento {
     bool pathFinding_CostoUniforme(const estado &origen, const estado &destino, list<Action> &plan);
 
     estado SensorCasilla(Sensores sensores, estado actual);
-    unsigned int CalculoCoste(int fil, int col, Action accion);
+    unsigned int CalculoCoste(int fil, int col, Action accion, bool TieneBikini, bool TieneZapatillas);
     void PintaPlan(list<Action> plan);
     bool HayObstaculoDelante(estado &st);
 

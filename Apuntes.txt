@@ -178,6 +178,7 @@ OBJETIVOS
     3: Reto 1 (Descubrir mayor porcentaje mapa) (2 p)
         mapa desconocido
         definir comportamiento para descubrir mayor porcentaje mapa
+        Que comportamiento deberia seguir, como en el trabajo anterior supongo
         tiene posF posC y sentido
         no hay aldeanos ni lonos
         3000 instantes 3000 puntos bateria 300 segundos tiempo
@@ -189,6 +190,8 @@ OBJETIVOS
         se ira porponiendo al agente casillas objetivos de 3 en 3 que debera ir alcanzando
         sensores posicion y orientacion no funcionan
             - hay que usar actWHEREIS 
+        como usar actWHEREIS
+
         hay aldeanos y lobos
         La unica informacion es que cuando se completen 3 objetivos se 
         propondran 3 nuevos
@@ -319,6 +322,14 @@ Busqueda en costo uniforme
 
     
     end 
+
+
+Busqueda A*
+
+Tiene en cuenta el coste del camino del nodo inicio al actual y el coste 
+del actual hasta el objetivo
+    g(n) coste desde inicio a actual
+    h(n) estimacion actual objetivo 
 
 
 --------------------------------------------------------------------------

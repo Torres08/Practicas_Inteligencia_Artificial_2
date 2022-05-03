@@ -6,7 +6,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Mon May  2 23:28:37 2022
+# Make data base, printed on Tue May  3 09:34:54 2022
 
 # Variables
 
@@ -15,7 +15,7 @@ GDK_BACKEND = x11
 # environment
 LC_ALL = C
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-b9daabbc-6926-4d70-9bfb-95338f5233d8.sock
+VSCODE_IPC_HOOK_EXTHOST = /run/user/1000/vscode-ipc-2f8cd548-0b32-4e91-8bb6-0fe6bc7876f1.sock
 # environment
 VSCODE_CWD = /home/icaro
 # environment
@@ -79,7 +79,7 @@ LESS_TERMCAP_ue = [0m
 # environment
 MFLAGS = -pqrR
 # environment
-SSH_AUTH_SOCK = /tmp/ssh-XXXXXXwCMPxS/agent.1145
+SSH_AUTH_SOCK = /tmp/ssh-XXXXXXHX6l9p/agent.991
 # default
 .SHELLFLAGS := -c
 # environment
@@ -99,7 +99,7 @@ CMAKE_BINARY_DIR = "/home/icaro/Escritorio/2º Cuatri/IA/practica2"
 # environment
 VSCODE_VERBOSE_LOGGING = true
 # environment
-VSCODE_PID = 52351
+VSCODE_PID = 1490
 # environment
 XDG_SESSION_TYPE = x11
 # automatic
@@ -107,7 +107,7 @@ XDG_SESSION_TYPE = x11
 # makefile (from 'Makefile', line 60)
 CMAKE_SOURCE_DIR = "/home/icaro/Escritorio/2º Cuatri/IA/practica2"
 # environment
-SESSION_MANAGER = local/kali:@/tmp/.ICE-unix/1145,unix/kali:/tmp/.ICE-unix/1145
+SESSION_MANAGER = local/kali:@/tmp/.ICE-unix/991,unix/kali:/tmp/.ICE-unix/991
 # automatic
 *F = $(notdir $*)
 # environment
@@ -189,9 +189,9 @@ GTK_MODULES = gail:atk-bridge
 # default
 MAKE_VERSION := 4.3
 # environment
-GIO_LAUNCHED_DESKTOP_FILE_PID = 52351
+GIO_LAUNCHED_DESKTOP_FILE_PID = 1490
 # environment
-SSH_AGENT_PID = 1196
+SSH_AGENT_PID = 1043
 # environment
 VSCODE_NODE_CACHED_DATA_DIR = 
 # environment
@@ -217,7 +217,7 @@ VSCODE_IPC_HOOK = /run/user/1000/vscode-f9f071d1-1.56.1-main.sock
 # environment
 GSETTINGS_SCHEMA_DIR = /home/icaro/data
 # environment
-XDG_SESSION_ID = 5
+XDG_SESSION_ID = 2
 # environment
 DOTNET_CLI_TELEMETRY_OPTOUT = 1
 # default
@@ -300,6 +300,7 @@ src/glui/arcball.cpp.i:
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 391):
+ 
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/arcball.cpp.i
 
 src/glui/glui_translation.cpp.s:
@@ -609,6 +610,7 @@ src/glui/glui_textbox.cpp.o:
 src/modelos/arbol/arbol.i: src/modelos/arbol/arbol.cpp.i
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
+ 
 #  File does not exist.
 #  File has not been updated.
 
@@ -794,6 +796,7 @@ src/glui/glui_tree.cpp.i:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
+ 
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 1039):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_tree.cpp.i
@@ -967,6 +970,7 @@ src/obj3dlib/objrevolucion3d.o: src/obj3dlib/objrevolucion3d.cc.o
 #  File has not been updated.
 
 # Not a target:
+ 
 Makefile:
 #  Implicit rule search has been done.
 #  Last modified 2022-05-02 16:23:21.503490863
@@ -1126,6 +1130,7 @@ src/glui/glui_listbox.cpp.i:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
+ 
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 703):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_listbox.cpp.i
@@ -1333,6 +1338,7 @@ src/glui/glui_mouse_iaction.cpp.o:
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 719):
+ 
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_mouse_iaction.cpp.o
 
 src/motorlib/entidad.o: src/motorlib/entidad.cpp.o
@@ -1412,7 +1418,6 @@ src/modelos/aldeano/aldeano.s: src/modelos/aldeano/aldeano.cpp.s
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
- 
 
 src/obj3dlib/dodecaedro3d.i: src/obj3dlib/dodecaedro3d.cc.i
 #  Phony target (prerequisite of .PHONY).
@@ -1539,6 +1544,7 @@ src/glui/glui_window.s: src/glui/glui_window.cpp.s
 #  File does not exist.
 #  File has not been updated.
 
+ 
 src/glui/glui_translation.cpp.o:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
@@ -1691,7 +1697,6 @@ src/glui/glui_radio.i: src/glui/glui_radio.cpp.i
 
 src/obj3dlib/cono3d.o: src/obj3dlib/cono3d.cc.o
 #  Phony target (prerequisite of .PHONY).
- 
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
@@ -1726,6 +1731,7 @@ src/obj3dlib/toro3d.cc.i:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
+ 
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 1999):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/toro3d.cc.i
@@ -1911,7 +1917,6 @@ src/obj3dlib/octaedro3d.o: src/obj3dlib/octaedro3d.cc.o
 src/glui/glui_translation.i: src/glui/glui_translation.cpp.i
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
- 
 #  File does not exist.
 #  File has not been updated.
 
@@ -1962,6 +1967,7 @@ src/glui/glui_rotation.s: src/glui/glui_rotation.cpp.s
 src/obj3dlib/objrevolucion3d.cc.s:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
+ 
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 1935):
@@ -2069,7 +2075,6 @@ bin_src/juegoSG.i: bin_src/juegoSG.cc.i
 
 src/glui/glui_listbox.cpp.s:
 #  Phony target (prerequisite of .PHONY).
- 
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
@@ -2159,6 +2164,7 @@ src/obj3dlib/objeto3d.cc.i:
 src/glui/glui_treepanel.cpp.i:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
+ 
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 1063):
@@ -2222,7 +2228,6 @@ all: cmake_check_build_system
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start "/home/icaro/Escritorio/2º Cuatri/IA/practica2/CMakeFiles" 0
 
- 
 src/motorlib/monitor.cpp.o:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
@@ -2302,7 +2307,6 @@ src/modelos/item/item.cpp.o:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
- 
 #  recipe to execute (from 'Makefile', line 1319):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/item/item.cpp.o
 
@@ -2365,12 +2369,12 @@ help:
 	@echo "... src/glui/glui_button.i"
 	@echo "... src/glui/glui_button.s"
 	@echo "... src/glui/glui_checkbox.o"
+ 
 	@echo "... src/glui/glui_checkbox.i"
 	@echo "... src/glui/glui_checkbox.s"
 	@echo "... src/glui/glui_column.o"
 	@echo "... src/glui/glui_column.i"
 	@echo "... src/glui/glui_column.s"
- 
 	@echo "... src/glui/glui_commandline.o"
 	@echo "... src/glui/glui_commandline.i"
 	@echo "... src/glui/glui_commandline.s"
@@ -2441,7 +2445,6 @@ help:
 	@echo "... src/glui/quaternion.i"
 	@echo "... src/glui/quaternion.s"
 	@echo "... src/glui/viewmodel.o"
- 
 	@echo "... src/glui/viewmodel.i"
 	@echo "... src/glui/viewmodel.s"
 	@echo "... src/modelos/aldeano/aldeano.o"
@@ -2504,7 +2507,6 @@ help:
 	@echo "... src/motorlib/util.o"
 	@echo "... src/motorlib/util.i"
 	@echo "... src/motorlib/util.s"
- 
 	@echo "... src/obj3dlib/cono3d.o"
 	@echo "... src/obj3dlib/cono3d.i"
 	@echo "... src/obj3dlib/cono3d.s"
@@ -2565,7 +2567,6 @@ src/modelos/perro/lomo.cpp.s:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
- 
 #  recipe to execute (from 'Makefile', line 1431):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/perro/lomo.cpp.s
 
@@ -2630,7 +2631,6 @@ src/glui/glui_node.cpp.o:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
- 
 #  recipe to execute (from 'Makefile', line 743):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_node.cpp.o
 
@@ -2661,6 +2661,7 @@ src/modelos/aldeano/cabeza.o: src/modelos/aldeano/cabeza.cpp.o
 #  File has not been updated.
 
 src/obj3dlib/esfera3d.i: src/obj3dlib/esfera3d.cc.i
+ 
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
@@ -2698,7 +2699,6 @@ src/obj3dlib/jpeg_reader/jpg_readwrite.cpp.o:
 
 src/obj3dlib/toro3d.s: src/obj3dlib/toro3d.cc.s
 #  Phony target (prerequisite of .PHONY).
- 
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
@@ -2758,7 +2758,6 @@ src/modelos/aldeano/brazo.s: src/modelos/aldeano/brazo.cpp.s
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
- 
 
 src/modelos/aldeano/cintura.o: src/modelos/aldeano/cintura.cpp.o
 #  Phony target (prerequisite of .PHONY).
@@ -2828,7 +2827,6 @@ src/modelos/arbol/arbol.o: src/modelos/arbol/arbol.cpp.o
 
 src/glui/glui_bitmap_img_data.cpp.s:
 #  Phony target (prerequisite of .PHONY).
- 
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
@@ -2885,7 +2883,6 @@ src/modelos/jugador/jugador3d.i: src/modelos/jugador/jugador3d.cpp.i
 #  File does not exist.
 #  File has not been updated.
 
- 
 src/obj3dlib/toro3d.i: src/obj3dlib/toro3d.cc.i
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
@@ -2905,6 +2902,7 @@ src/motorlib/monitor.s: src/motorlib/monitor.cpp.s
 #  File has not been updated.
 
 src/obj3dlib/jpeg_reader/jpg_readwrite.o: src/obj3dlib/jpeg_reader/jpg_readwrite.cpp.o
+ 
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
@@ -2946,7 +2944,6 @@ src/glui/glui.o: src/glui/glui.cpp.o
 #  File does not exist.
 #  File has not been updated.
 
- 
 src/modelos/aldeano/cintura.cpp.i:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
@@ -3003,7 +3000,6 @@ src/glui/glui_rotation.cpp.i:
 #  recipe to execute (from 'Makefile', line 847):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_rotation.cpp.i
 
- 
 src/glui/glui_spinner.cpp.i:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
@@ -3064,7 +3060,6 @@ src/glui/glui_button.cpp.i:
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 511):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_button.cpp.i
- 
 
 src/glui/glui_statictext.cpp.o:
 #  Phony target (prerequisite of .PHONY).
@@ -3085,6 +3080,7 @@ src/glui/glui_list.cpp.i:
 src/motorlib/motor_juego.cpp.o:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
+ 
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 1583):
@@ -3125,7 +3121,6 @@ src/glui/glui_separator.i: src/glui/glui_separator.cpp.i
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
- 
 
 Comportamientos_Jugador/jugador.s: Comportamientos_Jugador/jugador.cpp.s
 #  Phony target (prerequisite of .PHONY).
@@ -3189,7 +3184,6 @@ src/modelos/arbol/arbol.cpp.s:
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 1311):
- 
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/arbol/arbol.cpp.s
 
 src/glui/glui_edittext.i: src/glui/glui_edittext.cpp.i
@@ -3244,7 +3238,6 @@ src/modelos/aldeano/pierna.cpp.i:
 
 src/obj3dlib/octaedro3d.cc.o:
 #  Phony target (prerequisite of .PHONY).
- 
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
@@ -3261,6 +3254,7 @@ comportamientosLib/fast:
 
 src/glui/glui_list.cpp.s:
 #  Phony target (prerequisite of .PHONY).
+ 
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
@@ -3302,7 +3296,6 @@ src/obj3dlib/jpeg_reader/jpg_readwrite.s: src/obj3dlib/jpeg_reader/jpg_readwrite
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
- 
 
 src/glui/glui_bitmap_img_data.cpp.o:
 #  Phony target (prerequisite of .PHONY).
@@ -3368,7 +3361,6 @@ bin_src/juegoSG.cc.o:
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 311):
- 
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/practica2SG.dir/build.make CMakeFiles/practica2SG.dir/bin_src/juegoSG.cc.o
 
 src/modelos/aldeano/pierna.cpp.s:
@@ -3432,7 +3424,6 @@ src/glui/glui.cpp.s:
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
- 
 #  recipe to execute (from 'Makefile', line 423):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui.cpp.s
 
@@ -3457,6 +3448,7 @@ src/obj3dlib/icosaedro3d.cc.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/icosaedro3d.cc.i
 
 src/glui/glui_add_controls.cpp.o:
+ 
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
@@ -3493,7 +3485,6 @@ src/modelos/jugador/quesito.cpp.i:
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 1375):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/jugador/quesito.cpp.i
- 
 
 src/glui/glui_listbox.o: src/glui/glui_listbox.cpp.o
 #  Phony target (prerequisite of .PHONY).
@@ -3561,7 +3552,6 @@ src/obj3dlib/esfera3d.cc.i:
 #  recipe to execute (from 'Makefile', line 1735):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/obj3DLib.dir/build.make CMakeFiles/obj3DLib.dir/src/obj3dlib/esfera3d.cc.i
 
- 
 src/glui/glui_control.i: src/glui/glui_control.cpp.i
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
@@ -3614,8 +3604,7 @@ src/modelos/retrato.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/retrato.cpp.s
 
  
-.PHONY: default_target cmake_force edit_cache edit_cache/fast rebuild_cache rebuild_cache/fast all clean clean/fast preinstall preinstall/fast depend obj3DLib obj3DLib/fast GLUILib GLUILib/fast modelosBelkanLib modelosBelkanLib/fast comportamientosLib comportamientosLib/fast motorLib motorLib/fast practica2 practica2/fast practica2SG practica2SG/fast Comportamientos_Jugador/aldeano.o Comportamientos_Jugador/aldeano.cpp.o Comportamientos_Jugador/aldeano.i Comportamientos_Jugador/aldeano.cpp.i Comportamientos_Jugador/aldeano.s Comportamientos_Jugador/aldeano.cpp.s Comportamientos_Jugador/jugador.o Comportamientos_Jugador/jugador.cpp.o Comportamientos_Jugador/jugador.i Comportamientos_Jugador/jugador.cpp.i Comportamientos_Jugador/jugador.s Comportamientos_Jugador/jugador.cpp.s Comportamientos_Jugador/perro.o Comportamientos_Jugador/perro.cpp.o Comportamientos_Jugador/perro.i Comportamientos_Jugador/perro.cpp.i Comportamientos_Jugador/perro.s Comportamientos_Jugador/perro.cpp.s bin_src/juego.o bin_src/juego.cc.o bin_src/juego.i bin_src/juego.cc.i bin_src/juego.s bin_src/juego.cc.s bin_src/juegoSG.o bin_src/juegoSG.cc.o bin_src/juegoSG.i bin_src/juegoSG.cc.i bin_src/juegoSG.s bin_src/juegoSG.cc.s src/comportamientos/comportamiento.o src/comportamientos/comportamiento.cpp.o src/comportamientos/comportamiento.i src/comportamientos/comportamiento.cpp.i src/comportamientos/comportamiento.s src/comportamientos/comportamiento.cpp.s src/glui/algebra3.o src/glui/algebra3.cpp.o src/glui/algebra3.i src/glui/algebra3.cpp.i src/glui/algebra3.s src/glui/algebra3.cpp.s src/glui/arcball.o src/glui/arcball.cpp.o src/glui/arcball.i src/glui/arcball.cpp.i src/glui/arcball.s src/glui/arcball.cpp.s src/glui/glui.o src/glui/glui.cpp.o src/glui/glui.i src/glui/glui.cpp.i src/glui/glui.s src/glui/glui.cpp.s src/glui/glui_add_controls.o src/glui/glui_add_controls.cpp.o src/glui/glui_add_controls.i src/glui/glui_add_controls.cpp.i src/glui/glui_add_controls.s src/glui/glui_add_controls.cpp.s src/glui/glui_bitmap_img_data.o src/glui/glui_bitmap_img_data.cpp.o src/glui/glui_bitmap_img_data.i src/glui/glui_bitmap_img_data.cpp.i src/glui/glui_bitmap_img_data.s src/glui/glui_bitmap_img_data.cpp.s src/glui/glui_bitmaps.o src/glui/glui_bitmaps.cpp.o src/glui/glui_bitmaps.i src/glui/glui_bitmaps.cpp.i src/glui/glui_bitmaps.s src/glui/glui_bitmaps.cpp.s src/glui/glui_button.o src/glui/glui_button.cpp.o src/glui/glui_button.i src/glui/glui_button.cpp.i src/glui/glui_button.s src/glui/glui_button.cpp.s src/glui/glui_checkbox.o src/glui/glui_checkbox.cpp.o src/glui/glui_checkbox.i src/glui/glui_checkbox.cpp.i src/glui/glui_checkbox.s src/glui/glui_checkbox.cpp.s src/glui/glui_column.o src/glui/glui_column.cpp.o src/glui/glui_column.i src/glui/glui_column.cpp.i src/glui/glui_column.s src/glui/glui_column.cpp.s src/glui/glui_commandline.o src/glui/glui_commandline.cpp.o src/glui/glui_commandline.i src/glui/glui_commandline.cpp.i src/glui/glui_commandline.s src/glui/glui_commandline.cpp.s src/glui/glui_control.o src/glui/glui_control.cpp.o src/glui/glui_control.i src/glui/glui_control.cpp.i src/glui/glui_control.s src/glui/glui_control.cpp.s src/glui/glui_edittext.o src/glui/glui_edittext.cpp.o src/glui/glui_edittext.i src/glui/glui_edittext.cpp.i src/glui/glui_edittext.s src/glui/glui_edittext.cpp.s src/glui/glui_filebrowser.o src/glui/glui_filebrowser.cpp.o src/glui/glui_filebrowser.i src/glui/glui_filebrowser.cpp.i src/glui/glui_filebrowser.s src/glui/glui_filebrowser.cpp.s src/glui/glui_list.o src/glui/glui_list.cpp.o src/glui/glui_list.i src/glui/glui_list.cpp.i src/glui/glui_list.s src/glui/glui_list.cpp.s src/glui/glui_listbox.o src/glui/glui_listbox.cpp.o src/glui/glui_listbox.i src/glui/glui_listbox.cpp.i src/glui/glui_listbox.s src/glui/glui_listbox.cpp.s src/glui/glui_mouse_iaction.o src/glui/glui_mouse_iaction.cpp.o src/glui/glui_mouse_iaction.i src/glui/glui_mouse_iaction.cpp.i src/glui/glui_mouse_iaction.s src/glui/glui_mouse_iaction.cpp.s src/glui/glui_node.o src/glui/glui_node.cpp.o src/glui/glui_node.i src/glui/glui_node.cpp.i src/glui/glui_node.s src/glui/glui_node.cpp.s src/glui/glui_panel.o src/glui/glui_panel.cpp.o src/glui/glui_panel.i src/glui/glui_panel.cpp.i src/glui/glui_panel.s src/glui/glui_panel.cpp.s src/glui/glui_radio.o src/glui/glui_radio.cpp.o src/glui/glui_radio.i src/glui/glui_radio.cpp.i src/glui/glui_radio.s src/glui/glui_radio.cpp.s src/glui/glui_rollout.o src/glui/glui_rollout.cpp.o src/glui/glui_rollout.i src/glui/glui_rollout.cpp.i src/glui/glui_rollout.s src/glui/glui_rollout.cpp.s src/glui/glui_rotation.o src/glui/glui_rotation.cpp.o src/glui/glui_rotation.i src/glui/glui_rotation.cpp.i src/glui/glui_rotation.s src/glui/glui_rotation.cpp.s src/glui/glui_scrollbar.o src/glui/glui_scrollbar.cpp.o src/glui/glui_scrollbar.i src/glui/glui_scrollbar.cpp.i src/glui/glui_scrollbar.s src/glui/glui_scrollbar.cpp.s src/glui/glui_separator.o src/glui/glui_separator.cpp.o src/glui/glui_separator.i src/glui/glui_separator.cpp.i src/glui/glui_separator.s src/glui/glui_separator.cpp.s src/glui/glui_spinner.o src/glui/glui_spinner.cpp.o src/glui/glui_spinner.i src/glui/glui_spinner.cpp.i src/glui/glui_spinner.s src/glui/glui_spinner.cpp.s src/glui/glui_statictext.o src/glui/glui_statictext.cpp.o src/glui/glui_statictext.i src/glui/glui_statictext.cpp.i src/glui/glui_statictext.s src/glui/glui_statictext.cpp.s src/glui/glui_string.o src/glui/glui_string.cpp.o src/glui/glui_string.i src/glui/glui_string.cpp.i src/glui/glui_string.s src/glui/glui_string.cpp.s src/glui/glui_textbox.o src/glui/glui_textbox.cpp.o src/glui/glui_textbox.i src/glui/glui_textbox.cpp.i src/glui/glui_textbox.s src/glui/glui_textbox.cpp.s src/glui/glui_translation.o src/glui/glui_translation.cpp.o src/glui/glui_translation.i src/glui/glui_translation.cpp.i src/glui/glui_translation.s src/glui/glui_translation.cpp.s src/glui/glui_tree.o src/glui/glui_tree.cpp.o src/glui/glui_tree.i src/glui/glui_tree.cpp.i src/glui/glui_tree.s src/glui/glui_tree.cpp.s src/glui/glui_treepanel.o src/glui/glui_treepanel.cpp.o src/glui/glui_treepanel.i src/glui/glui_treepanel.cpp.i src/glui/glui_treepanel.s src/glui/glui_treepanel.cpp.s src/glui/glui_window.o src/glui/glui_window.cpp.o src/glui/glui_window.i src/glui/glui_window.cpp.i src/glui/glui_window.s src/glui/glui_window.cpp.s src/glui/quaternion.o src/glui/quaternion.cpp.o src/glui/quaternion.i src/glui/quaternion.cpp.i src/glui/quaternion.s src/glui/quaternion.cpp.s src/glui/viewmodel.o src/glui/viewmodel.cpp.o src/glui/viewmodel.i src/glui/viewmodel.cpp.i src/glui/viewmodel.s src/glui/viewmodel.cpp.s src/modelos/aldeano/aldeano.o src/modelos/aldeano/aldeano.cpp.o src/modelos/aldeano/aldeano.i src/modelos/aldeano/aldeano.cpp.i src/modelos/aldeano/aldeano.s src/modelos/aldeano/aldeano.cpp.s src/modelos/aldeano/brazo.o src/modelos/aldeano/brazo.cpp.o src/modelos/aldeano/brazo.i src/modelos/aldeano/brazo.cpp.i src/modelos/aldeano/brazo.s src/modelos/aldeano/brazo.cpp.s src/modelos/aldeano/cabeza.o src/modelos/aldeano/cabeza.cpp.o src/modelos/aldeano/cabeza.i src/modelos/aldeano/cabeza.cpp.i src/modelos/aldeano/cabeza.s src/modelos/aldeano/cabeza.cpp.s src/modelos/aldeano/cintura.o src/modelos/aldeano/cintura.cpp.o src/modelos/aldeano/cintura.i src/modelos/aldeano/cintura.cpp.i src/modelos/aldeano/cintura.s src/modelos/aldeano/cintura.cpp.s src/modelos/aldeano/pierna.o src/modelos/aldeano/pierna.cpp.o src/modelos/aldeano/pierna.i src/modelos/aldeano/pierna.cpp.i src/modelos/aldeano/pierna.s src/modelos/aldeano/pierna.cpp.s src/modelos/aldeano/torso.o src/modelos/aldeano/torso.cpp.o src/modelos/aldeano/torso.i src/modelos/aldeano/torso.cpp.i src/modelos/aldeano/torso.s src/modelos/aldeano/torso.cpp.s src/modelos/arbol/arbol.o src/modelos/arbol/arbol.cpp.o src/modelos/arbol/arbol.i src/modelos/arbol/arbol.cpp.i src/modelos/arbol/arbol.s src/modelos/arbol/arbol.cpp.s src/modelos/item/item.o src/modelos/item/item.cpp.o src/modelos/item/item.i src/modelos/item/item.cpp.i src/modelos/item/item.s src/modelos/item/item.cpp.s src/modelos/jugador/jugador3d.o src/modelos/jugador/jugador3d.cpp.o src/modelos/jugador/jugador3d.i src/modelos/jugador/jugador3d.cpp.i 
- src/modelos/jugador/jugador3d.s src/modelos/jugador/jugador3d.cpp.s src/modelos/jugador/quesito.o src/modelos/jugador/quesito.cpp.o src/modelos/jugador/quesito.i src/modelos/jugador/quesito.cpp.i src/modelos/jugador/quesito.s src/modelos/jugador/quesito.cpp.s src/modelos/perro/cabeza.o src/modelos/perro/cabeza.cpp.o src/modelos/perro/cabeza.i src/modelos/perro/cabeza.cpp.i src/modelos/perro/cabeza.s src/modelos/perro/cabeza.cpp.s src/modelos/perro/lomo.o src/modelos/perro/lomo.cpp.o src/modelos/perro/lomo.i src/modelos/perro/lomo.cpp.i src/modelos/perro/lomo.s src/modelos/perro/lomo.cpp.s src/modelos/perro/perro.o src/modelos/perro/perro.cpp.o src/modelos/perro/perro.i src/modelos/perro/perro.cpp.i src/modelos/perro/perro.s src/modelos/perro/perro.cpp.s src/modelos/retrato.o src/modelos/retrato.cpp.o src/modelos/retrato.i src/modelos/retrato.cpp.i src/modelos/retrato.s src/modelos/retrato.cpp.s src/motorlib/entidad.o src/motorlib/entidad.cpp.o src/motorlib/entidad.i src/motorlib/entidad.cpp.i src/motorlib/entidad.s src/motorlib/entidad.cpp.s src/motorlib/mapa.o src/motorlib/mapa.cpp.o src/motorlib/mapa.i src/motorlib/mapa.cpp.i src/motorlib/mapa.s src/motorlib/mapa.cpp.s src/motorlib/monitor.o src/motorlib/monitor.cpp.o src/motorlib/monitor.i src/motorlib/monitor.cpp.i src/motorlib/monitor.s src/motorlib/monitor.cpp.s src/motorlib/motor_grafico.o src/motorlib/motor_grafico.cpp.o src/motorlib/motor_grafico.i src/motorlib/motor_grafico.cpp.i src/motorlib/motor_grafico.s src/motorlib/motor_grafico.cpp.s src/motorlib/motor_juego.o src/motorlib/motor_juego.cpp.o src/motorlib/motor_juego.i src/motorlib/motor_juego.cpp.i src/motorlib/motor_juego.s src/motorlib/motor_juego.cpp.s src/motorlib/util.o src/motorlib/util.cpp.o src/motorlib/util.i src/motorlib/util.cpp.i src/motorlib/util.s src/motorlib/util.cpp.s src/obj3dlib/cono3d.o src/obj3dlib/cono3d.cc.o src/obj3dlib/cono3d.i src/obj3dlib/cono3d.cc.i src/obj3dlib/cono3d.s src/obj3dlib/cono3d.cc.s src/obj3dlib/cono3dwire.o src/obj3dlib/cono3dwire.cc.o src/obj3dlib/cono3dwire.i src/obj3dlib/cono3dwire.cc.i src/obj3dlib/cono3dwire.s src/obj3dlib/cono3dwire.cc.s src/obj3dlib/cubo3d.o src/obj3dlib/cubo3d.cc.o src/obj3dlib/cubo3d.i src/obj3dlib/cubo3d.cc.i src/obj3dlib/cubo3d.s src/obj3dlib/cubo3d.cc.s src/obj3dlib/dodecaedro3d.o src/obj3dlib/dodecaedro3d.cc.o src/obj3dlib/dodecaedro3d.i src/obj3dlib/dodecaedro3d.cc.i src/obj3dlib/dodecaedro3d.s src/obj3dlib/dodecaedro3d.cc.s src/obj3dlib/esfera3d.o src/obj3dlib/esfera3d.cc.o src/obj3dlib/esfera3d.i src/obj3dlib/esfera3d.cc.i src/obj3dlib/esfera3d.s src/obj3dlib/esfera3d.cc.s src/obj3dlib/file_ply_stl.o src/obj3dlib/file_ply_stl.cc.o src/obj3dlib/file_ply_stl.i src/obj3dlib/file_ply_stl.cc.i src/obj3dlib/file_ply_stl.s src/obj3dlib/file_ply_stl.cc.s src/obj3dlib/icosaedro3d.o src/obj3dlib/icosaedro3d.cc.o src/obj3dlib/icosaedro3d.i src/obj3dlib/icosaedro3d.cc.i src/obj3dlib/icosaedro3d.s src/obj3dlib/icosaedro3d.cc.s src/obj3dlib/jpeg_reader/jpg_imagen.o src/obj3dlib/jpeg_reader/jpg_imagen.cpp.o src/obj3dlib/jpeg_reader/jpg_imagen.i src/obj3dlib/jpeg_reader/jpg_imagen.cpp.i src/obj3dlib/jpeg_reader/jpg_imagen.s src/obj3dlib/jpeg_reader/jpg_imagen.cpp.s src/obj3dlib/jpeg_reader/jpg_memsrc.o src/obj3dlib/jpeg_reader/jpg_memsrc.cpp.o src/obj3dlib/jpeg_reader/jpg_memsrc.i src/obj3dlib/jpeg_reader/jpg_memsrc.cpp.i src/obj3dlib/jpeg_reader/jpg_memsrc.s src/obj3dlib/jpeg_reader/jpg_memsrc.cpp.s src/obj3dlib/jpeg_reader/jpg_readwrite.o src/obj3dlib/jpeg_reader/jpg_readwrite.cpp.o src/obj3dlib/jpeg_reader/jpg_readwrite.i src/obj3dlib/jpeg_reader/jpg_readwrite.cpp.i src/obj3dlib/jpeg_reader/jpg_readwrite.s src/obj3dlib/jpeg_reader/jpg_readwrite.cpp.s src/obj3dlib/luz.o src/obj3dlib/luz.cpp.o src/obj3dlib/luz.i src/obj3dlib/luz.cpp.i src/obj3dlib/luz.s src/obj3dlib/luz.cpp.s src/obj3dlib/objeto3d.o src/obj3dlib/objeto3d.cc.o src/obj3dlib/objeto3d.i src/obj3dlib/objeto3d.cc.i src/obj3dlib/objeto3d.s src/obj3dlib/objeto3d.cc.s src/obj3dlib/objrevolucion3d.o src/obj3dlib/objrevolucion3d.cc.o src/obj3dlib/objrevolucion3d.i src/obj3dlib/objrevolucion3d.cc.i src/obj3dlib/objrevolucion3d.s src/obj3dlib/objrevolucion3d.cc.s src/obj3dlib/octaedro3d.o src/obj3dlib/octaedro3d.cc.o src/obj3dlib/octaedro3d.i src/obj3dlib/octaedro3d.cc.i src/obj3dlib/octaedro3d.s src/obj3dlib/octaedro3d.cc.s src/obj3dlib/tetraedro3d.o src/obj3dlib/tetraedro3d.cc.o src/obj3dlib/tetraedro3d.i src/obj3dlib/tetraedro3d.cc.i src/obj3dlib/tetraedro3d.s src/obj3dlib/tetraedro3d.cc.s src/obj3dlib/toro3d.o src/obj3dlib/toro3d.cc.o src/obj3dlib/toro3d.i src/obj3dlib/toro3d.cc.i src/obj3dlib/toro3d.s src/obj3dlib/toro3d.cc.s help cmake_check_build_system
+.PHONY: default_target cmake_force edit_cache edit_cache/fast rebuild_cache rebuild_cache/fast all clean clean/fast preinstall preinstall/fast depend obj3DLib obj3DLib/fast GLUILib GLUILib/fast modelosBelkanLib modelosBelkanLib/fast comportamientosLib comportamientosLib/fast motorLib motorLib/fast practica2 practica2/fast practica2SG practica2SG/fast Comportamientos_Jugador/aldeano.o Comportamientos_Jugador/aldeano.cpp.o Comportamientos_Jugador/aldeano.i Comportamientos_Jugador/aldeano.cpp.i Comportamientos_Jugador/aldeano.s Comportamientos_Jugador/aldeano.cpp.s Comportamientos_Jugador/jugador.o Comportamientos_Jugador/jugador.cpp.o Comportamientos_Jugador/jugador.i Comportamientos_Jugador/jugador.cpp.i Comportamientos_Jugador/jugador.s Comportamientos_Jugador/jugador.cpp.s Comportamientos_Jugador/perro.o Comportamientos_Jugador/perro.cpp.o Comportamientos_Jugador/perro.i Comportamientos_Jugador/perro.cpp.i Comportamientos_Jugador/perro.s Comportamientos_Jugador/perro.cpp.s bin_src/juego.o bin_src/juego.cc.o bin_src/juego.i bin_src/juego.cc.i bin_src/juego.s bin_src/juego.cc.s bin_src/juegoSG.o bin_src/juegoSG.cc.o bin_src/juegoSG.i bin_src/juegoSG.cc.i bin_src/juegoSG.s bin_src/juegoSG.cc.s src/comportamientos/comportamiento.o src/comportamientos/comportamiento.cpp.o src/comportamientos/comportamiento.i src/comportamientos/comportamiento.cpp.i src/comportamientos/comportamiento.s src/comportamientos/comportamiento.cpp.s src/glui/algebra3.o src/glui/algebra3.cpp.o src/glui/algebra3.i src/glui/algebra3.cpp.i src/glui/algebra3.s src/glui/algebra3.cpp.s src/glui/arcball.o src/glui/arcball.cpp.o src/glui/arcball.i src/glui/arcball.cpp.i src/glui/arcball.s src/glui/arcball.cpp.s src/glui/glui.o src/glui/glui.cpp.o src/glui/glui.i src/glui/glui.cpp.i src/glui/glui.s src/glui/glui.cpp.s src/glui/glui_add_controls.o src/glui/glui_add_controls.cpp.o src/glui/glui_add_controls.i src/glui/glui_add_controls.cpp.i src/glui/glui_add_controls.s src/glui/glui_add_controls.cpp.s src/glui/glui_bitmap_img_data.o src/glui/glui_bitmap_img_data.cpp.o src/glui/glui_bitmap_img_data.i src/glui/glui_bitmap_img_data.cpp.i src/glui/glui_bitmap_img_data.s src/glui/glui_bitmap_img_data.cpp.s src/glui/glui_bitmaps.o src/glui/glui_bitmaps.cpp.o src/glui/glui_bitmaps.i src/glui/glui_bitmaps.cpp.i src/glui/glui_bitmaps.s src/glui/glui_bitmaps.cpp.s src/glui/glui_button.o src/glui/glui_button.cpp.o src/glui/glui_button.i src/glui/glui_button.cpp.i src/glui/glui_button.s src/glui/glui_button.cpp.s src/glui/glui_checkbox.o src/glui/glui_checkbox.cpp.o src/glui/glui_checkbox.i src/glui/glui_checkbox.cpp.i src/glui/glui_checkbox.s src/glui/glui_checkbox.cpp.s src/glui/glui_column.o src/glui/glui_column.cpp.o src/glui/glui_column.i src/glui/glui_column.cpp.i src/glui/glui_column.s src/glui/glui_column.cpp.s src/glui/glui_commandline.o src/glui/glui_commandline.cpp.o src/glui/glui_commandline.i src/glui/glui_commandline.cpp.i src/glui/glui_commandline.s src/glui/glui_commandline.cpp.s src/glui/glui_control.o src/glui/glui_control.cpp.o src/glui/glui_control.i src/glui/glui_control.cpp.i src/glui/glui_control.s src/glui/glui_control.cpp.s src/glui/glui_edittext.o src/glui/glui_edittext.cpp.o src/glui/glui_edittext.i src/glui/glui_edittext.cpp.i src/glui/glui_edittext.s src/glui/glui_edittext.cpp.s src/glui/glui_filebrowser.o src/glui/glui_filebrowser.cpp.o src/glui/glui_filebrowser.i src/glui/glui_filebrowser.cpp.i src/glui/glui_filebrowser.s src/glui/glui_filebrowser.cpp.s src/glui/glui_list.o src/glui/glui_list.cpp.o src/glui/glui_list.i src/glui/glui_list.cpp.i src/glui/glui_list.s src/glui/glui_list.cpp.s src/glui/glui_listbox.o src/glui/glui_listbox.cpp.o src/glui/glui_listbox.i src/glui/glui_listbox.cpp.i src/glui/glui_listbox.s src/glui/glui_listbox.cpp.s src/glui/glui_mouse_iaction.o src/glui/glui_mouse_iaction.cpp.o src/glui/glui_mouse_iaction.i src/glui/glui_mouse_iaction.cpp.i src/glui/glui_mouse_iaction.s src/glui/glui_mouse_iaction.cpp.s src/glui/glui_node.o src/glui/glui_node.cpp.o src/glui/glui_node.i src/glui/glui_node.cpp.i src/glui/glui_node.s src/glui/glui_node.cpp.s src/glui/glui_panel.o src/glui/glui_panel.cpp.o src/glui/glui_panel.i src/glui/glui_panel.cpp.i src/glui/glui_panel.s src/glui/glui_panel.cpp.s src/glui/glui_radio.o src/glui/glui_radio.cpp.o src/glui/glui_radio.i src/glui/glui_radio.cpp.i src/glui/glui_radio.s src/glui/glui_radio.cpp.s src/glui/glui_rollout.o src/glui/glui_rollout.cpp.o src/glui/glui_rollout.i src/glui/glui_rollout.cpp.i src/glui/glui_rollout.s src/glui/glui_rollout.cpp.s src/glui/glui_rotation.o src/glui/glui_rotation.cpp.o src/glui/glui_rotation.i src/glui/glui_rotation.cpp.i src/glui/glui_rotation.s src/glui/glui_rotation.cpp.s src/glui/glui_scrollbar.o src/glui/glui_scrollbar.cpp.o src/glui/glui_scrollbar.i src/glui/glui_scrollbar.cpp.i src/glui/glui_scrollbar.s src/glui/glui_scrollbar.cpp.s src/glui/glui_separator.o src/glui/glui_separator.cpp.o src/glui/glui_separator.i src/glui/glui_separator.cpp.i src/glui/glui_separator.s src/glui/glui_separator.cpp.s src/glui/glui_spinner.o src/glui/glui_spinner.cpp.o src/glui/glui_spinner.i src/glui/glui_spinner.cpp.i src/glui/glui_spinner.s src/glui/glui_spinner.cpp.s src/glui/glui_statictext.o src/glui/glui_statictext.cpp.o src/glui/glui_statictext.i src/glui/glui_statictext.cpp.i src/glui/glui_statictext.s src/glui/glui_statictext.cpp.s src/glui/glui_string.o src/glui/glui_string.cpp.o src/glui/glui_string.i src/glui/glui_string.cpp.i src/glui/glui_string.s src/glui/glui_string.cpp.s src/glui/glui_textbox.o src/glui/glui_textbox.cpp.o src/glui/glui_textbox.i src/glui/glui_textbox.cpp.i src/glui/glui_textbox.s src/glui/glui_textbox.cpp.s src/glui/glui_translation.o src/glui/glui_translation.cpp.o src/glui/glui_translation.i src/glui/glui_translation.cpp.i src/glui/glui_translation.s src/glui/glui_translation.cpp.s src/glui/glui_tree.o src/glui/glui_tree.cpp.o src/glui/glui_tree.i src/glui/glui_tree.cpp.i src/glui/glui_tree.s src/glui/glui_tree.cpp.s src/glui/glui_treepanel.o src/glui/glui_treepanel.cpp.o src/glui/glui_treepanel.i src/glui/glui_treepanel.cpp.i src/glui/glui_treepanel.s src/glui/glui_treepanel.cpp.s src/glui/glui_window.o src/glui/glui_window.cpp.o src/glui/glui_window.i src/glui/glui_window.cpp.i src/glui/glui_window.s src/glui/glui_window.cpp.s src/glui/quaternion.o src/glui/quaternion.cpp.o src/glui/quaternion.i src/glui/quaternion.cpp.i src/glui/quaternion.s src/glui/quaternion.cpp.s src/glui/viewmodel.o src/glui/viewmodel.cpp.o src/glui/viewmodel.i src/glui/viewmodel.cpp.i src/glui/viewmodel.s src/glui/viewmodel.cpp.s src/modelos/aldeano/aldeano.o src/modelos/aldeano/aldeano.cpp.o src/modelos/aldeano/aldeano.i src/modelos/aldeano/aldeano.cpp.i src/modelos/aldeano/aldeano.s src/modelos/aldeano/aldeano.cpp.s src/modelos/aldeano/brazo.o src/modelos/aldeano/brazo.cpp.o src/modelos/aldeano/brazo.i src/modelos/aldeano/brazo.cpp.i src/modelos/aldeano/brazo.s src/modelos/aldeano/brazo.cpp.s src/modelos/aldeano/cabeza.o src/modelos/aldeano/cabeza.cpp.o src/modelos/aldeano/cabeza.i src/modelos/aldeano/cabeza.cpp.i src/modelos/aldeano/cabeza.s src/modelos/aldeano/cabeza.cpp.s src/modelos/aldeano/cintura.o src/modelos/aldeano/cintura.cpp.o src/modelos/aldeano/cintura.i src/modelos/aldeano/cintura.cpp.i src/modelos/aldeano/cintura.s src/modelos/aldeano/cintura.cpp.s src/modelos/aldeano/pierna.o src/modelos/aldeano/pierna.cpp.o src/modelos/aldeano/pierna.i src/modelos/aldeano/pierna.cpp.i src/modelos/aldeano/pierna.s src/modelos/aldeano/pierna.cpp.s src/modelos/aldeano/torso.o src/modelos/aldeano/torso.cpp.o src/modelos/aldeano/torso.i src/modelos/aldeano/torso.cpp.i src/modelos/aldeano/torso.s src/modelos/aldeano/torso.cpp.s src/modelos/arbol/arbol.o src/modelos/arbol/arbol.cpp.o src/modelos/arbol/arbol.i src/modelos/arbol/arbol.cpp.i src/modelos/arbol/arbol.s src/modelos/arbol/arbol.cpp.s src/modelos/item/item.o src/modelos/item/item.cpp.o src/modelos/item/item.i src/modelos/item/item.cpp.i src/modelos/item/item.s src/modelos/item/item.cpp.s src/modelos/jugador/jugador3d.o src/modelos/jugador/jugador3d.cpp.o src/modelos/jugador/jugador3d.i src/modelos/jugador/jugador3d.cpp.i src/modelos/jugador/jugador3d.s src/modelos/jugador/jugador3d.cpp.s src/modelos/jugador/quesito.o src/modelos/jugador/quesito.cpp.o src/modelos/jugador/quesito.i src/modelos/jugador/quesito.cpp.i src/modelos/jugador/quesito.s src/modelos/jugador/quesito.cpp.s src/modelos/perro/cabeza.o src/modelos/perro/cabeza.cpp.o src/modelos/perro/cabeza.i src/modelos/perro/cabeza.cpp.i src/modelos/perro/cabeza.s src/modelos/perro/cabeza.cpp.s src/modelos/perro/lomo.o src/modelos/perro/lomo.cpp.o src/modelos/perro/lomo.i src/modelos/perro/lomo.cpp.i src/modelos/perro/lomo.s src/modelos/perro/lomo.cpp.s src/modelos/perro/perro.o src/modelos/perro/perro.cpp.o src/modelos/perro/perro.i src/modelos/perro/perro.cpp.i src/modelos/perro/perro.s src/modelos/perro/perro.cpp.s src/modelos/retrato.o src/modelos/retrato.cpp.o src/modelos/retrato.i src/modelos/retrato.cpp.i src/modelos/retrato.s src/modelos/retrato.cpp.s src/motorlib/entidad.o src/motorlib/entidad.cpp.o src/motorlib/entidad.i src/motorlib/entidad.cpp.i src/motorlib/entidad.s src/motorlib/entidad.cpp.s src/motorlib/mapa.o src/motorlib/mapa.cpp.o src/motorlib/mapa.i src/motorlib/mapa.cpp.i src/motorlib/mapa.s src/motorlib/mapa.cpp.s src/motorlib/monitor.o src/motorlib/monitor.cpp.o src/motorlib/monitor.i src/motorlib/monitor.cpp.i src/motorlib/monitor.s src/motorlib/monitor.cpp.s src/motorlib/motor_grafico.o src/motorlib/motor_grafico.cpp.o src/motorlib/motor_grafico.i src/motorlib/motor_grafico.cpp.i src/motorlib/motor_grafico.s src/motorlib/motor_grafico.cpp.s src/motorlib/motor_juego.o src/motorlib/motor_juego.cpp.o src/motorlib/motor_juego.i src/motorlib/motor_juego.cpp.i src/motorlib/motor_juego.s src/motorlib/motor_juego.cpp.s src/motorlib/util.o src/motorlib/util.cpp.o src/motorlib/util.i src/motorlib/util.cpp.i src/motorlib/util.s src/motorlib/util.cpp.s src/obj3dlib/cono3d.o src/obj3dlib/cono3d.cc.o src/obj3dlib/cono3d.i src/obj3dlib/cono3d.cc.i src/obj3dlib/cono3d.s src/obj3dlib/cono3d.cc.s src/obj3dlib/cono3dwire.o src/obj3dlib/cono3dwire.cc.o src/obj3dlib/cono3dwire.i src/obj3dlib/cono3dwire.cc.i src/obj3dlib/cono3dwire.s src/obj3dlib/cono3dwire.cc.s src/obj3dlib/cubo3d.o src/obj3dlib/cubo3d.cc.o src/obj3dlib/cubo3d.i src/obj3dlib/cubo3d.cc.i src/obj3dlib/cubo3d.s src/obj3dlib/cubo3d.cc.s src/obj3dlib/dodecaedro3d.o src/obj3dlib/dodecaedro3d.cc.o src/obj3dlib/dodecaedro3d.i src/obj3dlib/dodecaedro3d.cc.i src/obj3dlib/dodecaedro3d.s src/obj3dlib/dodecaedro3d.cc.s src/obj3dlib/esfera3d.o src/obj3dlib/esfera3d.cc.o src/obj3dlib/esfera3d.i src/obj3dlib/esfera3d.cc.i src/obj3dlib/esfera3d.s src/obj3dlib/esfera3d.cc.s src/obj3dlib/file_ply_stl.o src/obj3dlib/file_ply_stl.cc.o src/obj3dlib/file_ply_stl.i src/obj3dlib/file_ply_stl.cc.i src/obj3dlib/file_ply_stl.s src/obj3dlib/file_ply_stl.cc.s src/obj3dlib/icosaedro3d.o src/obj3dlib/icosaedro3d.cc.o src/obj3dlib/icosaedro3d.i src/obj3dlib/icosaedro3d.cc.i src/obj3dlib/icosaedro3d.s src/obj3dlib/icosaedro3d.cc.s src/obj3dlib/jpeg_reader/jpg_imagen.o src/obj3dlib/jpeg_reader/jpg_imagen.cpp.o src/obj3dlib/jpeg_reader/jpg_imagen.i src/obj3dlib/jpeg_reader/jpg_imagen.cpp.i src/obj3dlib/jpeg_reader/jpg_imagen.s src/obj3dlib/jpeg_reader/jpg_imagen.cpp.s src/obj3dlib/jpeg_reader/jpg_memsrc.o src/obj3dlib/jpeg_reader/jpg_memsrc.cpp.o src/obj3dlib/jpeg_reader/jpg_memsrc.i src/obj3dlib/jpeg_reader/jpg_memsrc.cpp.i src/obj3dlib/jpeg_reader/jpg_memsrc.s src/obj3dlib/jpeg_reader/jpg_memsrc.cpp.s src/obj3dlib/jpeg_reader/jpg_readwrite.o src/obj3dlib/jpeg_reader/jpg_readwrite.cpp.o src/obj3dlib/jpeg_reader/jpg_readwrite.i src/obj3dlib/jpeg_reader/jpg_readwrite.cpp.i src/obj3dlib/jpeg_reader/jpg_readwrite.s src/obj3dlib/jpeg_reader/jpg_readwrite.cpp.s src/obj3dlib/luz.o src/obj3dlib/luz.cpp.o src/obj3dlib/luz.i src/obj3dlib/luz.cpp.i src/obj3dlib/luz.s src/obj3dlib/luz.cpp.s src/obj3dlib/objeto3d.o src/obj3dlib/objeto3d.cc.o src/obj3dlib/objeto3d.i src/obj3dlib/objeto3d.cc.i src/obj3dlib/objeto3d.s src/obj3dlib/objeto3d.cc.s src/obj3dlib/objrevolucion3d.o src/obj3dlib/objrevolucion3d.cc.o src/obj3dlib/objrevolucion3d.i src/obj3dlib/objrevolucion3d.cc.i src/obj3dlib/objrevolucion3d.s src/obj3dlib/objrevolucion3d.cc.s src/obj3dlib/octaedro3d.o src/obj3dlib/octaedro3d.cc.o src/obj3dlib/octaedro3d.i src/obj3dlib/octaedro3d.cc.i src/obj3dlib/octaedro3d.s src/obj3dlib/octaedro3d.cc.s src/obj3dlib/tetraedro3d.o src/obj3dlib/tetraedro3d.cc.o src/obj3dlib/tetraedro3d.i src/obj3dlib/tetraedro3d.cc.i src/obj3dlib/tetraedro3d.s src/obj3dlib/tetraedro3d.cc.s src/obj3dlib/toro3d.o src/obj3dlib/toro3d.cc.o src/obj3dlib/toro3d.i src/obj3dlib/toro3d.cc.i src/obj3dlib/toro3d.s src/obj3dlib/toro3d.cc.s help cmake_check_build_system
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
@@ -3688,7 +3677,6 @@ src/modelos/aldeano/brazo.cpp.s:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
- 
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 1191):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/modelosBelkanLib.dir/build.make CMakeFiles/modelosBelkanLib.dir/src/modelos/aldeano/brazo.cpp.s
@@ -3737,6 +3725,7 @@ src/glui/arcball.cpp.o:
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
+ 
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 383):
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/arcball.cpp.o
@@ -3767,7 +3756,6 @@ src/glui/glui_bitmaps.o: src/glui/glui_bitmaps.cpp.o
 #  Phony target (prerequisite of .PHONY).
 #  Implicit rule search has not been done.
 #  File does not exist.
- 
 #  File has not been updated.
 
 obj3DLib: cmake_check_build_system
@@ -3840,7 +3828,6 @@ src/glui/glui_filebrowser.cpp.s:
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 663):
- 
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_filebrowser.cpp.s
 
 modelosBelkanLib: cmake_check_build_system
@@ -3905,7 +3892,6 @@ src/glui/glui_rollout.cpp.i:
 #  File does not exist.
 #  File has not been updated.
 #  recipe to execute (from 'Makefile', line 823):
- 
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GLUILib.dir/build.make CMakeFiles/GLUILib.dir/src/glui/glui_rollout.cpp.i
 
 src/glui/glui_translation.cpp.i:
@@ -3967,7 +3953,6 @@ src/obj3dlib/luz.s: src/obj3dlib/luz.cpp.s
 #  Implicit rule search has not been done.
 #  File does not exist.
 #  File has not been updated.
- 
 
 # files hash-table stats:
 # Load=485/1024=47%, Rehash=0, Collisions=586/1919=31%
@@ -3984,7 +3969,8 @@ src/obj3dlib/luz.s: src/obj3dlib/luz.cpp.s
 
 # strcache performance: lookups = 2686 / hit rate = 80%
 # hash-table stats:
+ 
 # Load=519/8192=6%, Rehash=0, Collisions=62/2686=2%
-# Finished Make data base on Mon May  2 23:28:37 2022
+# Finished Make data base on Tue May  3 09:34:54 2022
 
  
