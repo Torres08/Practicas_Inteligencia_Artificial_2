@@ -41,42 +41,79 @@ Action ComportamientoJugador::think(Sensores sensores) {
   // nivel 3 donde hago hibrido reactivo y deliberativo
 
   /*
+        // 1 actaulizo mapa
+        // 2 busco sensores
+        // 3 modo busqueda modo aleatori
 	
   */
   if (sensores.nivel == 3) {
     
-    //ActualizarMapa(sensores);
-	/*
-	int ejemplo=0;
+        //ActualizarMapa(sensores);
+      /*
+      int ejemplo=0;
 
-	ejemplo = (rand() % 4 );
-	cout << " " << ejemplo << endl;
-	*/
+      ejemplo = (rand() % 4 );
+      cout << " " << ejemplo << endl;
+      */
+      
+      if (comienzo){
+
+        ActualizarMapa(sensores);
+        // 1 actaulizo mapa
+        // 2 busco sensores
+        // 3 modo busqueda modo aleatorio
+
+        // zapatillas
+        if (!encontrada_zapas)
+          for (int i = 0; i < 15; i++){
+            if (sensores.terreno[i] == 'D'){
+              // ¿Cual es la posicion de destino?
+              // i -> tengo que traducirla para introducir en el pathfinding
+              // el destino va a ser un estado ¿Cual?
+              // objetivos son los que introduzco -> creo uno nuevo y lo inserto en 
+              // calculo punto
+              encontrada_zapas = true;
+              estado aux;
+              aux = CalculoPunto (i,sensores);
+
+              
+              //aux.fila = sensores.destino[2 * i];
+              //aux.columna = sensores.destino[2 * i + 1];
+              //objetivos.push_back(aux);
+
+              //hayPlan = pathFinding(sensores.nivel, actual, objetivos, plan);
+
+            }
+        }
+
+        /*
+        // calculo la accion
+        if (hayPlan and plan.size() > 0) { // hay un plan no vacio
+             accion = plan.front();           // tomo la siguiente accion del Plan
+            plan.erase(plan.begin());        // eliminamos la accion del plan
+        
+        } else {
+            cout << "Hola" << endl;
+              
+            if (actual.recarga){ // movimiento aleatorio
+              accion = actIDLE;
+              actual = Recargar(sensores,actual);
+            }
+
+            else if (SensoresAvanzar(sensores, actual)){
+              accion = actFORWARD; 
+            } else {
+              accion = Girar(sensores);
+            }
+            
+        }
+        */
+        
+
+
+      }
+
 	
-	if (comienzo){
-
-		ActualizarMapa(sensores);
-
-		if (actual.recarga){
-			accion = actIDLE;
-    		actual = Recargar(sensores,actual);
-		}
-
-		else if (SensoresAvanzar(sensores, actual)){
-			accion = actFORWARD; 
-			// accion = moverAleatorio;
-		} else {
-			accion = Girar(sensores);
-		}
-	}
-
-	
-
-
-
-
-
-
 
 
   } else {
@@ -131,7 +168,11 @@ bool ComportamientoJugador::pathFinding(int level, const estado &origen,
     break;
   case 3:
     cout << "Reto 1: Descubrir el mapa\n";
-
+    cout << "Busqueda objetivo con costo uniforme" << endl;
+    un_objetivo = objetivos.front();
+    cout << "fila: " << un_objetivo.fila << " col:" << un_objetivo.columna
+         << endl;
+    return pathFinding_CostoUniforme(origen, un_objetivo, plan);
     break;
   case 4:
     cout << "Reto 2: Maximizar objetivos\n";
@@ -827,21 +868,21 @@ void ComportamientoJugador::ActualizarMapa(Sensores sensores) {
     break;
 
   case 1:
-  	mapaResultado[fil - 1][col] = sensores.terreno[1];
-	mapaResultado[fil - 1][col+1] = sensores.terreno[2];
-	mapaResultado[fil][col + 1] = sensores.terreno[3];
-	mapaResultado[fil - 2][col] = sensores.terreno[4];
-	mapaResultado[fil - 2][col + 1] = sensores.terreno[5];
-	mapaResultado[fil - 2][col + 2] = sensores.terreno[6];
-	mapaResultado[fil - 1][col + 2] = sensores.terreno[7];
-    mapaResultado[fil][col + 2] = sensores.terreno[8];
-	mapaResultado[fil - 3][col] = sensores.terreno[9];
-	mapaResultado[fil - 3][col + 1] = sensores.terreno[10];
-	mapaResultado[fil - 3][col + 2] = sensores.terreno[11];
-	mapaResultado[fil - 3][col + 3] = sensores.terreno[12];
-	mapaResultado[fil -2 ][col +3 ] = sensores.terreno[13];
-	mapaResultado[fil -1][col+3 ] = sensores.terreno[14];
-	mapaResultado[fil][col + 3] = sensores.terreno[15];
+      mapaResultado[fil - 1][col] = sensores.terreno[1];
+      mapaResultado[fil - 1][col+1] = sensores.terreno[2];
+      mapaResultado[fil][col + 1] = sensores.terreno[3];
+      mapaResultado[fil - 2][col] = sensores.terreno[4];
+      mapaResultado[fil - 2][col + 1] = sensores.terreno[5];
+      mapaResultado[fil - 2][col + 2] = sensores.terreno[6];
+      mapaResultado[fil - 1][col + 2] = sensores.terreno[7];
+      mapaResultado[fil][col + 2] = sensores.terreno[8];
+      mapaResultado[fil - 3][col] = sensores.terreno[9];
+      mapaResultado[fil - 3][col + 1] = sensores.terreno[10];
+      mapaResultado[fil - 3][col + 2] = sensores.terreno[11];
+      mapaResultado[fil - 3][col + 3] = sensores.terreno[12];
+      mapaResultado[fil -2 ][col +3 ] = sensores.terreno[13];
+      mapaResultado[fil -1][col+3 ] = sensores.terreno[14];
+      mapaResultado[fil][col + 3] = sensores.terreno[15];
   break;
 
   case 2:
@@ -1010,4 +1051,182 @@ Action ComportamientoJugador::Girar(Sensores sensores) {
 */
 
   return accion;
+}
+
+
+estado ComportamientoJugador::CalculoPunto(int x,Sensores sensores){
+
+  estado aux;
+  // cuidado con actual, solo quiero ir una vez, hare un booleano para eso
+  aux.fila=0;
+  aux.columna = 0;
+  int fild=0;
+  int cold=0;
+  int fil = actual.fila;
+  int col = actual.columna;
+
+  if (actual.orientacion == 0 || actual.orientacion == 4){
+    
+    
+    //fila
+    if ((x == 1 or x == 2 or x == 3)) 
+      fild = 1;
+     else if ((x == 4 || x == 5 || x == 6 || x == 7 || x == 8)) 
+      fild = 2;
+     else if (x == 0) 
+      fild = 0;
+     else 
+      fild = 3;
+
+
+    // columna
+    if ((x == 9 || x == 15)) 
+      cold = 3;
+     else if ((x == 4 || x == 10 || x == 14 || x == 8)) 
+      cold = 2;
+     else if ((x == 2 || x == 6 || x == 12)) 
+      cold = 0;
+     else 
+      cold = 1;
+    
+    
+
+  } else if (actual.orientacion == 2 || actual.orientacion == 6 ){
+    
+    
+    // columna
+    if ((x == 1 or x == 2 or x == 3)) 
+      cold = 1;
+     else if ((x == 4 || x == 5 || x == 6 || x == 7 || x == 8)) 
+      cold = 2;
+     else if (x == 0) 
+      cold = 0;
+     else 
+      cold = 3;
+    
+
+    //fila
+    if ((x == 9 || x == 15)) 
+      fild = 3;
+     else if ((x == 4 || x == 10 || x == 14 || x == 8)) 
+      fild = 2;
+     else if ((x == 2 || x == 6 || x == 12)) 
+      fild = 0;
+     else 
+      fild = 1;
+    
+
+  }  else if (actual.orientacion == 1 || actual.orientacion == 5 ){
+      // fila
+      if ((x == 3 || x == 8 || x == 15 )) 
+        fild = 0;
+      else if ((x == 1 || x == 2 || x == 7 || x == 14)) 
+        fild = 1;
+      else if ((x == 4 || x == 5 || x == 6 || x == 7)) 
+        fild = 2;
+      else 
+        fild = 3;
+
+
+      // columna
+      if ((x == 1|| x == 4 || x == 9 )) 
+        cold = 0;
+      else if ((x == 2 || x == 3 || x == 5 || x == 10)) 
+        cold = 1;
+      else if ((x == 6 || x == 7 || x == 8 || x == 11)) 
+        cold = 2;
+      else 
+        cold = 3;
+
+  } else if (actual.orientacion == 3 || actual.orientacion == 7 ){
+      // fila
+      if ((x == 3 || x == 8 || x == 15 )) 
+        cold = 0; 
+      else if ((x == 1 || x == 2 || x == 7 || x == 14)) 
+        cold = 1;
+      else if ((x == 4 || x == 5 || x == 6 || x == 7)) 
+        cold = 2;
+      else 
+        cold = 3;
+
+
+      // columna
+      if ((x == 1|| x == 4 || x == 9 )) 
+        fild = 0;
+      else if ((x == 2 || x == 3 || x == 5 || x == 10)) 
+        fild = 1;
+      else if ((x == 6 || x == 7 || x == 8 || x == 11)) 
+        fild = 2;
+      else 
+        fild = 3;
+  }
+
+  cout << "\n************************************************" << endl;
+  cout << "A sumar: " << fild << " " << cold << endl;
+
+  switch (actual.orientacion) {
+
+  case 0:
+      aux.fila = abs(fild - fil);
+
+      if ((x == 9 || x == 10 || x == 11 || x == 4 || x == 5 || x == 1))
+        aux.columna = abs(col - cold);
+      else
+        aux.columna = abs(col + cold);
+  break;
+
+  case 1:
+      aux.fila = abs(fild - fil);
+      aux.columna = abs(col + cold);
+  break;
+
+  case 2:
+    aux.columna = abs(col + cold);
+
+    if ((x == 9 || x == 10 || x == 11 || x == 4 || x == 5 || x == 1))
+      aux.fila = abs(fil - fild);
+    else
+      aux.fila = abs(fil + fild);
+  break;
+
+  case 3:
+
+      aux.fila = abs(fild + fil);
+      aux.columna = abs(col + cold);
+  break;
+
+  case 4:
+    aux.fila = abs(fil + fild);
+
+    if ((x == 9 || x == 10 || x == 11 || x == 4 || x == 5 || x == 1))
+      aux.columna = abs(col + cold);
+    else
+      aux.columna = abs(col - cold);
+  break;
+
+  case 5:
+      aux.fila = abs(fild + fil);
+      aux.columna = abs(col - cold);
+  break;
+
+  case 6:
+    aux.columna = abs(col - cold);
+
+    if ((x == 9 || x == 10 || x == 11 || x == 4 || x == 5 || x == 1))
+      aux.fila = abs(fil + fild);
+    else
+      aux.fila = abs(fil - fild);
+  break;
+
+  case 7:
+      aux.fila = abs(fild - fil);
+      aux.columna = abs(col - cold);
+  break;
+  }
+
+  cout << "Posicion actual: " << actual.fila << " " << actual.columna << endl;
+  cout << "Calculo punto destino: " << aux.fila << " " << aux.columna << endl;
+  cout << "************************************************" << endl;
+  return aux;
+
 }

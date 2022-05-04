@@ -22,6 +22,7 @@ class ComportamientoJugador : public Comportamiento {
       comienzo = false;
       tiempo_recarga = 50;
       girar=0; // valores 0,1,2,3
+      encontrada_zapas = false;
     }
     ComportamientoJugador(std::vector< std::vector< unsigned char> > mapaR) : Comportamiento(mapaR) {
       // Inicializar Variables de Estado PARA NIVEL 0 1 Y 2
@@ -43,6 +44,7 @@ class ComportamientoJugador : public Comportamiento {
     bool hayPlan, comienzo;
     int tiempo_recarga;
     int girar;
+    bool encontrada_zapas;
 
     // Métodos privados de la clase
     bool pathFinding(int level, const estado &origen, const list<estado> &destino, list<Action> &plan);
@@ -60,6 +62,7 @@ class ComportamientoJugador : public Comportamiento {
     void ActualizarMapa(Sensores sensores);
     estado Recargar(Sensores sensores, estado st);
     Action Girar(Sensores sensores);
+    estado CalculoPunto(int i,Sensores sensores);
 
     void Inicializar(){
       hayPlan = false;
