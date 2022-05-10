@@ -11,14 +11,13 @@
 // Tiene como entrada la información de los sensores y devuelve la acción a
 // realizar. Para ver los distintos sensores mirar fichero "comportamiento.hpp"
 Action ComportamientoJugador::think(Sensores sensores) {
+  
   // Actualizo la variable accion y actual
   Action accion = actIDLE;
 
   actual.fila = sensores.posF; // fila
   actual.columna = sensores.posC; // columna 
   actual.orientacion = sensores.sentido; // brujula
-
-  
 
   cout << "Fila: " << actual.fila << endl;
   cout << "Col : " << actual.columna << endl;
@@ -27,6 +26,13 @@ Action ComportamientoJugador::think(Sensores sensores) {
   cout << "Tiene Bikini: " << actual.TieneBikini << endl;
   cout << "Tiempo Recarga: " << tiempo_recarga << endl;
   cout << "Recarga: " << actual.recarga << endl;
+  cout << "Encontrada Zapatillas: " << encontrada_zapas << endl;
+  cout << "Encontrada Bikini: " << encontrada_bikini << endl;
+  cout << "Encontrar Recarga: " << encontrada_recarga << endl;
+  cout << "Tiempo intervalo: "<< tiempo_intervalo << endl;
+  cout << "Contador: " << contador  << endl;
+  cout << "Emergencia: " << emergencia << endl;
+  cout << "Contador Emergencia: " << contador_emergencia << endl;
 
   // Capturo los destinos
   cout << "sensores.num_destinos : " << sensores.num_destinos << endl;
@@ -48,8 +54,29 @@ Action ComportamientoJugador::think(Sensores sensores) {
   */
   if (sensores.nivel == 3) {
     
+      if (contador == 0){
+        contador = 50;
+        
+
+        actual.TieneBikini = true;
+        actual.TieneZapatillas = true;
+
+        emergencia = true;
+      } // necesito darle un tiempo para salir para luego volver a poner las variables ibual
         //ActualizarMapa(sensores);
+      if(emergencia)
+        contador_emergencia--;
+
+      if (contador_emergencia == 0){
+        contador_emergencia = 25;
+        emergencia = false;
+        actual.TieneBikini = false;
+        actual.TieneZapatillas = false;
+
+      }
+
       /*
+      
       int ejemplo=0;
 
       ejemplo = (rand() % 4 );
@@ -63,6 +90,14 @@ Action ComportamientoJugador::think(Sensores sensores) {
         // 2 busco sensores
         // 3 modo busqueda modo aleatorio
 
+        // plantear el orden de las cosas
+        /*
+          busco 1º zapas - prioridad
+                  decimos que hemos encontrado bikini a pesar que no
+                  cuando baje un contador - encontrado bikini = false
+        */
+        
+        // BUSCO
         // zapatillas
         if (!encontrada_zapas)
           for (int i = 0; i < 15; i++){
@@ -73,27 +108,74 @@ Action ComportamientoJugador::think(Sensores sensores) {
               // objetivos son los que introduzco -> creo uno nuevo y lo inserto en 
               // calculo punto
               encontrada_zapas = true;
+              //encontrada_bikini = false;
+
               estado aux;
               aux = CalculoPunto (i,sensores);
 
               
-              //aux.fila = sensores.destino[2 * i];
-              //aux.columna = sensores.destino[2 * i + 1];
-              //objetivos.push_back(aux);
+              
+              objetivos.push_back(aux);
 
-              //hayPlan = pathFinding(sensores.nivel, actual, objetivos, plan);
+              hayPlan = pathFinding(sensores.nivel, actual, objetivos, plan);
 
             }
-        }
+        } 
+        else if (!encontrada_bikini){
+          for (int i = 0; i < 15; i++){
+            if (sensores.terreno[i] == 'K'){
+              encontrada_bikini = true;
+              //encontrada_zapas = false;
+              estado aux;
+              aux = CalculoPunto (i,sensores);
+              objetivos.push_back(aux);
 
-        /*
-        // calculo la accion
+              hayPlan = pathFinding(sensores.nivel, actual, objetivos, plan);
+            }
+          }
+        } else if(!encontrada_recarga){
+          for (int i = 0; i < 15; i++){
+            if (sensores.terreno[i] == 'X'){
+              encontrada_recarga = true;
+              //encontrada_zapas = false;
+              estado aux;
+              aux = CalculoPunto (i,sensores);
+              objetivos.push_back(aux);
+
+              hayPlan = pathFinding(sensores.nivel, actual, objetivos, plan);
+            }
+          }
+
+        } 
+
+
+        //int tiempo_intervalo = 0
+        tiempo_intervalo--;
+        if (tiempo_intervalo == 0){
+          tiempo_intervalo = 250;
+          // caso en el que haya estado buscando con zapas
+          if (actual.TieneZapatillas == true)
+              encontrada_bikini = false ; // quiero buscar bikini
+          else if (actual.TieneBikini == true)
+              encontrada_zapas = false ; // quiero buscar zapas
+
+          encontrada_recarga = false;
+          // caso en el que haya estado buscando con bikini
+        }
+            
+
+      ////////////////////////////////////////////////////////////////////////////////////
+        
+        // modo busqueda = cuando hay plan
         if (hayPlan and plan.size() > 0) { // hay un plan no vacio
              accion = plan.front();           // tomo la siguiente accion del Plan
             plan.erase(plan.begin());        // eliminamos la accion del plan
-        
-        } else {
-            cout << "Hola" << endl;
+
+            //actual = SensorCasilla(sensores, actual); // me interesa solo actualizar la casilla cuando estoy en un plan
+            // no puedo, aunque pase por esa casilla, el programa indep la actualiza
+
+        } else { // si no hay plan el robot se mueve aleatoriamente
+            //cout << "Hola" << endl;
               
             if (actual.recarga){ // movimiento aleatorio
               accion = actIDLE;
@@ -107,32 +189,82 @@ Action ComportamientoJugador::think(Sensores sensores) {
             }
             
         }
-        */
+        
         
 
 
       }
 
 	
+  
+
+  } 
+  
+  
+
+  ////////////////////////////////////////////////////////////////////////////////////
+  else if (sensores.nivel == 4){
+      
+      //bool cambio; // hago actwhereis
+
+      cout << "HOLAAAAAAAAA " << cambio  << endl;
+
+      if (!hayPlan && !cambio ) // primero whereis es necesario no lo calculo antes de hacer la accion como es obvio
+            hayPlan = pathFinding(sensores.nivel, actual, objetivos, plan);
+
+          //accion = actWHEREIS;
+          // accion = actWHEREIS antes de cualquier accion
+
+      if (cambio){
+          
+             accion = actWHEREIS; // actualiza pos y orientacion para que se pueda usar
+             cambio = false; // 1º debe ser actWHEREIS
+           
+      } else{
+
+        if (hayPlan and plan.size() > 0) { // hay un plan no vacio
+           
+               accion = plan.front();           // tomo la siguiente accion del Plan
+               plan.erase(plan.begin());        // eliminamos la accion del plan
+               cambio = true;
+            
+        } else {
+            accion = actWHEREIS;
+            cout << "no se pudo encontrar un plan\n" << endl;
+         }
+
+      } 
+      
+      
+      
 
 
-  } else {
-    if (!hayPlan)
-      hayPlan = pathFinding(sensores.nivel, actual, objetivos, plan);
+  ///////////////////////////////////////////////////////////////////////////////////
+  }else {
+          if (!hayPlan)
+            hayPlan = pathFinding(sensores.nivel, actual, objetivos, plan);
 
-    if (hayPlan and plan.size() > 0) { // hay un plan no vacio
-      accion = plan.front();           // tomo la siguiente accion del Plan
-      plan.erase(plan.begin());        // eliminamos la accion del plan
-    } else {
-      cout << "no se pudo encontrar un plan\n" << endl;
-    }
+          if (hayPlan and plan.size() > 0) { // hay un plan no vacio
+            accion = plan.front();           // tomo la siguiente accion del Plan
+            plan.erase(plan.begin());        // eliminamos la accion del plan
+          } else {
+            cout << "no se pudo encontrar un plan\n" << endl;
+          }
   }
-  //
+        //
 
-  // actualizo tmb bikini y zapas solo puedo tener uno
-  actual = SensorCasilla(sensores, actual);
-  comienzo = true;
-  return accion;
+
+        // nivel 3
+        if( ((accion == actIDLE && ultimaAccion == actIDLE) || (accion == actTURN_R && ultimaAccion == actTURN_R) || (accion == actTURN_L && ultimaAccion == actTURN_L)|| (accion == actSEMITURN_R && ultimaAccion == actSEMITURN_R)|| (accion == actSEMITURN_L && ultimaAccion == actSEMITURN_L)) && !actual.recarga)
+          contador--;
+
+        // actualizo tmb bikini y zapas solo puedo tener uno
+        actual = SensorCasilla(sensores, actual);
+        comienzo = true;
+        ultimaAccion = accion;
+
+
+        return accion;
 }
 
 // Llama al algoritmo de busqueda que se usara en cada comportamiento del agente
@@ -141,6 +273,8 @@ bool ComportamientoJugador::pathFinding(int level, const estado &origen,
                                         const list<estado> &destino,
                                         list<Action> &plan) {
   estado un_objetivo;
+  estado vector_objetivos[num_objetivos]; // para listar los objetivos de 3 en 3
+
   switch (level) {
   case 0:
     cout << "Demo\n";
@@ -170,14 +304,27 @@ bool ComportamientoJugador::pathFinding(int level, const estado &origen,
     cout << "Reto 1: Descubrir el mapa\n";
     cout << "Busqueda objetivo con costo uniforme" << endl;
     un_objetivo = objetivos.front();
+    
     cout << "fila: " << un_objetivo.fila << " col:" << un_objetivo.columna
          << endl;
     return pathFinding_CostoUniforme(origen, un_objetivo, plan);
     break;
   case 4:
+   
+   
     cout << "Reto 2: Maximizar objetivos\n";
-    // Incluir aqui la llamada al algoritmo de busqueda para el Reto 2
-    cout << "No implementado aun\n";
+    cout << "\nOBJETIVOS QUE VAMOS A VER" << endl;
+    // meto la sucesion de objetivos
+    for (int i = 0 ; i < num_objetivos; i++){
+      vector_objetivos[i] = objetivos.front();
+      objetivos.pop_front();
+      cout << "fila: " << vector_objetivos[i].fila << " col:" << vector_objetivos[i].columna << endl;
+    }
+    cout << endl;
+    return pathFinding_AEstrella(origen, vector_objetivos, plan);
+
+
+
     break;
   }
   return false;
@@ -561,7 +708,7 @@ bool ComportamientoJugador::pathFinding_Anchura(const estado &origen,
 }
 
 //------------------------------------------------------------------------
-//						NIVEL 2: COSTO UNIFORME O A*
+//						NIVEL 2: COSTO UNIFORME 
 //------------------------------------------------------------------------
 
 // menor consumo de bateria en acciones
@@ -575,24 +722,7 @@ bool ComportamientoJugador::pathFinding_Anchura(const estado &origen,
         - CostoUniforme
 */
 
-estado ComportamientoJugador::SensorCasilla(Sensores sensores, estado aux) {
 
-  if (sensores.terreno[2] == 'K') {
-    aux.TieneBikini = true;
-    aux.TieneZapatillas = false;
-  }
-
-  if (sensores.terreno[2] == 'D') {
-    aux.TieneZapatillas = true;
-    aux.TieneBikini = false;
-  }
-
-  if (sensores.terreno[2] == 'X' ) {
-    aux.recarga = true;
-  }
-
-  return aux;
-}
 
 struct nodoCoste {
   estado st;
@@ -693,8 +823,15 @@ bool ComportamientoJugador::pathFinding_CostoUniforme(const estado &origen,
 
   nodoCoste current;
   current.st = origen;
-  current.coste = 0;
   current.secuencia.empty();
+  current.coste = 0;
+
+
+  // inicializo
+  //current.st.TieneBikini= false; // estan ya inicializados a 0 en vd
+  //current.st.TieneZapatillas = false;
+  //current.coste = CalculoCoste( origen.fila, origen.columna, actIDLE, origen.TieneBikini, origen.TieneZapatillas); // es 0 igualmente
+  //cout << "Hola Coste : " << current.coste << endl; 
 
   Abiertos.push(current);
   // hijoSEMITurnR.coste += coste(hijoSEMITurnR.fil,hijoSEMITurnR.col,tiene
@@ -723,8 +860,8 @@ bool ComportamientoJugador::pathFinding_CostoUniforme(const estado &origen,
       current.st.TieneBikini = false;
     }
 
-    cout << "Estoy generando los hijos de "
-         << " " << current.coste << endl;
+    //cout << "Estoy generando los hijos de "
+    //    << " " << current.coste << endl;
 
     // genera hijo giro a la derecha 90
     nodoCoste hijoTurnR = current;
@@ -1016,15 +1153,17 @@ estado ComportamientoJugador::Recargar(Sensores sensores,estado st) {
 Action ComportamientoJugador::Girar(Sensores sensores) {
   Action accion;
   // generar valores aleatorios del 1 al 4
-
+  
 	switch (girar) {
 		case 0:
 			accion = actTURN_L;
+      //accion = actSEMITURN_L;
 			girar = (rand() % 4);
 		break;
 
 		case 1: 
 			accion = actTURN_R;
+      //accion = actSEMITURN_R;
 			girar = (rand() % 4);
 		break;
 
@@ -1122,7 +1261,7 @@ estado ComportamientoJugador::CalculoPunto(int x,Sensores sensores){
         fild = 0;
       else if ((x == 1 || x == 2 || x == 7 || x == 14)) 
         fild = 1;
-      else if ((x == 4 || x == 5 || x == 6 || x == 7)) 
+      else if ((x == 4 || x == 5 || x == 6 || x == 13)) 
         fild = 2;
       else 
         fild = 3;
@@ -1144,7 +1283,7 @@ estado ComportamientoJugador::CalculoPunto(int x,Sensores sensores){
         cold = 0; 
       else if ((x == 1 || x == 2 || x == 7 || x == 14)) 
         cold = 1;
-      else if ((x == 4 || x == 5 || x == 6 || x == 7)) 
+      else if ((x == 4 || x == 5 || x == 6 || x == 13)) 
         cold = 2;
       else 
         cold = 3;
@@ -1224,9 +1363,271 @@ estado ComportamientoJugador::CalculoPunto(int x,Sensores sensores){
   break;
   }
 
+  cout << "Sensor: " << x << endl;
   cout << "Posicion actual: " << actual.fila << " " << actual.columna << endl;
   cout << "Calculo punto destino: " << aux.fila << " " << aux.columna << endl;
   cout << "************************************************" << endl;
   return aux;
 
+}
+
+estado ComportamientoJugador::SensorCasilla(Sensores sensores, estado aux) {
+
+  if (sensores.terreno[2] == 'K' && encontrada_bikini) {
+    aux.TieneBikini = true;
+    aux.TieneZapatillas = false;
+  }
+
+  if (sensores.terreno[2] == 'D' && encontrada_zapas) {
+    aux.TieneZapatillas = true;
+    aux.TieneBikini = false;
+  }
+
+  if (sensores.terreno[2] == 'X' ) {
+    aux.recarga = true;
+  }
+
+  return aux;
+}
+
+
+//------------------------------------------------------------------------
+//			NIVEL 4: RETO 2 (MAXIMIZAR EL NUMERO DE OBJETIVOS)
+//------------------------------------------------------------------------
+
+
+struct nodoEstrella {
+  estado st;
+  list<Action> secuencia;
+  unsigned int coste;
+  int valor_heuristica; // en CU h(n) = 0 por eso no lo teniamos encuenta
+
+  //bool operator<(const nodoEstrella &n) const  {
+  //return this->valor_heuristica > n.valor_heuristica;
+  //}
+
+};
+
+bool operator<(const nodoEstrella &a ,const nodoEstrella &n) {
+  return a.valor_heuristica > n.valor_heuristica;
+ }
+
+/* 
+  igual nivel 2 pero ahora tmb comparamos num_objetivos es el mismo, por que ahora son varios, 
+  puede repetirse en cerrados un nodo si el numero de objetivos de ese nodo es diferente al numero de objetivos que 
+  lleve el mismo
+*/
+
+struct ComparaEstadosEstrella {
+  bool operator()(const estado &a, const estado &n) const {
+    if ((a.fila > n.fila) or 
+        (a.fila == n.fila and a.columna > n.columna) or
+        (a.fila == n.fila and a.columna == n.columna and a.orientacion > n.orientacion) or
+        (a.fila == n.fila and a.columna == n.columna and a.orientacion == n.orientacion and a.TieneZapatillas > n.TieneZapatillas) or
+        (a.fila == n.fila and a.columna == n.columna and a.orientacion == n.orientacion and a.TieneZapatillas == n.TieneZapatillas and a.TieneBikini > n.TieneBikini) or 
+        (a.fila == n.fila and a.columna == n.columna and a.orientacion == n.orientacion and a.TieneZapatillas == n.TieneZapatillas and a.TieneBikini ==  n.TieneBikini and a.num_objetivos_visitados > n.num_objetivos_visitados))
+        // num obj visitados lo comparamos tmb
+      return true;
+    else
+      return false;
+  }
+};
+
+// calculo la distancia entre dos puntos  -> h(n); g(h) sigue siendo el coste
+int ComportamientoJugador::DistanciaManhattan(const estado &inicio, const estado &fin){
+    return  abs(inicio.fila - fin.fila)  + abs(inicio.columna - fin.columna);
+}
+
+// calculo la mejor DM que hay entre las 3 posibilidades ¿Por cual quiero empezar?
+int ComportamientoJugador::MejorDM(const estado &inicio, const estado destino[3], bool objetivos_visitados[3] ){
+    int valor= DistanciaManhattan(inicio, destino[0]); // empezamos por el 0 y luego comparamos 0 1 2 
+    //int valor = 10000000;
+
+    for (int i = 0; i < num_objetivos; i++){
+      if (!objetivos_visitados[i] && valor > DistanciaManhattan(inicio, destino[i])) // caso no visitado = false y valor sea minimo
+          valor = DistanciaManhattan(inicio, destino[i]);
+    }
+
+    return valor;
+}
+
+bool ComportamientoJugador::pathFinding_AEstrella(const estado &origen, const estado destino[3], list<Action> &plan){
+
+
+  // Borro la lista , borro mi plan
+  cout << "Calculando plan\n";
+  plan.clear();
+  set<estado, ComparaEstadosEstrella> Cerrados; // Lista de Cerrados
+  priority_queue<nodoEstrella> Abiertos;         // Lista de Abiertos
+
+  nodoEstrella current;
+  current.st = origen;
+  current.secuencia.empty();
+
+
+  // inicializo atributos
+  current.coste = 0;
+  current.st.num_objetivos_visitados = 0;
+
+  for (int i = 0; i < num_objetivos; i++)
+    current.st.objetivos_visitados[i] = false;
+
+
+
+  // h(n) y g(n) con manhatann
+  cout << "Mejor DM: " << MejorDM(current.st, destino, current.st.objetivos_visitados) << endl;
+
+  // heuristica  = h(n) "DM" + g(n) "coste"
+  current.valor_heuristica = current.coste + MejorDM(current.st, destino, current.st.objetivos_visitados);
+
+  bool terminado = false;
+
+  Abiertos.push(current);
+
+  
+  while (!Abiertos.empty() and !terminado) {
+
+    
+    Abiertos.pop();
+    Cerrados.insert(current.st);
+    
+
+    // veo bikini y zapas
+    // current.st = SensorCasilla(sensores, current.st);
+    if (mapaResultado[current.st.fila][current.st.columna] == 'K') {
+      current.st.TieneBikini = true;
+      current.st.TieneZapatillas = false;
+    }
+
+    if (mapaResultado[current.st.fila][current.st.columna] == 'D') {
+      current.st.TieneZapatillas = true;
+      current.st.TieneBikini = false;
+    }
+
+    cout << "Estoy generando los hijos de "  << current.coste << endl;
+
+    // comprobamos objetivo seleccionado
+
+    
+    for (int i = 0; i < num_objetivos; i++){
+      if (current.st.fila == destino[i].fila && current.st.columna == destino[i].columna  && !current.st.objetivos_visitados[i]){
+          current.st.objetivos_visitados[i] = true;
+          current.st.num_objetivos_visitados ++ ;
+      }
+    }
+    
+
+    
+      if (current.st.num_objetivos_visitados == num_objetivos){ // comprobamos que se ha visto 3 obj
+            terminado = true;
+      }else {
+
+            // hijos
+
+            // genera hijo giro a la derecha 90
+            nodoEstrella hijoTurnR = current;
+            hijoTurnR.st.orientacion = (hijoTurnR.st.orientacion + 2) % 8; // giro der 90
+            hijoTurnR.coste += CalculoCoste( current.st.fila, current.st.columna, actTURN_R, current.st.TieneBikini, current.st.TieneZapatillas); // calculo el coste
+            
+
+            // h(n) + g(n)
+            hijoTurnR.valor_heuristica = hijoTurnR.coste+  MejorDM(hijoTurnR.st, destino, hijoTurnR.st.objetivos_visitados);
+            
+            if (Cerrados.find(hijoTurnR.st) == Cerrados.end()) {
+              hijoTurnR.secuencia.push_back(actTURN_R);
+              Abiertos.push(hijoTurnR);
+            }
+
+
+
+            // genera hijo giro a la izquierda 90
+            nodoEstrella hijoTurnL = current;
+            hijoTurnL.st.orientacion = (hijoTurnL.st.orientacion + 6) % 8;
+            hijoTurnL.coste += CalculoCoste(
+                current.st.fila, current.st.columna, actTURN_L, current.st.TieneBikini,
+                current.st.TieneZapatillas); // calculo el coste
+
+            // h(n) + g(n)
+            hijoTurnL.valor_heuristica = hijoTurnL.coste + MejorDM(hijoTurnL.st, destino, hijoTurnL.st.objetivos_visitados);
+
+            if (Cerrados.find(hijoTurnL.st) == Cerrados.end()) {
+              hijoTurnL.secuencia.push_back(actTURN_L);
+              Abiertos.push(hijoTurnL);
+            }
+
+
+
+            // genera gijo giro a la derecha 45
+            nodoEstrella hijoSEMITurnR = current;
+            hijoSEMITurnR.st.orientacion = (hijoSEMITurnR.st.orientacion + 1) % 8;
+            hijoSEMITurnR.coste += CalculoCoste(
+                current.st.fila, current.st.columna, actSEMITURN_R,
+                current.st.TieneBikini, current.st.TieneZapatillas); // calculo el coste
+
+            // h(n) + g(n)
+            hijoSEMITurnR.valor_heuristica = hijoSEMITurnR.coste + MejorDM(hijoSEMITurnR.st, destino, hijoSEMITurnR.st.objetivos_visitados);
+
+            if (Cerrados.find(hijoSEMITurnR.st) == Cerrados.end()) {
+              hijoSEMITurnR.secuencia.push_back(actSEMITURN_R);
+              Abiertos.push(hijoSEMITurnR);
+            }
+
+            // genera hijo giro a la izquierda 45
+            nodoEstrella hijoSEMITurnL = current;
+            hijoSEMITurnL.st.orientacion = (hijoSEMITurnL.st.orientacion + 7) % 8;
+            hijoSEMITurnL.coste += CalculoCoste(
+                current.st.fila, current.st.columna, actSEMITURN_L,
+                current.st.TieneBikini, current.st.TieneZapatillas); // calculo el coste
+
+            // h(n) + g(n)
+            hijoSEMITurnL.valor_heuristica = hijoSEMITurnL.coste +  MejorDM(hijoSEMITurnL.st, destino, hijoSEMITurnL.st.objetivos_visitados);
+
+
+            if (Cerrados.find(hijoSEMITurnL.st) == Cerrados.end()) {
+              hijoSEMITurnL.secuencia.push_back(actSEMITURN_L);
+              Abiertos.push(hijoSEMITurnL);
+            }
+
+            // genero hijo para avanzar
+            nodoEstrella hijoForward = current;
+            hijoForward.coste += CalculoCoste(
+                current.st.fila, current.st.columna, actFORWARD, current.st.TieneBikini,
+                current.st.TieneZapatillas); // calculo el coste
+
+            // h(n) + g(n)
+            hijoForward.valor_heuristica = hijoForward.coste + MejorDM(hijoForward.st, destino, hijoForward.st.objetivos_visitados);
+
+            if (!HayObstaculoDelante(hijoForward.st)) {
+              if (Cerrados.find(hijoForward.st) == Cerrados.end()) {
+                hijoForward.secuencia.push_back(actFORWARD);
+                Abiertos.push(hijoForward);
+              }
+            }
+
+            // tomo el siguiente valor de Abiertos
+              if (!Abiertos.empty())
+                current = Abiertos.top();
+      }
+
+  } // fin del while
+  
+      // cargamos el plan
+
+      cout << "Terminada la busqueda\n";
+
+        if (terminado){
+              cout << "Cargando el plan\n";
+          plan = current.secuencia;
+          cout << "Longitud del plan: " << plan.size() << endl;
+          PintaPlan(plan);
+          // ver el plan en el mapa
+          VisualizaPlan(origen, plan);
+          
+          return true;
+        } else {
+          cout << "No encontrado plan\n";
+        }
+      
+
+  return false;
 }

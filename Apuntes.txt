@@ -324,13 +324,108 @@ Busqueda en costo uniforme
     end 
 
 
-Busqueda A*
+Busqueda A* 
+
+BASICO
 
 Tiene en cuenta el coste del camino del nodo inicio al actual y el coste 
 del actual hasta el objetivo
     g(n) coste desde inicio a actual
     h(n) estimacion actual objetivo 
 
+Usa un algoritmo de busqueda de grafos, donde la lista de abiertos es una cola 
+con prioridad ordenada de acuerdo a f(n) = g(n) + h(n) información a guardar en un nodo.
+
+-estado
+-Hijos 
+-Mejor Padre(puntero padre puede cambiar)
+
+*SI hay empate entre los nodos, se elige el mas joven(el más reciente)
+
+Algoritmo
+
+1. cree un grafo de busqueda G, que solo tenga el nodo inicial n0. INserte n0 
+   en la lista de abiertos
+
+2. cree lista Cerrados -> inicializala a vacia
+
+3. si la lista de abiertos esta vacia, el algoritmo termina con fallo ya que no 
+   encontraremos ningun nodo objetivo
+
+4. Extraiga primero el nodo de la list ABIERTOS e insertelo en cerrados. Ese nodos
+   será n.
+
+5. Si el nodo n es el nodo objetivo, el alg termina con exito y la sol es el
+    camino de n0 a n, a traves de los punteros del grafo G (los punteros definen el
+    arbol de busqueda y son creados en el paso 7)
+
+6. Expando n y creo el conjunto M coon todos sus sucesores, siempre y cuando estos no
+   sean ascendentes del nodo n del grafo G .Incorpore los elementos de M como sucesores
+   del nodo n en el grafo
+
+7. Establezca un puntero a n desde aquellos elementos de M que todavia no hayan sido 
+   visitados en el grafo G (es decir que no esten ni en la lista de ABIERTOS ni en la
+   lista de CERRADOS). Inserte esos elementos de M en la lista ABIERTOS.Para cada 
+   elemento de M que ya estuviera en ABIERTO o CERRADOS, modifique su puntero para que este
+   apunte al nodo n, siempre que los mejores caminos hasta el momento se hayan encontrado
+    hacia dichos nodos pasen por n. Para cada elemento de M que ya estuviese en cerrados ,
+    modifique los punteros de sus descendientes en el grafo G, para que apunten hacia atrás 
+    a los caminos más eficientes que hayan sido encontrados hasta el momento esos descendientes.
+
+8. Reordeno ABIERTOS segun el orden creciente de los valores de la funcion f (los casos en los que f sehan
+iguales se ordenan segun el orden decreciente de la profundidad del nodo)
+
+9. vaya al paso 3
+
+
+Esquema
+
+    * ABIERTOS contiene el nodo inicial, CERRADOS esta vacio
+    * Ciclo -> until se encuentre la solucion o ABIERTOS = vacio
+        {
+        * selecciono el mejor nodo de ABIERTOS
+        * SI ES OBJETIVO -> terminamos
+        * en otro caso -> expandimos
+        * para cada nodo sucesor 
+            - si esta en ABIERTOS -> insertarlo manteniendo informacion del mejor padre
+            - si esta enb CERRADOS -> insertarlo manteniendo la info del mejor padre +
+                                      actualizo la info de los descendientes
+            - otro caso -> inserto como nuevo nodo 
+
+        cuando hay nodos comunes -> cambio de padre 
+        }
+
+Cambio - Nodos repetidos/comunes
+   * si el nodo n ya esta en ABIERTOS hay que comprobar si el nuevo camino es mejor que el
+    enterior
+    Calcular el valor de f y hacer apuntar su padre anterior
+
+   * si el nodo n ya esta en CERRAODS, haemos primero lo mismo que en ABIERTOS
+    COSTE NUEVO > COSTE ANTERIOR 
+
+    Recursivamente por cada sucesor se actualiza
+
+Esquema
+
+    n = un nodo en cerrado
+
+        caso 1: el padre actual de n no es mejor que el padre anterior -> fin
+
+        caso 2: el padre actual no es el mismo que el padre anterior
+            actualizar g al coste actual del camino
+            actualizar el padre de n -> seguir recursion para actualizar coste de todos
+            los hijos que esten cerrados
+
+        caso 3: n tiene sucesor en ABIERTOS
+            si el coste actual del camino hasta el sucesor mejora el coste anterior del sucesor
+                - actualizo el coste del sucesor
+                - actualizo el padre del sucesor    
+            FIN
+
+Si
+    H(n) = 0 y cada arco es de coste unitario -> busqueda en anchura
+    H(n) = 0 y no es coste unitario -> busqueda costo uniforme
+    G(n) = 0 -> greedy
 
 --------------------------------------------------------------------------
 PASOS QUE HE HECHO
@@ -350,7 +445,11 @@ NIVEL 2
 	- CostoUniforme - tener en cuenta zapas y bikini del proximo
 
 NIVEL 3
-    
+    - hacer una funcion calcular punto
+    - recodificar los sensores para los mapas
+    - emergencia
+    - modo aleatorio
+    - recarga
 
 
 NIVEL 4

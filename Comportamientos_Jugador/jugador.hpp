@@ -12,6 +12,8 @@ struct estado {
   bool TieneBikini;
   bool TieneZapatillas;
   bool recarga;
+  int num_objetivos_visitados;
+  bool objetivos_visitados[3];
 };
 
 class ComportamientoJugador : public Comportamiento {
@@ -23,6 +25,12 @@ class ComportamientoJugador : public Comportamiento {
       tiempo_recarga = 50;
       girar=0; // valores 0,1,2,3
       encontrada_zapas = false;
+      encontrada_bikini = true;
+      encontrada_recarga = false;
+      tiempo_intervalo = 350; // cada 10 pasos busco zapas o busco bikini, 
+      contador = 50; // si llega a 0 habilito para que no se quede pillado
+      emergencia = false;
+      contador_emergencia = 25;
     }
     ComportamientoJugador(std::vector< std::vector< unsigned char> > mapaR) : Comportamiento(mapaR) {
       // Inicializar Variables de Estado PARA NIVEL 0 1 Y 2
@@ -44,14 +52,24 @@ class ComportamientoJugador : public Comportamiento {
     bool hayPlan, comienzo;
     int tiempo_recarga;
     int girar;
-    bool encontrada_zapas;
+    bool encontrada_zapas, encontrada_bikini, encontrada_recarga;
+    int tiempo_intervalo;
+    int contador;
+    Action ultimaAccion;
+    bool emergencia;
+    int contador_emergencia;
+    int num_objetivos;
+    bool cambio;
 
     // Métodos privados de la clase
     bool pathFinding(int level, const estado &origen, const list<estado> &destino, list<Action> &plan);
     bool pathFinding_Profundidad(const estado &origen, const estado &destino, list<Action> &plan);
     bool pathFinding_Anchura(const estado &origen, const estado &destino, list<Action> &plan);
     bool pathFinding_CostoUniforme(const estado &origen, const estado &destino, list<Action> &plan);
+    bool pathFinding_AEstrella(const estado &origen, const estado destino[3], list<Action> &plan);
 
+
+    //
     estado SensorCasilla(Sensores sensores, estado actual);
     unsigned int CalculoCoste(int fil, int col, Action accion, bool TieneBikini, bool TieneZapatillas);
     void PintaPlan(list<Action> plan);
@@ -64,9 +82,17 @@ class ComportamientoJugador : public Comportamiento {
     Action Girar(Sensores sensores);
     estado CalculoPunto(int i,Sensores sensores);
 
+
+    //
+    int DistanciaManhattan(const estado &inicio, const estado &fin);
+    int MejorDM(const estado &inicio, const estado destino[3], bool objetivos_visitados[3] );
+
+
     void Inicializar(){
       hayPlan = false;
       actual.TieneBikini = actual.TieneZapatillas = actual.recarga = false;
+      num_objetivos = 3;
+      cambio = true;
     }
 };
 
