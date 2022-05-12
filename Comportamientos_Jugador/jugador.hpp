@@ -31,6 +31,7 @@ class ComportamientoJugador : public Comportamiento {
       contador = 50; // si llega a 0 habilito para que no se quede pillado
       emergencia = false;
       contador_emergencia = 25;
+      bien_busqueda = true;
     }
     ComportamientoJugador(std::vector< std::vector< unsigned char> > mapaR) : Comportamiento(mapaR) {
       // Inicializar Variables de Estado PARA NIVEL 0 1 Y 2
@@ -60,13 +61,14 @@ class ComportamientoJugador : public Comportamiento {
     int contador_emergencia;
     int num_objetivos;
     bool cambio;
+    bool bien_busqueda;
 
     // Métodos privados de la clase
     bool pathFinding(int level, const estado &origen, const list<estado> &destino, list<Action> &plan);
     bool pathFinding_Profundidad(const estado &origen, const estado &destino, list<Action> &plan);
     bool pathFinding_Anchura(const estado &origen, const estado &destino, list<Action> &plan);
     bool pathFinding_CostoUniforme(const estado &origen, const estado &destino, list<Action> &plan);
-    bool pathFinding_AEstrella(const estado &origen, const estado destino[3], list<Action> &plan);
+    bool pathFinding_AEstrella(const estado &origen, const estado &destino, list<Action> &plan);
 
 
     //
@@ -81,11 +83,14 @@ class ComportamientoJugador : public Comportamiento {
     estado Recargar(Sensores sensores, estado st);
     Action Girar(Sensores sensores);
     estado CalculoPunto(int i,Sensores sensores);
-
+    void VistaAgente(Sensores sensores);
+    void EmergenciaBelkan();
+    void IntervaloBusqueda();
+    Action MoverAleatorio(Sensores sensores);
+    void MovimientoRepetido(Action accion, Action ultimaAccion);
 
     //
-    int DistanciaManhattan(const estado &inicio, const estado &fin);
-    int MejorDM(const estado &inicio, const estado destino[3], bool objetivos_visitados[3] );
+    
 
 
     void Inicializar(){

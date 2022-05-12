@@ -450,7 +450,7 @@ NIVEL 3
     - emergencia
     - modo aleatorio
     - recarga
-
+    - vamos a hacer A*
 
 NIVEL 4
     - A*
