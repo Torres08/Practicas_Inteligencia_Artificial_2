@@ -21,6 +21,7 @@ class ComportamientoJugador : public Comportamiento {
     ComportamientoJugador(unsigned int size) : Comportamiento(size) {
       // Inicializar Variables de Estado PARA NIVEL 3 Y 4
       Inicializar();
+      /*
       comienzo = false;
       tiempo_recarga = 50;
       girar=0; // valores 0,1,2,3
@@ -32,7 +33,10 @@ class ComportamientoJugador : public Comportamiento {
       emergencia = false;
       contador_emergencia = 25;
       bien_busqueda = true;
+      */
     }
+
+
     ComportamientoJugador(std::vector< std::vector< unsigned char> > mapaR) : Comportamiento(mapaR) {
       // Inicializar Variables de Estado PARA NIVEL 0 1 Y 2
       Inicializar();
@@ -76,6 +80,7 @@ class ComportamientoJugador : public Comportamiento {
     unsigned int CalculoCoste(int fil, int col, Action accion, bool TieneBikini, bool TieneZapatillas);
     void PintaPlan(list<Action> plan);
     bool HayObstaculoDelante(estado &st);
+    int distancia_estimada(const estado actual, const estado destino);
     
     //
     bool SensoresAvanzar(Sensores sensores, estado st);
@@ -90,14 +95,22 @@ class ComportamientoJugador : public Comportamiento {
     void MovimientoRepetido(Action accion, Action ultimaAccion);
 
     //
-    
-
-
     void Inicializar(){
       hayPlan = false;
       actual.TieneBikini = actual.TieneZapatillas = actual.recarga = false;
       num_objetivos = 3;
       cambio = true;
+      comienzo = false;
+      tiempo_recarga = 50;
+      girar=0; // valores 0,1,2,3
+      encontrada_zapas = false;
+      encontrada_bikini = true;
+      encontrada_recarga = false;
+      tiempo_intervalo = 350; // cada 10 pasos busco zapas o busco bikini, 
+      contador = 50; // si llega a 0 habilito para que no se quede pillado
+      emergencia = false;
+      contador_emergencia = 25;
+      bien_busqueda = true;
     }
 };
 

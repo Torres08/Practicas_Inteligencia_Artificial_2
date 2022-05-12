@@ -24,12 +24,12 @@ Action ComportamientoJugador::think(Sensores sensores) {
   cout << "Ori : " << actual.orientacion << endl;
   cout << "Tiene Zapatillas: " << actual.TieneZapatillas << endl;
   cout << "Tiene Bikini: " << actual.TieneBikini << endl;
-  cout << "Tiempo Recarga: " << tiempo_recarga << endl;
+  cout << "Tiempo Recarga: " << tiempo_recarga << endl; //
   cout << "Recarga: " << actual.recarga << endl;
   cout << "Encontrada Zapatillas: " << encontrada_zapas << endl;
   cout << "Encontrada Bikini: " << encontrada_bikini << endl;
   cout << "Encontrar Recarga: " << encontrada_recarga << endl;
-  cout << "Tiempo intervalo: "<< tiempo_intervalo << endl;
+  cout << "Tiempo intervalo: "<< tiempo_intervalo << endl; //
   cout << "Contador: " << contador  << endl;
   cout << "Emergencia: " << emergencia << endl;
   cout << "Contador Emergencia: " << contador_emergencia << endl;
@@ -57,7 +57,7 @@ Action ComportamientoJugador::think(Sensores sensores) {
   // emergencia
   
   if (sensores.nivel == 3) {
-  
+      
       EmergenciaBelkan();
     
       if (comienzo){
@@ -67,7 +67,7 @@ Action ComportamientoJugador::think(Sensores sensores) {
         IntervaloBusqueda();
 
         // modo busqueda = cuando hay plan
-        if (hayPlan and plan.size() > 0) { // hay un plan no vacio
+        if (hayPlan and plan.size() > 0) {   // hay un plan no vacio
             accion = plan.front();           // tomo la siguiente accion del Plan
             plan.erase(plan.begin());        // eliminamos la accion del plan
             
@@ -172,8 +172,8 @@ bool ComportamientoJugador::pathFinding(int level, const estado &origen,
     un_objetivo = objetivos.front();
     cout << "fila: " << un_objetivo.fila << " col:" << un_objetivo.columna
          << endl;
-    return pathFinding_CostoUniforme(origen, un_objetivo, plan);
-    //return pathFinding_AEstrella(origen, un_objetivo, plan);
+    //return pathFinding_CostoUniforme(origen, un_objetivo, plan);
+    return pathFinding_AEstrella(origen, un_objetivo, plan);
 
     break;
   case 3:
@@ -596,8 +596,6 @@ bool ComportamientoJugador::pathFinding_Anchura(const estado &origen,
         - CostoUniforme
 */
 
-
-
 struct nodoCoste {
   estado st;
   list<Action> secuencia;
@@ -815,6 +813,226 @@ bool ComportamientoJugador::pathFinding_CostoUniforme(const estado &origen,
 
   return false;
 }
+
+
+//------------------------------------------------------------------------
+//						NIVEL 2: A ESTRELLA
+//------------------------------------------------------------------------
+
+// LO IMPLEMENTO POR QUE ES MAS RAPIDO
+
+struct NodoEstrella{
+  estado st;
+  list<Action> secuencia;
+  int f; //coste total desde el nodo origen hasta destino
+  int g; //cosete nodo origen hasta el actual
+  int h; // coste nodo actual al destino
+};
+
+bool operator<(const NodoEstrella &a, const NodoEstrella &n) {
+  return a.f > n.f;
+}
+
+struct ComparaEstadosEstrella {
+  bool operator()(const NodoEstrella &a, const NodoEstrella &n) const {
+    if ((a.st.fila > n.st.fila) or (a.st.fila == n.st.fila and a.st.columna > n.st.columna) or
+        (a.st.fila == n.st.fila and a.st.columna == n.st.columna and
+         a.st.orientacion > n.st.orientacion) or
+        (a.st.fila == n.st.fila and a.st.columna == n.st.columna and
+         a.st.orientacion == n.st.orientacion and
+         a.st.TieneZapatillas > n.st.TieneZapatillas) or 
+        (a.st.fila == n.st.fila and a.st.columna == n.st.columna and
+         a.st.orientacion == n.st.orientacion and
+         a.st.TieneZapatillas == n.st.TieneZapatillas and
+         a.st.TieneBikini > n.st.TieneBikini))
+      return true;
+    else
+      return false;
+  }
+};
+
+// Comparador estados A* es el mismo de CU
+// ComparaEstadosCoste
+
+// distancia manhattan no hace falta vamos tmb por diagonales
+
+int ComportamientoJugador::distancia_estimada(const estado actual, const estado destino){
+  //return abs(actual.fila - destino.fila) + abs(actual.columna-destino.columna);
+  return 0;
+}
+
+
+
+bool ComportamientoJugador::pathFinding_AEstrella(const estado &origen, const estado &destino, list<Action> &plan){
+      
+      cout << "Calculando plan\n";
+     
+      plan.clear();
+
+      set<NodoEstrella,ComparaEstadosEstrella> Cerrados;
+      priority_queue<NodoEstrella, std::vector<NodoEstrella>> Abiertos;
+
+      NodoEstrella current;
+      current.st = origen;
+      current.secuencia.empty();
+
+      current.g = 0;
+      current.h = distancia_estimada(current.st, destino);
+      current.f = current.g+current.h;
+
+      Abiertos.push(current);
+
+      while (!Abiertos.empty() and
+         (current.st.fila != destino.fila or
+          current.st.columna !=
+              destino.columna)) // mientras abiertos no sea fin y no se haya
+                                // llegado al destino creamos el arbol
+      {
+            Abiertos.pop();
+            Cerrados.insert(current);
+
+            cout << "Estoy generando los hijos de "
+            << " " << current.f << endl;
+
+            // veo bikini y zapas
+            // current.st = SensorCasilla(sensores, current.st);
+            if (mapaResultado[current.st.fila][current.st.columna] == 'K') {
+              current.st.TieneBikini = true;
+              current.st.TieneZapatillas = false;
+            }
+
+            if (mapaResultado[current.st.fila][current.st.columna] == 'D') {
+              current.st.TieneZapatillas = true;
+              current.st.TieneBikini = false;
+            }
+
+            // genera hijo giro a la derecha 90
+            NodoEstrella hijoTurnR = current;
+            hijoTurnR.st.orientacion =
+                (hijoTurnR.st.orientacion + 2) % 8; // giro der 90
+           
+            hijoTurnR.g += CalculoCoste(
+                current.st.fila, current.st.columna, actTURN_R, current.st.TieneBikini,
+                current.st.TieneZapatillas); // calculo el coste
+            
+            hijoTurnR.h = distancia_estimada(hijoTurnR.st,destino);
+
+            hijoTurnR.f= hijoTurnR.g + hijoTurnR.h;
+
+            if (Cerrados.find(hijoTurnR) == Cerrados.end()) {
+              hijoTurnR.secuencia.push_back(actTURN_R);
+              Abiertos.push(hijoTurnR);
+            }
+
+            // genera hijo giro a la izquierda 90
+            NodoEstrella hijoTurnL = current;
+            hijoTurnL.st.orientacion =
+                (hijoTurnL.st.orientacion + 6) % 8; // giro izq 90
+           
+            hijoTurnL.g += CalculoCoste(
+                current.st.fila, current.st.columna, actTURN_L, current.st.TieneBikini,
+                current.st.TieneZapatillas); // calculo el coste
+            
+            hijoTurnL.h = distancia_estimada(hijoTurnL.st,destino);
+
+            hijoTurnL.f= hijoTurnL.g + hijoTurnL.h;
+
+            if (Cerrados.find(hijoTurnL) == Cerrados.end()) {
+              hijoTurnL.secuencia.push_back(actTURN_L);
+              Abiertos.push(hijoTurnL);
+            }
+
+            // genera gijo giro a la derecha 45
+            NodoEstrella hijoSEMITurnR = current;
+            hijoSEMITurnR.st.orientacion = (hijoSEMITurnR.st.orientacion + 1) % 8;
+            
+            hijoSEMITurnR.g += CalculoCoste(
+                current.st.fila, current.st.columna, actSEMITURN_R,
+                current.st.TieneBikini, current.st.TieneZapatillas); // calculo el coste
+
+            hijoSEMITurnR.h = distancia_estimada(hijoSEMITurnR.st, destino);
+            
+            hijoSEMITurnR.f= hijoSEMITurnR.g + hijoSEMITurnR.h;
+            
+            if (Cerrados.find(hijoSEMITurnR) == Cerrados.end()) {
+              hijoSEMITurnR.secuencia.push_back(actSEMITURN_R);
+              Abiertos.push(hijoSEMITurnR);
+            }
+
+            // genera hijo giro a la izquierda 45
+            NodoEstrella hijoSEMITurnL = current;
+            hijoSEMITurnL.st.orientacion = (hijoSEMITurnL.st.orientacion + 7) % 8;
+            
+            hijoSEMITurnL.g += CalculoCoste(
+                current.st.fila, current.st.columna, actSEMITURN_L,
+                current.st.TieneBikini, current.st.TieneZapatillas); // calculo el coste
+
+            hijoSEMITurnL.h = distancia_estimada(hijoSEMITurnL.st, destino);
+
+            hijoSEMITurnL.f= hijoSEMITurnL.g + hijoSEMITurnL.h;
+
+            if (Cerrados.find(hijoSEMITurnL) == Cerrados.end()) {
+              hijoSEMITurnL.secuencia.push_back(actSEMITURN_L);
+              Abiertos.push(hijoSEMITurnL);
+            }
+
+
+
+            // genero hijo para avanzar
+            NodoEstrella hijoForward = current;
+            hijoForward.g += CalculoCoste(
+                current.st.fila, current.st.columna, actFORWARD, current.st.TieneBikini,
+                current.st.TieneZapatillas); // calculo el coste
+
+            hijoForward.h = distancia_estimada(hijoForward.st, destino);
+
+            hijoForward.f = hijoForward.g+hijoForward.h;    
+
+            if (!HayObstaculoDelante(hijoForward.st)) {
+              if (Cerrados.find(hijoForward) == Cerrados.end()) {
+                hijoForward.secuencia.push_back(actFORWARD);
+                Abiertos.push(hijoForward);
+              }
+            }
+            
+            // si todavia tiene nodos
+            if (!Abiertos.empty()){
+              // cojo el primero
+              current = Abiertos.top();
+
+              // si esta en la lista de cerrados lo borro y cojo el siguiente
+              while (Cerrados.find(current) != Cerrados.end()){
+                Abiertos.pop();
+                current = Abiertos.top();
+              }
+            }
+
+
+      }
+
+      // cargamos el plan
+
+        cout << "Terminada la busqueda\n";
+
+        if (current.st.fila == destino.fila and
+            current.st.columna == destino.columna) {
+          cout << "Cargando el plan\n";
+          plan = current.secuencia;
+          cout << "Longitud del plan: " << plan.size() << endl;
+          PintaPlan(plan);
+          // ver el plan en el mapa
+          VisualizaPlan(origen, plan);
+          cout << "Coste: " << current.f << endl;
+          return true;
+        } else {
+          cout << "No encontrado plan\n";
+        }
+
+        return false;
+
+
+  }
+
 
 
 
