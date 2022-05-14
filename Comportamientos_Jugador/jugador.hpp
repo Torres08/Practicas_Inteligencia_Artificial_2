@@ -66,6 +66,8 @@ class ComportamientoJugador : public Comportamiento {
     int num_objetivos;
     bool cambio;
     bool bien_busqueda;
+    estado vector_objetivos[3];
+    bool bien_situado;
 
     // Métodos privados de la clase
     bool pathFinding(int level, const estado &origen, const list<estado> &destino, list<Action> &plan);
@@ -95,11 +97,15 @@ class ComportamientoJugador : public Comportamiento {
     void MovimientoRepetido(Action accion, Action ultimaAccion);
 
     //
+    void SensorVistaNivel(Sensores sensores);
+    bool replanificar(Sensores sensores, estado ac, estado dest);
+
+    //
     void Inicializar(){
       hayPlan = false;
       actual.TieneBikini = actual.TieneZapatillas = actual.recarga = false;
       num_objetivos = 3;
-      cambio = true;
+      
       comienzo = false;
       tiempo_recarga = 50;
       girar=0; // valores 0,1,2,3
@@ -110,7 +116,11 @@ class ComportamientoJugador : public Comportamiento {
       contador = 50; // si llega a 0 habilito para que no se quede pillado
       emergencia = false;
       contador_emergencia = 25;
+
       bien_busqueda = true;
+      
+      bien_situado = false;
+      cambio = true;
     }
 };
 

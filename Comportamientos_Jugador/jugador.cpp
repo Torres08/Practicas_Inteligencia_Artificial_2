@@ -15,13 +15,15 @@ Action ComportamientoJugador::think(Sensores sensores) {
   // Actualizo la variable accion y actual
   Action accion = actIDLE;
 
-  actual.fila = sensores.posF; // fila
-  actual.columna = sensores.posC; // columna 
-  actual.orientacion = sensores.sentido; // brujula
-
-  cout << "Fila: " << actual.fila << endl;
-  cout << "Col : " << actual.columna << endl;
-  cout << "Ori : " << actual.orientacion << endl;
+  if (sensores.nivel != 4){
+      actual.fila = sensores.posF; // fila
+      actual.columna = sensores.posC; // columna 
+      actual.orientacion = sensores.sentido; // brujula
+      cout << "Fila: " << actual.fila << endl;
+      cout << "Col : " << actual.columna << endl;
+      cout << "Ori : " << actual.orientacion << endl;
+  }
+  
   cout << "Tiene Zapatillas: " << actual.TieneZapatillas << endl;
   cout << "Tiene Bikini: " << actual.TieneBikini << endl;
   cout << "Tiempo Recarga: " << tiempo_recarga << endl; //
@@ -34,6 +36,7 @@ Action ComportamientoJugador::think(Sensores sensores) {
   cout << "Emergencia: " << emergencia << endl;
   cout << "Contador Emergencia: " << contador_emergencia << endl;
   cout << "Bien Busqueda: " << bien_busqueda << endl;
+  cout << endl;
 
   // Capturo los destinos
   cout << "sensores.num_destinos : " << sensores.num_destinos << endl;
@@ -58,6 +61,7 @@ Action ComportamientoJugador::think(Sensores sensores) {
   
   if (sensores.nivel == 3) {
       
+      actual = SensorCasilla(sensores, actual);
       EmergenciaBelkan();
     
       if (comienzo){
@@ -78,7 +82,6 @@ Action ComportamientoJugador::think(Sensores sensores) {
       }
 
       MovimientoRepetido(accion, ultimaAccion);
-      actual = SensorCasilla(sensores, actual);
       comienzo = true;
   } 
   
@@ -88,41 +91,125 @@ Action ComportamientoJugador::think(Sensores sensores) {
   
   else if (sensores.nivel == 4){
       
-      //bool cambio; // hago actwhereis
+      // list<estado> objetivos;
 
-      if (!hayPlan && !cambio ) // primero whereis es necesario no lo calculo antes de hacer la accion como es obvio
-            hayPlan = pathFinding(sensores.nivel, actual, objetivos, plan);
+        /*
+            Elementos - Aldeano: a , cuadrado naranja, molestan el movimiento
+              - Lobos: I , empujan al agente (desplaza una casilla en 
+                      la direccion que avanzaria el lobo)
 
-          //accion = actWHEREIS;
-          // accion = actWHEREIS antes de cualquier accion
+            lobo empuja -> recalculo la posicion
+        */
+      
+        // 0. action whereis como la casilla azul pos igual, paso por la casilla azul y luego todo igual de bien
+        // 1º accion whereis y luego va bien se supone, como la casilla azul
+          
+        // 1. compruebo si la casilla es bikini o no 
+        actual = SensorCasilla(sensores, actual);
 
-      if (cambio){
-              cout << "Hola" << endl;
-             accion = actWHEREIS; // actualiza pos y orientacion para que se pueda usar casilla azul
-             cambio = false; // 1º debe ser actWHEREIS
-           
-      } else{
+        // 2. compruebo si choca lobo en ese caso ¿QUE HAGO?
+              // no tiene plan o tiene que planificar
+              // if (Plan.size() == 0 && || replanificar(sensores, actual, destino ))
 
-        if (hayPlan and plan.size() > 0) { // hay un plan no vacio
-           
-               accion = plan.front();           // tomo la siguiente accion del Plan
-               plan.erase(plan.begin());        // eliminamos la accion del plan
-               //cambio = true;
-            
+              // copio el destino y lo pong a false para replanificar el plan
+              // copia_destino = destino;
+              // hayPlant = false
+
+        // 3. si se ha cambiado el destino se replanificara
+
+        // 4. si choca y le empuja -> ¿Recalcular la posicion? delante para sensores es 'l' de lobo, si es 'a' aldeano es como si fuese un muro
+
+        // ya tras recalcular la posicion  calculo el plan
+
+        // Pinto en el mapa lo ultimo, por si hay cambio de posicion o algo 
+            //ActualizarMapa(sensores);
+
+        ////////////////////////////////////////////////////////////////////////////////////
+        
+        list<estado> aux;
+
+
+            //actual.fila = sensores.posF; // sensores devuelven -1
+            //actual.columna = sensores.posC;
+            //actual.orientacion = sensores.sentido;
+        
+        
+
+        if (bien_situado){
+            ActualizarMapa(sensores);
+        }
+          
+
+        if (ultimaAccion == actWHEREIS and !bien_situado) {
+            actual.fila = sensores.posF; // sensores devuelven -1
+            actual.columna = sensores.posC;
+            actual.orientacion = sensores.sentido;
+            bien_situado = true;
+        }
+
+        cout << "Fila: " << actual.fila << endl;
+        cout << "Col : " << actual.columna << endl;
+        cout << "Ori : " << actual.orientacion << endl;
+
+        // primero de todo actwhereis
+      
+        if (cambio){
+          accion = actWHEREIS;
+          cambio = false;
+
         } else {
-            accion = MoverAleatorio(sensores);
-            cout << "no se pudo encontrar un plan\n" << endl;
-         }
+          
+          accion = actFORWARD;
+          cambio = true;
+          //bien_situado = false;
+          
+          // compruebo si es bikini o no 
+          /*
+          for (int i =0 ; i < num_objetivos; i++){
+              vector_objetivos[i] = objetivos.front();
+              objetivos.pop_front();
+              cout << "\nOBJETIVO " << i+1 << " | fila: " << vector_objetivos[i].fila << " Columna: "<< vector_objetivos[i].columna;
 
-      } 
-      
-      
-      
+              if (!hayPlan) 
+                // no puedo hacer un vecctor de estados si trabajo con una lista de estados
+                hayPlan = pathFinding(sensores.nivel, actual, objetivos, plan);
 
+          }
+            cout << endl;
+          
+          
+          // calcularia el coste y escogeria el mejor los ordeno en el vector y los meto en una lista auxiliar or ejemplo, lo meto uno a uno y le hago pathfinding
+          // vamos en orden primero
+            
+            aux.clear();
+            for (int i =0 ; i < num_objetivos; i++){
+              estado a;
+              a = vector_objetivos[i];
+              aux.push_back(a);
+
+            if (!hayPlan)
+              hayPlan = pathFinding(sensores.nivel, actual, objetivos, plan);
+            }
+
+
+            if (hayPlan and plan.size() > 0) { // hay un plan no vacio
+              accion = plan.front();           // tomo la siguiente accion del Plan
+              plan.erase(plan.begin());        // eliminamos la accion del plan
+            } else {
+              cout << "no se pudo encontrar un plan\n" << endl;
+            }
+          */
+            
+
+        }
+      
+      
+      //SensorVistaNivel(sensores);
+          
+      
 
   ///////////////////////////////////////////////////////////////////////////////////
   } else {
-          
           
           if (!hayPlan)
             hayPlan = pathFinding(sensores.nivel, actual, objetivos, plan);
@@ -133,8 +220,9 @@ Action ComportamientoJugador::think(Sensores sensores) {
           } else {
             cout << "no se pudo encontrar un plan\n" << endl;
           }
+
   }
-        
+  ///////////////////////////////////////////////////////////////////////////////////       
 
 
         
@@ -183,7 +271,8 @@ bool ComportamientoJugador::pathFinding(int level, const estado &origen,
     
     cout << "fila: " << un_objetivo.fila << " col:" << un_objetivo.columna
          << endl;
-    return pathFinding_CostoUniforme(origen, un_objetivo, plan);
+    //return pathFinding_CostoUniforme(origen, un_objetivo, plan);
+    return pathFinding_AEstrella(origen, un_objetivo, plan);
     break;
   case 4:
    
@@ -869,8 +958,11 @@ bool ComportamientoJugador::pathFinding_AEstrella(const estado &origen, const es
      
       plan.clear();
 
-      set<NodoEstrella,ComparaEstadosEstrella> Cerrados;
-      priority_queue<NodoEstrella, std::vector<NodoEstrella>> Abiertos;
+      
+
+      set<NodoEstrella, ComparaEstadosEstrella> Cerrados; // Lista de Cerrados
+      priority_queue<NodoEstrella> Abiertos;         // Lista de Abiertos
+
 
       NodoEstrella current;
       current.st = origen;
@@ -1064,9 +1156,9 @@ bool ComportamientoJugador::SensoresAvanzar(Sensores sensores, estado st) {
 
 void ComportamientoJugador::ActualizarMapa(Sensores sensores) {
 
-  int fil=sensores.posF;
-  int col=sensores.posC;
-  int brujula=sensores.sentido;
+  int fil=actual.fila;
+  int col=actual.columna;
+  int brujula=actual.orientacion;
 
   mapaResultado[fil][col] = sensores.terreno[0];
 
@@ -1583,4 +1675,49 @@ void ComportamientoJugador::MovimientoRepetido(Action accion, Action ultimaAccio
 //			NIVEL 4: RETO 2 (MAXIMIZAR EL NUMERO DE OBJETIVOS)
 //------------------------------------------------------------------------
 
+void ComportamientoJugador::SensorVistaNivel(Sensores sensores) {
 
+    if (ultimaAccion == actWHEREIS and !bien_situado) {
+      actual.fila = sensores.posF; // sensores devuelven -1
+      actual.columna = sensores.posC;
+      actual.orientacion = sensores.sentido;
+      bien_situado = true;
+    }
+  
+}
+
+bool ComportamientoJugador::replanificar (Sensores sensores, estado ac, estado dest){
+  // true si necesita replanificar, false si no 
+
+  bool find = false;
+  Action next_accion = plan.front(); // saco la siguiente accion
+
+  // si es recto es el unico caso en que puede chocar y eso
+
+  if (next_accion == actFORWARD){
+    // siguiente casilla
+    unsigned char casilla;
+
+      // uso brujula -> cuidado los sensores estan rotos
+      
+      /*
+      switch (sensores.sentido){
+          case 0
+      }
+
+      */
+
+      casilla = sensores.terreno[2]; // la casilla de enfrente es la 2 de sensores terreno
+
+      // cout << "Casilla: " << endl;
+
+
+      // si es agua sin bikini o bosque si zapas
+      // replanifica
+
+      // caso contrario uso EsObstaculo
+
+    return find;
+
+  }
+}
