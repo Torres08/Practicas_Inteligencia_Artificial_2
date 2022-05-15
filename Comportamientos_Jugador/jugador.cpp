@@ -39,15 +39,18 @@ Action ComportamientoJugador::think(Sensores sensores) {
   cout << endl;
 
   // Capturo los destinos
-  cout << "sensores.num_destinos : " << sensores.num_destinos << endl;
-  objetivos.clear();
-  for (int i = 0; i < sensores.num_destinos; i++) {
-    estado aux;
-    aux.fila = sensores.destino[2 * i];
-    aux.columna = sensores.destino[2 * i + 1];
-    objetivos.push_back(aux);
-  }
+  if (sensores.nivel != 4 ){
+      cout << "sensores.num_destinos : " << sensores.num_destinos << endl;
+      objetivos.clear();
+      for (int i = 0; i < sensores.num_destinos; i++) {
+        estado aux;
+        aux.fila = sensores.destino[2 * i];
+        aux.columna = sensores.destino[2 * i + 1];
+        objetivos.push_back(aux);
+      }
 
+  }
+  
   // nivel 3 donde hago hibrido reactivo y deliberativo
 
   /*
@@ -92,6 +95,7 @@ Action ComportamientoJugador::think(Sensores sensores) {
   else if (sensores.nivel == 4){
       
       // list<estado> objetivos;
+      // cuando termino lo quito y paso al siguiente
 
         /*
             Elementos - Aldeano: a , cuadrado naranja, molestan el movimiento
@@ -104,8 +108,7 @@ Action ComportamientoJugador::think(Sensores sensores) {
         // 0. action whereis como la casilla azul pos igual, paso por la casilla azul y luego todo igual de bien
         // 1º accion whereis y luego va bien se supone, como la casilla azul
           
-        // 1. compruebo si la casilla es bikini o no 
-        actual = SensorCasilla(sensores, actual);
+        
 
         // 2. compruebo si choca lobo en ese caso ¿QUE HAGO?
               // no tiene plan o tiene que planificar
@@ -126,84 +129,202 @@ Action ComportamientoJugador::think(Sensores sensores) {
 
         ////////////////////////////////////////////////////////////////////////////////////
         
-        list<estado> aux;
-
-
-            //actual.fila = sensores.posF; // sensores devuelven -1
-            //actual.columna = sensores.posC;
-            //actual.orientacion = sensores.sentido;
         
+        
+
+        //actual.fila = sensores.posF; // sensores devuelven -1
+        //actual.columna = sensores.posC;
+        //actual.orientacion = sensores.sentido;
+
+        // 1. compruebo si la casilla es bikini o no 
+
+        if (sensores.terreno[2] == 'K'){
+          actual.TieneZapatillas = false;
+          actual.TieneBikini = true;
+        }
+          
+
+        if (sensores.terreno[2] == 'D'){
+            actual.TieneZapatillas = true;
+            actual.TieneBikini = false;
+        }
+          
+      
+        // CALCULO POSICION MANUAL
+        
+        switch (ultimaAccion) {
+        case actFORWARD:
+          switch (actual.orientacion) {
+          case 0: // norte 
+            actual.fila--;
+            break;
+          case 1: // noroeste
+            actual.columna++;
+            actual.fila--;
+          break;
+          
+          case 2: // este 
+            actual.columna++;
+            break;
+
+          case 3: //sureste
+            actual.columna++;
+            actual.fila++;
+          break;
+
+          case 4: // sur 
+            actual.fila++;
+            break;
+
+          case 5: 
+            actual.fila++;
+            actual.columna--;
+          break;
+
+          case 6: // oeste
+            actual.columna--;
+            break;
+          
+          case 7:
+            actual.columna--;
+            actual.fila--;
+          break;
+
+          }
+          break;
+
+        case actTURN_L:
+          actual.orientacion = (actual.orientacion + 6) % 8;
+          
+          break;
+
+        case actTURN_R:
+         actual.orientacion = (actual.orientacion + 2) % 8;
+          
+          break;
+        
+        case actSEMITURN_L:
+          actual.orientacion = (actual.orientacion + 7) % 8;
+          
+        break;
+
+        case actSEMITURN_R:
+          actual.orientacion = (actual.orientacion + 1) % 8;
+        break;
+        }
         
 
         if (bien_situado){
             ActualizarMapa(sensores);
         }
-          
+        
 
-        if (ultimaAccion == actWHEREIS and !bien_situado) {
+        // sensoresvistanivel
+        if (ultimaAccion == actWHEREIS and !bien_situado ) {
             actual.fila = sensores.posF; // sensores devuelven -1
             actual.columna = sensores.posC;
             actual.orientacion = sensores.sentido;
             bien_situado = true;
         }
 
-        cout << "Fila: " << actual.fila << endl;
-        cout << "Col : " << actual.columna << endl;
-        cout << "Ori : " << actual.orientacion << endl;
-
+        
+        
         // primero de todo actwhereis
-      
+        // accion -> actWHEREIS
+
+        
+
         if (cambio){
-          accion = actWHEREIS;
+          cout << "VOY A HACER UN WHEREIS" << endl;
+          accion = actWHEREIS; 
           cambio = false;
+          
+          
 
-        } else {
-          
-          accion = actFORWARD;
-          cambio = true;
-          //bien_situado = false;
-          
-          // compruebo si es bikini o no 
-          /*
-          for (int i =0 ; i < num_objetivos; i++){
-              vector_objetivos[i] = objetivos.front();
-              objetivos.pop_front();
-              cout << "\nOBJETIVO " << i+1 << " | fila: " << vector_objetivos[i].fila << " Columna: "<< vector_objetivos[i].columna;
+        } 
+        else {  
 
-              if (!hayPlan) 
-                // no puedo hacer un vecctor de estados si trabajo con una lista de estados
-                hayPlan = pathFinding(sensores.nivel, actual, objetivos, plan);
+            cout <<"HOLAAAA " << bien_situado << endl;
 
-          }
-            cout << endl;
-          
-          
-          // calcularia el coste y escogeria el mejor los ordeno en el vector y los meto en una lista auxiliar or ejemplo, lo meto uno a uno y le hago pathfinding
-          // vamos en orden primero
+            // SI ME ENCUENTRO DELANTE A UN LOBO / ALDEANO
+            if (sensores.colision){
+              cout <<"\nME HAN CHOCADO "<< endl;
+              
+              actual.fila = 0;
+              actual.columna = 0;
+              actual.orientacion = 0;
+              accion = actWHEREIS;
+              hayPlan = false;
+              plan.clear();
+              bien_situado = false;
+            }  
             
-            aux.clear();
-            for (int i =0 ; i < num_objetivos; i++){
-              estado a;
-              a = vector_objetivos[i];
-              aux.push_back(a);
 
-            if (!hayPlan)
-              hayPlan = pathFinding(sensores.nivel, actual, objetivos, plan);
+            // CASO EN EL QUE NO PUEDA AVANZAR
+            if (!SensoresAvanzar(sensores, actual)&& ultimaAccion == actFORWARD ){// si no puede avanzar dentro de un plan 
+                
+                cout << "\nNO SE PUEDE AVANZAR" << endl;
+                cout << "RECALCULAR PLAN" << endl;
+                
+                plan.clear();
+                hayPlan = false;
+                accion = actIDLE;
             }
 
+                //accion = Girar(sensores); // girp por que si
+                //volveria a recalcular
 
+            
+            // CASO EN EL QUE HAYA PLAN AVANZO
             if (hayPlan and plan.size() > 0) { // hay un plan no vacio
               accion = plan.front();           // tomo la siguiente accion del Plan
               plan.erase(plan.begin());        // eliminamos la accion del plan
-            } else {
-              cout << "no se pudo encontrar un plan\n" << endl;
-            }
-          */
+            } 
+          
+            // SI HE LLEGADO A MI OBJETIVO
+            if (actual.fila == objetivos.front().fila && actual.columna == objetivos.front().columna){
+                cout << "PLAN TERMINADO: HE LLEGADO" << endl;
+                plan.clear();
+                hayPlan = false;   
+                
+                cout << "\nBORRO OBJETIVO: " << objetivos.front().fila << " " << objetivos.front().columna << endl;          
+                objetivos.pop_front();
+                cout << "OBJETIVO NUEVO: "<< objetivos.front().fila << " " << objetivos.front().columna << endl;
+                
+                
+            } 
+            
+          //SI ESTA VACIO BUSCO MAS OBJETIVOS
+          if (objetivos.empty()){ // cuando este vacio busco los nuevos
+              cout << "sensores.num_destinos : " << sensores.num_destinos << endl;
+              objetivos.clear();
+              for (int i = 0; i < sensores.num_destinos; i++) {
+                estado aux;
+                aux.fila = sensores.destino[2 * i];
+                aux.columna = sensores.destino[2 * i + 1];
+                objetivos.push_back(aux);
+              }
+          }
+
+          // CASO NO HAY PLAN CALCULO UNO CON EL 1º OBJETIVO DE LA LISTA
+          if (!hayPlan && accion != actWHEREIS){
+              cout << "\nCALCULO PLAN" << endl;
+              hayPlan = pathFinding(sensores.nivel, actual, objetivos, plan);
+          }
+              
+        
+        }
+          cout << "Fila: " << actual.fila << endl;
+          cout << "Col : " << actual.columna << endl;
+          cout << "Ori : " << actual.orientacion << endl;
+          cout << "OBJETIVO " << objetivos.front().fila << " " << objetivos.front().columna << endl;          
+          cout << "\n\n\n" << endl;
+          
             
 
-        }
+        
       
-      
+      //actual = SensorCasilla(sensores, actual);
       //SensorVistaNivel(sensores);
           
       
@@ -282,7 +403,7 @@ bool ComportamientoJugador::pathFinding(int level, const estado &origen,
     
     cout << "fila: " << un_objetivo.fila << " col:" << un_objetivo.columna
          << endl;
-    return pathFinding_CostoUniforme(origen, un_objetivo, plan);
+    return pathFinding_AEstrella(origen, un_objetivo, plan);
 
 
 
@@ -813,8 +934,8 @@ bool ComportamientoJugador::pathFinding_CostoUniforme(const estado &origen,
       current.st.TieneBikini = false;
     }
 
-    cout << "Estoy generando los hijos de "
-     << " " << current.coste << endl;
+    //cout << "Estoy generando los hijos de "
+    // << " " << current.coste << endl;
 
     // genera hijo giro a la derecha 90
     nodoCoste hijoTurnR = current;
@@ -983,8 +1104,8 @@ bool ComportamientoJugador::pathFinding_AEstrella(const estado &origen, const es
             Abiertos.pop();
             Cerrados.insert(current);
 
-            cout << "Estoy generando los hijos de "
-            << " " << current.f << endl;
+            //cout << "Estoy generando los hijos de "
+            //<< " " << current.f << endl;
 
             // veo bikini y zapas
             // current.st = SensorCasilla(sensores, current.st);
@@ -1138,11 +1259,12 @@ bool ComportamientoJugador::SensoresAvanzar(Sensores sensores, estado st) {
 
   bool b1 = (sensores.terreno[2] == 'T' or sensores.terreno[2] == 'S' or
              sensores.terreno[2] == 'G' or sensores.terreno[2] == 'D' or
-             sensores.terreno[2] == 'K' or sensores.terreno[2] == 'X');
+             sensores.terreno[2] == 'K' or sensores.terreno[2] == 'X' );
   bool b2 = (sensores.superficie[2] == '_');
   bool condicion_zapatillas = (sensores.terreno[2] == 'B');
   bool condicion_bikini = (sensores.terreno[2] == 'A');
 
+  
   
   if (st.TieneZapatillas) // ahora uso estado porque las variables de zapas y bikini estan ahi
     b1 = b1 || condicion_zapatillas;
@@ -1692,32 +1814,8 @@ bool ComportamientoJugador::replanificar (Sensores sensores, estado ac, estado d
   bool find = false;
   Action next_accion = plan.front(); // saco la siguiente accion
 
-  // si es recto es el unico caso en que puede chocar y eso
-
-  if (next_accion == actFORWARD){
-    // siguiente casilla
-    unsigned char casilla;
-
-      // uso brujula -> cuidado los sensores estan rotos
-      
-      /*
-      switch (sensores.sentido){
-          case 0
-      }
-
-      */
-
-      casilla = sensores.terreno[2]; // la casilla de enfrente es la 2 de sensores terreno
-
-      // cout << "Casilla: " << endl;
-
-
-      // si es agua sin bikini o bosque si zapas
-      // replanifica
-
-      // caso contrario uso EsObstaculo
+    
 
     return find;
 
-  }
 }

@@ -98,7 +98,7 @@ class ComportamientoJugador : public Comportamiento {
 
     //
     void SensorVistaNivel(Sensores sensores);
-    bool replanificar(Sensores sensores, estado ac, estado dest);
+    bool replanificar(Sensores sensores, estado ac, estado dest); // true si tengo que replanificar
 
     //
     void Inicializar(){
