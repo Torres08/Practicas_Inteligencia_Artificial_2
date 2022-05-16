@@ -214,7 +214,7 @@ Action ComportamientoJugador::think(Sensores sensores) {
         }
         
 
-        if (bien_situado){
+        if (bien_situado && !sensores.colision){
             ActualizarMapa(sensores);
         }
         
@@ -239,17 +239,12 @@ Action ComportamientoJugador::think(Sensores sensores) {
           accion = actWHEREIS; 
           cambio = false;
           
-          
-
         } 
         else {  
-
-            cout <<"HOLAAAA " << bien_situado << endl;
 
             // SI ME ENCUENTRO DELANTE A UN LOBO / ALDEANO
             if (sensores.colision){
               cout <<"\nME HAN CHOCADO "<< endl;
-              
               actual.fila = 0;
               actual.columna = 0;
               actual.orientacion = 0;
@@ -259,16 +254,19 @@ Action ComportamientoJugador::think(Sensores sensores) {
               bien_situado = false;
             }  
             
-
+            // variable booleana para
             // CASO EN EL QUE NO PUEDA AVANZAR
-            if (!SensoresAvanzar(sensores, actual)&& ultimaAccion == actFORWARD ){// si no puede avanzar dentro de un plan 
+            
+            if (!SensoresAvanzar(sensores, actual) && ultimaAccion == actFORWARD && !sensores.colision){// si no puede avanzar dentro de un plan 
                 
+                contador1++;
                 cout << "\nNO SE PUEDE AVANZAR" << endl;
                 cout << "RECALCULAR PLAN" << endl;
                 
                 plan.clear();
                 hayPlan = false;
                 accion = actIDLE;
+
             }
 
                 //accion = Girar(sensores); // girp por que si
@@ -276,7 +274,8 @@ Action ComportamientoJugador::think(Sensores sensores) {
 
             
             // CASO EN EL QUE HAYA PLAN AVANZO
-            if (hayPlan and plan.size() > 0) { // hay un plan no vacio
+            if (hayPlan and plan.size() > 0 and !sensores.colision) { // hay un plan no vacio
+              contador1=0;
               accion = plan.front();           // tomo la siguiente accion del Plan
               plan.erase(plan.begin());        // eliminamos la accion del plan
             } 
@@ -290,7 +289,6 @@ Action ComportamientoJugador::think(Sensores sensores) {
                 cout << "\nBORRO OBJETIVO: " << objetivos.front().fila << " " << objetivos.front().columna << endl;          
                 objetivos.pop_front();
                 cout << "OBJETIVO NUEVO: "<< objetivos.front().fila << " " << objetivos.front().columna << endl;
-                
                 
             } 
             
@@ -306,6 +304,7 @@ Action ComportamientoJugador::think(Sensores sensores) {
               }
           }
 
+          // voy a pponer un contador para que no recalcule 3 veces seguidas -> segmentation fault
           // CASO NO HAY PLAN CALCULO UNO CON EL 1º OBJETIVO DE LA LISTA
           if (!hayPlan && accion != actWHEREIS){
               cout << "\nCALCULO PLAN" << endl;
@@ -314,6 +313,9 @@ Action ComportamientoJugador::think(Sensores sensores) {
               
         
         }
+
+
+
           cout << "Fila: " << actual.fila << endl;
           cout << "Col : " << actual.columna << endl;
           cout << "Ori : " << actual.orientacion << endl;
@@ -321,9 +323,6 @@ Action ComportamientoJugador::think(Sensores sensores) {
           cout << "\n\n\n" << endl;
           
             
-
-        
-      
       //actual = SensorCasilla(sensores, actual);
       //SensorVistaNivel(sensores);
           

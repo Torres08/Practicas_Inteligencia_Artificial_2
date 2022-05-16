@@ -68,6 +68,9 @@ class ComportamientoJugador : public Comportamiento {
     bool bien_busqueda;
     estado vector_objetivos[3];
     bool bien_situado;
+    bool terminado;
+    bool recalcular;
+    int contador1 = 0;
 
     // Métodos privados de la clase
     bool pathFinding(int level, const estado &origen, const list<estado> &destino, list<Action> &plan);
@@ -121,6 +124,9 @@ class ComportamientoJugador : public Comportamiento {
       
       bien_situado = false;
       cambio = true;
+      terminado = true;
+      recalcular = false;
+      contador1=0;
     }
 };
 
